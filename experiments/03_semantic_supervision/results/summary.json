@@ -1,0 +1,439 @@
+{
+  "split": "test",
+  "steps": 6000,
+  "seeds": [
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
+    51
+  ],
+  "noise_repeats": 4,
+  "noise_seed": 20042,
+  "counts": {
+    "windows": 759,
+    "videos": 196,
+    "source_groups": 39,
+    "classes": 6
+  },
+  "conditions": {
+    "C": "joint encoder+denoiser, FM only",
+    "J": "same architecture/initialization, FM + cosine alignment, lambda=1",
+    "N": "fixed Q1 no-history background",
+    "P": "fixed Q2 pretrained-q background"
+  },
+  "paired_design": "C/J: no pretraining; normalized 64x1024 condition, 10% dropout, zero history; FM backpropagates into encoder; shared data/noise/drop streams.",
+  "primary": "C_vs_J overall velocity MSE",
+  "secondary": [
+    "N_vs_C",
+    "N_vs_J"
+  ],
+  "background_only": [
+    "N_vs_P",
+    "P_vs_C",
+    "P_vs_J"
+  ],
+  "statistics": "Noise mean -> window -> video -> source group -> class macro; paired within-class source-group bootstrap, seed2026, 5000 draws. Separate paired seed-level t interval; no pooling of shared videos across seeds.",
+  "primary_seed_uncertainty": {
+    "n_seeds": 10,
+    "mean": 0.29011919613915915,
+    "min": -0.7872581863808348,
+    "max": 0.9301937208527566,
+    "sample_sd": 0.5748232139017165,
+    "ci95_seed_mean_percent": [
+      -0.12108455963768544,
+      0.7013229519160038
+    ],
+    "wins": 7,
+    "losses": 3,
+    "ties": 0,
+    "method": "Paired seed-level Student-t interval for mean percentage improvement; fixed shared dataset, training randomness only. Approximate normal-mean interval, distinct from each seed's source-group bootstrap CI."
+  },
+  "background_seeds": [
+    42,
+    43,
+    44
+  ],
+  "mse": {
+    "N": {
+      "n_seeds": 3,
+      "mean": 0.47293193471287137,
+      "min": 0.47204432750104575,
+      "max": 0.4735137971548345,
+      "sample_sd": 0.0007809898616981286
+    },
+    "P": {
+      "n_seeds": 3,
+      "mean": 0.45919726688090057,
+      "min": 0.4584440690929947,
+      "max": 0.4597151243094445,
+      "sample_sd": 0.0006674085363362722
+    },
+    "C": {
+      "n_seeds": 10,
+      "mean": 0.45829735483859474,
+      "min": 0.4537777580404887,
+      "max": 0.462018031436698,
+      "sample_sd": 0.0024000560628759248
+    },
+    "J": {
+      "n_seeds": 10,
+      "mean": 0.45696530932842994,
+      "min": 0.45221381323997045,
+      "max": 0.4641373420700723,
+      "sample_sd": 0.0031977864236434977
+    }
+  },
+  "gain_percent": {
+    "C_vs_J": {
+      "n_seeds": 10,
+      "mean": 0.29011919613915915,
+      "min": -0.7872581863808348,
+      "max": 0.9301937208527566,
+      "sample_sd": 0.5748232139017165
+    },
+    "N_vs_C": {
+      "n_seeds": 3,
+      "mean": 2.8688712262071516,
+      "min": 2.427757287582788,
+      "max": 3.244229924049691,
+      "sample_sd": 0.4121889194198585
+    },
+    "N_vs_J": {
+      "n_seeds": 3,
+      "mean": 3.1989692297250905,
+      "min": 2.9152751630797225,
+      "max": 3.346264363506646,
+      "sample_sd": 0.24574666709021678
+    },
+    "N_vs_P": {
+      "n_seeds": 3,
+      "mean": 2.9041202996483677,
+      "min": 2.857455304081069,
+      "max": 2.9737654951514814,
+      "sample_sd": 0.06146610715285667
+    },
+    "P_vs_C": {
+      "n_seeds": 3,
+      "mean": -0.03650604514624881,
+      "min": -0.5627428605831319,
+      "max": 0.39815162468651577,
+      "sample_sd": 0.48694928677182653
+    },
+    "P_vs_J": {
+      "n_seeds": 3,
+      "mean": 0.3037095970779835,
+      "min": 0.0595206345269661,
+      "max": 0.47892269768368134,
+      "sample_sd": 0.21804305720052677
+    }
+  },
+  "per_seed": [
+    {
+      "seed": 42,
+      "comparison": "C_vs_J",
+      "role": "primary",
+      "mse_reference": 0.462018031436698,
+      "mse_treatment": 0.45772036871906635,
+      "gain_percent": 0.9301937208527566,
+      "ci95_low_percent": 0.5281799995806652,
+      "ci95_high_percent": 1.3266924716777089
+    },
+    {
+      "seed": 42,
+      "comparison": "N_vs_C",
+      "role": "secondary",
+      "mse_reference": 0.4735137971548345,
+      "mse_treatment": 0.462018031436698,
+      "gain_percent": 2.427757287582788,
+      "ci95_low_percent": 2.021628958103711,
+      "ci95_high_percent": 2.823073168105676
+    },
+    {
+      "seed": 42,
+      "comparison": "N_vs_J",
+      "role": "secondary",
+      "mse_reference": 0.4735137971548345,
+      "mse_treatment": 0.45772036871906635,
+      "gain_percent": 3.335368162588903,
+      "ci95_low_percent": 2.9623235860689014,
+      "ci95_high_percent": 3.7379363860375783
+    },
+    {
+      "seed": 42,
+      "comparison": "N_vs_P",
+      "role": "background",
+      "mse_reference": 0.4735137971548345,
+      "mse_treatment": 0.45943260724026247,
+      "gain_percent": 2.9737654951514814,
+      "ci95_low_percent": 2.5919064721874063,
+      "ci95_high_percent": 3.3498642305812725
+    },
+    {
+      "seed": 42,
+      "comparison": "P_vs_C",
+      "role": "background",
+      "mse_reference": 0.45943260724026247,
+      "mse_treatment": 0.462018031436698,
+      "gain_percent": -0.5627428605831319,
+      "ci95_low_percent": -1.0522276232015622,
+      "ci95_high_percent": -0.07259599513274288
+    },
+    {
+      "seed": 42,
+      "comparison": "P_vs_J",
+      "role": "background",
+      "mse_reference": 0.45943260724026247,
+      "mse_treatment": 0.45772036871906635,
+      "gain_percent": 0.3726854590233031,
+      "ci95_low_percent": 0.04613780456358602,
+      "ci95_high_percent": 0.7126739469606439
+    },
+    {
+      "seed": 43,
+      "comparison": "C_vs_J",
+      "role": "primary",
+      "mse_reference": 0.45819158973027996,
+      "mse_treatment": 0.45624847638992366,
+      "gain_percent": 0.42408315296667,
+      "ci95_low_percent": 0.12671983582084795,
+      "ci95_high_percent": 0.7203178459654059
+    },
+    {
+      "seed": 43,
+      "comparison": "N_vs_C",
+      "role": "secondary",
+      "mse_reference": 0.47204432750104575,
+      "mse_treatment": 0.45819158973027996,
+      "gain_percent": 2.9346264669889766,
+      "ci95_low_percent": 2.674277121233768,
+      "ci95_high_percent": 3.19529549465077
+    },
+    {
+      "seed": 43,
+      "comparison": "N_vs_J",
+      "role": "secondary",
+      "mse_reference": 0.47204432750104575,
+      "mse_treatment": 0.45624847638992366,
+      "gain_percent": 3.346264363506646,
+      "ci95_low_percent": 3.041043965108937,
+      "ci95_high_percent": 3.6434826122134742
+    },
+    {
+      "seed": 43,
+      "comparison": "N_vs_P",
+      "role": "background",
+      "mse_reference": 0.47204432750104575,
+      "mse_treatment": 0.4584440690929947,
+      "gain_percent": 2.8811400997125536,
+      "ci95_low_percent": 2.551552034271977,
+      "ci95_high_percent": 3.1962389959081636
+    },
+    {
+      "seed": 43,
+      "comparison": "P_vs_C",
+      "role": "background",
+      "mse_reference": 0.4584440690929947,
+      "mse_treatment": 0.45819158973027996,
+      "gain_percent": 0.05507310045786973,
+      "ci95_low_percent": -0.3079177023656732,
+      "ci95_high_percent": 0.4112028921711888
+    },
+    {
+      "seed": 43,
+      "comparison": "P_vs_J",
+      "role": "background",
+      "mse_reference": 0.4584440690929947,
+      "mse_treatment": 0.45624847638992366,
+      "gain_percent": 0.47892269768368134,
+      "ci95_low_percent": 0.2531697848840042,
+      "ci95_high_percent": 0.7270969225142957
+    },
+    {
+      "seed": 44,
+      "comparison": "C_vs_J",
+      "role": "primary",
+      "mse_reference": 0.4578847610730768,
+      "mse_treatment": 0.45944149895043906,
+      "gain_percent": -0.33998464454549904,
+      "ci95_low_percent": -0.6277379648010839,
+      "ci95_high_percent": -0.058687247244220746
+    },
+    {
+      "seed": 44,
+      "comparison": "N_vs_C",
+      "role": "secondary",
+      "mse_reference": 0.47323767948273404,
+      "mse_treatment": 0.4578847610730768,
+      "gain_percent": 3.244229924049691,
+      "ci95_low_percent": 2.8628943440587267,
+      "ci95_high_percent": 3.669488625489334
+    },
+    {
+      "seed": 44,
+      "comparison": "N_vs_J",
+      "role": "secondary",
+      "mse_reference": 0.47323767948273404,
+      "mse_treatment": 0.45944149895043906,
+      "gain_percent": 2.9152751630797225,
+      "ci95_low_percent": 2.505371694786344,
+      "ci95_high_percent": 3.3270806812480123
+    },
+    {
+      "seed": 44,
+      "comparison": "N_vs_P",
+      "role": "background",
+      "mse_reference": 0.47323767948273404,
+      "mse_treatment": 0.4597151243094445,
+      "gain_percent": 2.857455304081069,
+      "ci95_low_percent": 2.5060443078749013,
+      "ci95_high_percent": 3.222658563002212
+    },
+    {
+      "seed": 44,
+      "comparison": "P_vs_C",
+      "role": "background",
+      "mse_reference": 0.4597151243094445,
+      "mse_treatment": 0.4578847610730768,
+      "gain_percent": 0.39815162468651577,
+      "ci95_low_percent": 0.08788914201458026,
+      "ci95_high_percent": 0.7162733930272744
+    },
+    {
+      "seed": 44,
+      "comparison": "P_vs_J",
+      "role": "background",
+      "mse_reference": 0.4597151243094445,
+      "mse_treatment": 0.45944149895043906,
+      "gain_percent": 0.0595206345269661,
+      "ci95_low_percent": -0.2014824367229617,
+      "ci95_high_percent": 0.31182746534879774
+    },
+    {
+      "seed": 45,
+      "comparison": "C_vs_J",
+      "role": "primary",
+      "mse_reference": 0.4590865659369725,
+      "mse_treatment": 0.45543212857214943,
+      "gain_percent": 0.7960235903145096,
+      "ci95_low_percent": 0.3321682664120379,
+      "ci95_high_percent": 1.302365311054215
+    },
+    {
+      "seed": 46,
+      "comparison": "C_vs_J",
+      "role": "primary",
+      "mse_reference": 0.4595665763913093,
+      "mse_treatment": 0.45766684377899647,
+      "gain_percent": 0.4133748427116446,
+      "ci95_low_percent": 0.001255825875479678,
+      "ci95_high_percent": 0.8256350465905348
+    },
+    {
+      "seed": 47,
+      "comparison": "C_vs_J",
+      "role": "primary",
+      "mse_reference": 0.4537777580404887,
+      "mse_treatment": 0.45221381323997045,
+      "gain_percent": 0.34464994654469505,
+      "ci95_low_percent": -0.04500111602006085,
+      "ci95_high_percent": 0.662298140641718
+    },
+    {
+      "seed": 48,
+      "comparison": "C_vs_J",
+      "role": "primary",
+      "mse_reference": 0.455102456492581,
+      "mse_treatment": 0.45637270745691066,
+      "gain_percent": -0.2791131856591855,
+      "ci95_low_percent": -0.696516743204027,
+      "ci95_high_percent": 0.13085936125461878
+    },
+    {
+      "seed": 49,
+      "comparison": "C_vs_J",
+      "role": "primary",
+      "mse_reference": 0.45850842876081754,
+      "mse_treatment": 0.45606019236556394,
+      "gain_percent": 0.5339566825129705,
+      "ci95_low_percent": 0.0849232454023352,
+      "ci95_high_percent": 1.0355215109184353
+    },
+    {
+      "seed": 50,
+      "comparison": "C_vs_J",
+      "role": "primary",
+      "mse_reference": 0.46051192424717646,
+      "mse_treatment": 0.4641373420700723,
+      "gain_percent": -0.7872581863808348,
+      "ci95_low_percent": -1.3272123601697776,
+      "ci95_high_percent": -0.280974730285012
+    },
+    {
+      "seed": 51,
+      "comparison": "C_vs_J",
+      "role": "primary",
+      "mse_reference": 0.45832545627654725,
+      "mse_treatment": 0.4543597217412062,
+      "gain_percent": 0.8652660420738645,
+      "ci95_low_percent": 0.30261311578829414,
+      "ci95_high_percent": 1.4754560038520117
+    }
+  ],
+  "reference_exact": [
+    {
+      "seed": 42,
+      "matches": {
+        "N": true,
+        "P": true
+      }
+    },
+    {
+      "seed": 43,
+      "matches": {
+        "N": true,
+        "P": true
+      }
+    },
+    {
+      "seed": 44,
+      "matches": {
+        "N": true,
+        "P": true
+      }
+    },
+    {
+      "seed": 45,
+      "matches": null
+    },
+    {
+      "seed": 46,
+      "matches": null
+    },
+    {
+      "seed": 47,
+      "matches": null
+    },
+    {
+      "seed": 48,
+      "matches": null
+    },
+    {
+      "seed": 49,
+      "matches": null
+    },
+    {
+      "seed": 50,
+      "matches": null
+    },
+    {
+      "seed": 51,
+      "matches": null
+    }
+  ]
+}

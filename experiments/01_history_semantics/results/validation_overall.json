@@ -1,0 +1,14 @@
+{
+  "mse_mean": {
+    "N": 0.4545236049402288,
+    "S": 0.4491006549138155,
+    "SD": 0.4448942073760636,
+    "L": 0.42949597540835494
+  },
+  "improvement_over_N_percent": {
+    "S": 1.1934482522463246,
+    "SD": 2.1188805535768074,
+    "L": 5.506319360693823
+  },
+  "note": "Three-seed final-6000 validation means retained as process summary; no validation raw errors included."
+}

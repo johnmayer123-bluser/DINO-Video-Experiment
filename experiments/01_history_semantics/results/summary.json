@@ -1,0 +1,205 @@
+{
+  "split": "test",
+  "steps": 6000,
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "noise_seed": 20042,
+  "noise_repeats": 4,
+  "noise_levels": [
+    0.1,
+    0.3,
+    0.5,
+    0.7,
+    0.9
+  ],
+  "counts": {
+    "windows": 759,
+    "videos": 196,
+    "source_groups": 39,
+    "classes": 6
+  },
+  "primary": "SD versus N, all five noise levels",
+  "secondary": "SD versus S, all five noise levels",
+  "statistics": "Repeat mean -> window -> video -> source group -> class macro; paired source-group bootstrap within class, seed 2026, 5000 draws.",
+  "interval_scope": "Per-seed CIs measure test source-group sampling; cross-seed mean/range/sample SD are descriptive, with no pooled CI.",
+  "test_status": "Follow-up evaluation: this test set was already examined in earlier Q1.",
+  "test_mse": {
+    "N": {
+      "mean": 0.47293193471287137,
+      "min": 0.47204432750104575,
+      "max": 0.4735137971548345,
+      "sample_sd": 0.0007809898616981286
+    },
+    "S": {
+      "mean": 0.4726073458150703,
+      "min": 0.4689167365185686,
+      "max": 0.474939362132353,
+      "sample_sd": 0.0032330072662059483
+    },
+    "SD": {
+      "mean": 0.46161876192103124,
+      "min": 0.4589592132848798,
+      "max": 0.4632196243663579,
+      "sample_sd": 0.002319135180143133
+    },
+    "L": {
+      "mean": 0.4293145832111031,
+      "min": 0.42525283348986287,
+      "max": 0.43281776600617644,
+      "sample_sd": 0.00381327270888803
+    }
+  },
+  "test_improvement_percent": {
+    "N_vs_SD": {
+      "mean": 2.392474982117254,
+      "min": 2.1169183162520477,
+      "max": 2.772009629993266,
+      "sample_sd": 0.33969798776571875
+    },
+    "S_vs_SD": {
+      "mean": 2.324206439747515,
+      "min": 2.1235162787358597,
+      "max": 2.5817851705203454,
+      "sample_sd": 0.23437112945379854
+    },
+    "N_vs_S": {
+      "mean": 0.0692044559492122,
+      "min": -0.3010609165106093,
+      "max": 0.6625629840812386,
+      "sample_sd": 0.5191056467895517
+    },
+    "N_vs_L": {
+      "mean": 9.22333558124255,
+      "min": 8.541144382403786,
+      "max": 9.912521194543789,
+      "sample_sd": 0.6857151606855969
+    }
+  },
+  "per_seed": [
+    {
+      "seed": 42,
+      "comparison": "N_vs_SD",
+      "mse_reference": 0.4735137971548345,
+      "mse_treatment": 0.46267744811185596,
+      "improvement_percent": 2.2884970001064486,
+      "ci95_low_percent": 1.8087874084839182,
+      "ci95_high_percent": 2.769109934962649
+    },
+    {
+      "seed": 42,
+      "comparison": "S_vs_SD",
+      "mse_reference": 0.474939362132353,
+      "mse_treatment": 0.46267744811185596,
+      "improvement_percent": 2.5817851705203454,
+      "ci95_low_percent": 1.684358101759497,
+      "ci95_high_percent": 3.4341805250357718
+    },
+    {
+      "seed": 42,
+      "comparison": "N_vs_S",
+      "mse_reference": 0.4735137971548345,
+      "mse_treatment": 0.474939362132353,
+      "improvement_percent": -0.3010609165106093,
+      "ci95_low_percent": -1.2607720006953693,
+      "ci95_high_percent": 0.635665772018502
+    },
+    {
+      "seed": 42,
+      "comparison": "N_vs_L",
+      "mse_reference": 0.4735137971548345,
+      "mse_treatment": 0.42987315013727,
+      "improvement_percent": 9.216341166780072,
+      "ci95_low_percent": 6.2856196618144695,
+      "ci95_high_percent": 12.19967935818904
+    },
+    {
+      "seed": 43,
+      "comparison": "N_vs_SD",
+      "mse_reference": 0.47204432750104575,
+      "mse_treatment": 0.4589592132848798,
+      "improvement_percent": 2.772009629993266,
+      "ci95_low_percent": 2.4431194708380395,
+      "ci95_high_percent": 3.078740957274859
+    },
+    {
+      "seed": 43,
+      "comparison": "S_vs_SD",
+      "mse_reference": 0.4689167365185686,
+      "mse_treatment": 0.4589592132848798,
+      "improvement_percent": 2.1235162787358597,
+      "ci95_low_percent": 1.3226694368277523,
+      "ci95_high_percent": 2.916141717231336
+    },
+    {
+      "seed": 43,
+      "comparison": "N_vs_S",
+      "mse_reference": 0.47204432750104575,
+      "mse_treatment": 0.4689167365185686,
+      "improvement_percent": 0.6625629840812386,
+      "ci95_low_percent": -0.19814425626377752,
+      "ci95_high_percent": 1.5042595030853028
+    },
+    {
+      "seed": 43,
+      "comparison": "N_vs_L",
+      "mse_reference": 0.47204432750104575,
+      "mse_treatment": 0.42525283348986287,
+      "improvement_percent": 9.912521194543789,
+      "ci95_low_percent": 6.928710917485444,
+      "ci95_high_percent": 12.939015331325388
+    },
+    {
+      "seed": 44,
+      "comparison": "N_vs_SD",
+      "mse_reference": 0.47323767948273404,
+      "mse_treatment": 0.4632196243663579,
+      "improvement_percent": 2.1169183162520477,
+      "ci95_low_percent": 1.5154958516107906,
+      "ci95_high_percent": 2.6580057676423468
+    },
+    {
+      "seed": 44,
+      "comparison": "S_vs_SD",
+      "mse_reference": 0.47396593879428933,
+      "mse_treatment": 0.4632196243663579,
+      "improvement_percent": 2.2673178699863406,
+      "ci95_low_percent": 1.4017996674059632,
+      "ci95_high_percent": 3.083217871758876
+    },
+    {
+      "seed": 44,
+      "comparison": "N_vs_S",
+      "mse_reference": 0.47323767948273404,
+      "mse_treatment": 0.47396593879428933,
+      "improvement_percent": -0.15388869972299268,
+      "ci95_low_percent": -0.9339651928083735,
+      "ci95_high_percent": 0.634581845568227
+    },
+    {
+      "seed": 44,
+      "comparison": "N_vs_L",
+      "mse_reference": 0.47323767948273404,
+      "mse_treatment": 0.43281776600617644,
+      "improvement_percent": 8.541144382403786,
+      "ci95_low_percent": 5.523131664709654,
+      "ci95_high_percent": 11.635608177625612
+    }
+  ],
+  "validation_overall": {
+    "mse_mean": {
+      "N": 0.4545236049402288,
+      "S": 0.4491006549138155,
+      "SD": 0.4448942073760636,
+      "L": 0.42949597540835494
+    },
+    "improvement_over_N_percent": {
+      "S": 1.1934482522463246,
+      "SD": 2.1188805535768074,
+      "L": 5.506319360693823
+    },
+    "note": "Three-seed final-6000 validation means retained as process summary; no validation raw errors included."
+  }
+}

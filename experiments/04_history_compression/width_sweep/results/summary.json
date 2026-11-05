@@ -1,0 +1,568 @@
+{
+  "split": "test",
+  "steps": 6000,
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "tokens": 16,
+  "state_kib": {
+    "D1024": 32,
+    "D512": 16,
+    "D256": 8,
+    "D128": 4
+  },
+  "model_parameters": {
+    "D1024": 14829968,
+    "D512": 14567312,
+    "D256": 14435984,
+    "D128": 14370320
+  },
+  "parameter_note": "Each removed width dimension removes 513 parameters from the encoder output head and attention context projection.",
+  "noise_seed": 20042,
+  "noise_repeats": 4,
+  "counts": {
+    "windows": 759,
+    "videos": 196,
+    "source_groups": 39,
+    "classes": 6
+  },
+  "statistics": "Repeat mean -> window -> video -> source group -> class macro; paired within-class source-group bootstrap, 2026/5000. Per-seed CIs; three-seed mean/range/SD are descriptive.",
+  "mse": {
+    "N": {
+      "mean": 0.47293193471287137,
+      "min": 0.47204432750104575,
+      "max": 0.4735137971548345,
+      "sample_sd": 0.0007809898616981286
+    },
+    "L": {
+      "mean": 0.4293145832111031,
+      "min": 0.42525283348986287,
+      "max": 0.43281776600617644,
+      "sample_sd": 0.00381327270888803
+    },
+    "K64": {
+      "mean": 0.45936479408001823,
+      "min": 0.4578847610730768,
+      "max": 0.462018031436698,
+      "sample_sd": 0.002302886733945245
+    },
+    "K16": {
+      "mean": 0.46018855874120684,
+      "min": 0.45919143929703765,
+      "max": 0.46083916077353704,
+      "sample_sd": 0.0008768136937571222
+    },
+    "K4": {
+      "mean": 0.4647496206072012,
+      "min": 0.4623751666227557,
+      "max": 0.46851294380280406,
+      "sample_sd": 0.003296178915389233
+    },
+    "K1": {
+      "mean": 0.4644262575703251,
+      "min": 0.4638195307243289,
+      "max": 0.4654928167221697,
+      "sample_sd": 0.000926582872585572
+    },
+    "D1024": {
+      "mean": 0.46018855874120684,
+      "min": 0.45919143929703765,
+      "max": 0.46083916077353704,
+      "sample_sd": 0.0008768136937571222
+    },
+    "D512": {
+      "mean": 0.46212458278320945,
+      "min": 0.4604291804863642,
+      "max": 0.4634206603698711,
+      "sample_sd": 0.001535198078906757
+    },
+    "D256": {
+      "mean": 0.4607729470045638,
+      "min": 0.4602561757746149,
+      "max": 0.4615838252254484,
+      "sample_sd": 0.000711011573508166
+    },
+    "D128": {
+      "mean": 0.4618597153320572,
+      "min": 0.46141135319247306,
+      "max": 0.4627403001153584,
+      "sample_sd": 0.0007626514874225681
+    }
+  },
+  "gain_percent": {
+    "N_vs_D1024": {
+      "mean": 2.6942689045892174,
+      "min": 2.3737530724768363,
+      "max": 2.96811534555943,
+      "sample_sd": 0.2999169084399253
+    },
+    "N_vs_D512": {
+      "mean": 2.2848627186853654,
+      "min": 2.016848726485687,
+      "max": 2.7633020932210983,
+      "sample_sd": 0.41533996716679417
+    },
+    "N_vs_D256": {
+      "mean": 2.570928526966454,
+      "min": 2.4972552448275565,
+      "max": 2.696074303096885,
+      "sample_sd": 0.10894639833907764
+    },
+    "N_vs_D128": {
+      "mean": 2.341071055593854,
+      "min": 2.2182044715563842,
+      "max": 2.5524714462632936,
+      "sample_sd": 0.1838811539622474
+    },
+    "D1024_vs_D512": {
+      "mean": -0.42120103634194495,
+      "min": -0.9210147905430954,
+      "max": 0.022994050217872708,
+      "sample_sd": 0.4744557408245415
+    },
+    "D1024_vs_D256": {
+      "mean": -0.12719382430107137,
+      "min": -0.2803625256083242,
+      "max": 0.1265050908311638,
+      "sample_sd": 0.22128049449863418
+    },
+    "D1024_vs_D128": {
+      "mean": -0.3635970974072755,
+      "min": -0.7728499520273324,
+      "max": -0.12416315010546075,
+      "sample_sd": 0.3561284707924623
+    },
+    "K4_vs_D256": {
+      "mean": 0.8519829692941258,
+      "min": 0.3834865523766551,
+      "max": 1.7623350939188542,
+      "sample_sd": 0.7885005865269687
+    }
+  },
+  "retention": {
+    "definitions": {
+      "local": "(N-D)/(N-Q4K16)",
+      "original": "(N-D)/(N-Q3C64)"
+    },
+    "scope": "MSE-gain retention only, not semantic information; ratios are computed within each seed before averaging. Descriptive points, no ratio CI or clipping.",
+    "per_seed": [
+      {
+        "seed": 42,
+        "local": {
+          "D1024": 1.0,
+          "D512": 1.0081591758284172,
+          "D256": 0.919194728644058,
+          "D128": 0.9312400247164963
+        },
+        "original": {
+          "D1024": 1.1290001310058548,
+          "D512": 1.1382118415850377,
+          "D256": 1.0377709690590327,
+          "D128": 1.0513701099028196
+        }
+      },
+      {
+        "seed": 43,
+        "local": {
+          "D1024": 1.0,
+          "D512": 0.8496455464852736,
+          "D256": 1.0520282306456799,
+          "D128": 0.9489349482385397
+        },
+        "original": {
+          "D1024": 0.8088774156366118,
+          "D512": 0.6872590938481647,
+          "D256": 0.8509618763814347,
+          "D128": 0.767572048538452
+        }
+      },
+      {
+        "seed": 44,
+        "local": {
+          "D1024": 1.0,
+          "D512": 0.6989072508428141,
+          "D256": 0.9083455287984196,
+          "D128": 0.7473444301533005
+        },
+        "original": {
+          "D1024": 0.9148905641849219,
+          "D512": 0.6394236490365149,
+          "D256": 0.8310367533172371,
+          "D128": 0.683738367343412
+        }
+      }
+    ],
+    "across_seeds": {
+      "local": {
+        "D1024": {
+          "mean": 1.0,
+          "min": 1.0,
+          "max": 1.0,
+          "sample_sd": 0.0
+        },
+        "D512": {
+          "mean": 0.8522373243855017,
+          "min": 0.6989072508428141,
+          "max": 1.0081591758284172,
+          "sample_sd": 0.15464225250990865
+        },
+        "D256": {
+          "mean": 0.9598561626960525,
+          "min": 0.9083455287984196,
+          "max": 1.0520282306456799,
+          "sample_sd": 0.08000746132021497
+        },
+        "D128": {
+          "mean": 0.8758398010361121,
+          "min": 0.7473444301533005,
+          "max": 0.9489349482385397,
+          "sample_sd": 0.11163141508261118
+        }
+      },
+      "original": {
+        "D1024": {
+          "mean": 0.9509227036091294,
+          "min": 0.8088774156366118,
+          "max": 1.1290001310058548,
+          "sample_sd": 0.16307475134875574
+        },
+        "D512": {
+          "mean": 0.8216315281565726,
+          "min": 0.6394236490365149,
+          "max": 1.1382118415850377,
+          "sample_sd": 0.275207882486914
+        },
+        "D256": {
+          "mean": 0.9065898662525682,
+          "min": 0.8310367533172371,
+          "max": 1.0377709690590327,
+          "sample_sd": 0.11404215857489286
+        },
+        "D128": {
+          "mean": 0.8342268419282278,
+          "min": 0.683738367343412,
+          "max": 1.0513701099028196,
+          "sample_sd": 0.19266660490518833
+        }
+      }
+    }
+  },
+  "baseline_check": "All D1024 repeated errors exactly equal Q4 K16 for seeds 42/43/44.",
+  "equal_byte_comparison": "K4x1024 versus K16x256 (both 8 KiB) is exploratory, not an additional fixed-16 width contrast.",
+  "per_seed": [
+    {
+      "seed": 42,
+      "comparison": "N_vs_D1024",
+      "role": "width_sweep",
+      "state_kib": 32,
+      "mse_reference": 0.4735137971548345,
+      "mse_treatment": 0.4605350761530458,
+      "gain_percent": 2.7409382957313877,
+      "ci95_low_percent": 2.418377951383453,
+      "ci95_high_percent": 3.065542253352808,
+      "retention_local": 1.0,
+      "retention_original": 1.1290001310058548
+    },
+    {
+      "seed": 42,
+      "comparison": "N_vs_D512",
+      "role": "width_sweep",
+      "state_kib": 16,
+      "mse_reference": 0.4735137971548345,
+      "mse_treatment": 0.4604291804863642,
+      "gain_percent": 2.7633020932210983,
+      "ci95_low_percent": 2.3501289416035247,
+      "ci95_high_percent": 3.1999289956936297,
+      "retention_local": 1.0081591758284172,
+      "retention_original": 1.1382118415850377
+    },
+    {
+      "seed": 42,
+      "comparison": "N_vs_D256",
+      "role": "width_sweep",
+      "state_kib": 8,
+      "mse_reference": 0.4735137971548345,
+      "mse_treatment": 0.4615838252254484,
+      "gain_percent": 2.5194560329749205,
+      "ci95_low_percent": 2.1694764952581007,
+      "ci95_high_percent": 2.8590207701072696,
+      "retention_local": 0.919194728644058,
+      "retention_original": 1.0377709690590327
+    },
+    {
+      "seed": 42,
+      "comparison": "N_vs_D128",
+      "role": "width_sweep",
+      "state_kib": 4,
+      "mse_reference": 0.4735137971548345,
+      "mse_treatment": 0.46142749268834027,
+      "gain_percent": 2.5524714462632936,
+      "ci95_low_percent": 2.1844772091783673,
+      "ci95_high_percent": 2.906574678744049,
+      "retention_local": 0.9312400247164963,
+      "retention_original": 1.0513701099028196
+    },
+    {
+      "seed": 42,
+      "comparison": "D1024_vs_D512",
+      "role": "width_sweep",
+      "state_kib": 16,
+      "mse_reference": 0.4605350761530458,
+      "mse_treatment": 0.4604291804863642,
+      "gain_percent": 0.022994050217872708,
+      "ci95_low_percent": -0.28490838951080066,
+      "ci95_high_percent": 0.35220716042210887,
+      "retention_local": 1.0081591758284172,
+      "retention_original": 1.1382118415850377
+    },
+    {
+      "seed": 42,
+      "comparison": "D1024_vs_D256",
+      "role": "width_sweep",
+      "state_kib": 8,
+      "mse_reference": 0.4605350761530458,
+      "mse_treatment": 0.4615838252254484,
+      "gain_percent": -0.22772403812605369,
+      "ci95_low_percent": -0.4477609734807114,
+      "ci95_high_percent": -0.012326378739033214,
+      "retention_local": 0.919194728644058,
+      "retention_original": 1.0377709690590327
+    },
+    {
+      "seed": 42,
+      "comparison": "D1024_vs_D128",
+      "role": "width_sweep",
+      "state_kib": 4,
+      "mse_reference": 0.4605350761530458,
+      "mse_treatment": 0.46142749268834027,
+      "gain_percent": -0.1937781900890334,
+      "ci95_low_percent": -0.5272324009902907,
+      "ci95_high_percent": 0.12934252647562583,
+      "retention_local": 0.9312400247164963,
+      "retention_original": 1.0513701099028196
+    },
+    {
+      "seed": 42,
+      "comparison": "K4_vs_D256",
+      "role": "exploratory_equal_bytes",
+      "state_kib": 8,
+      "mse_reference": 0.46336075139604366,
+      "mse_treatment": 0.4615838252254484,
+      "gain_percent": 0.3834865523766551,
+      "ci95_low_percent": 0.11388626281516269,
+      "ci95_high_percent": 0.638195507699337,
+      "retention_local": 0.919194728644058,
+      "retention_original": 1.0377709690590327
+    },
+    {
+      "seed": 43,
+      "comparison": "N_vs_D1024",
+      "role": "width_sweep",
+      "state_kib": 32,
+      "mse_reference": 0.47204432750104575,
+      "mse_treatment": 0.46083916077353704,
+      "gain_percent": 2.3737530724768363,
+      "ci95_low_percent": 2.073197121382151,
+      "ci95_high_percent": 2.682852404532023,
+      "retention_local": 1.0,
+      "retention_original": 0.8088774156366118
+    },
+    {
+      "seed": 43,
+      "comparison": "N_vs_D512",
+      "role": "width_sweep",
+      "state_kib": 16,
+      "mse_reference": 0.47204432750104575,
+      "mse_treatment": 0.462523907493393,
+      "gain_percent": 2.016848726485687,
+      "ci95_low_percent": 1.5861994343437498,
+      "ci95_high_percent": 2.427765491971899,
+      "retention_local": 0.8496455464852736,
+      "retention_original": 0.6872590938481647
+    },
+    {
+      "seed": 43,
+      "comparison": "N_vs_D256",
+      "role": "width_sweep",
+      "state_kib": 8,
+      "mse_reference": 0.47204432750104575,
+      "mse_treatment": 0.4602561757746149,
+      "gain_percent": 2.4972552448275565,
+      "ci95_low_percent": 2.151420442083692,
+      "ci95_high_percent": 2.817717426777584,
+      "retention_local": 1.0520282306456799,
+      "retention_original": 0.8509618763814347
+    },
+    {
+      "seed": 43,
+      "comparison": "N_vs_D128",
+      "role": "width_sweep",
+      "state_kib": 4,
+      "mse_reference": 0.47204432750104575,
+      "mse_treatment": 0.46141135319247306,
+      "gain_percent": 2.2525372489618833,
+      "ci95_low_percent": 1.8854582859106173,
+      "ci95_high_percent": 2.6228451091502336,
+      "retention_local": 0.9489349482385397,
+      "retention_original": 0.767572048538452
+    },
+    {
+      "seed": 43,
+      "comparison": "D1024_vs_D512",
+      "role": "width_sweep",
+      "state_kib": 16,
+      "mse_reference": 0.46083916077353704,
+      "mse_treatment": 0.462523907493393,
+      "gain_percent": -0.3655823687006121,
+      "ci95_low_percent": -0.672676849674062,
+      "ci95_high_percent": -0.08140270045949131,
+      "retention_local": 0.8496455464852736,
+      "retention_original": 0.6872590938481647
+    },
+    {
+      "seed": 43,
+      "comparison": "D1024_vs_D256",
+      "role": "width_sweep",
+      "state_kib": 8,
+      "mse_reference": 0.46083916077353704,
+      "mse_treatment": 0.4602561757746149,
+      "gain_percent": 0.1265050908311638,
+      "ci95_low_percent": -0.1856896841575023,
+      "ci95_high_percent": 0.4181517621100782,
+      "retention_local": 1.0520282306456799,
+      "retention_original": 0.8509618763814347
+    },
+    {
+      "seed": 43,
+      "comparison": "D1024_vs_D128",
+      "role": "width_sweep",
+      "state_kib": 4,
+      "mse_reference": 0.46083916077353704,
+      "mse_treatment": 0.46141135319247306,
+      "gain_percent": -0.12416315010546075,
+      "ci95_low_percent": -0.39127114906522986,
+      "ci95_high_percent": 0.11019753936517328,
+      "retention_local": 0.9489349482385397,
+      "retention_original": 0.767572048538452
+    },
+    {
+      "seed": 43,
+      "comparison": "K4_vs_D256",
+      "role": "exploratory_equal_bytes",
+      "state_kib": 8,
+      "mse_reference": 0.46851294380280406,
+      "mse_treatment": 0.4602561757746149,
+      "gain_percent": 1.7623350939188542,
+      "ci95_low_percent": 1.4734719539573167,
+      "ci95_high_percent": 2.049334318065953,
+      "retention_local": 1.0520282306456799,
+      "retention_original": 0.8509618763814347
+    },
+    {
+      "seed": 44,
+      "comparison": "N_vs_D1024",
+      "role": "width_sweep",
+      "state_kib": 32,
+      "mse_reference": 0.47323767948273404,
+      "mse_treatment": 0.45919143929703765,
+      "gain_percent": 2.96811534555943,
+      "ci95_low_percent": 2.5732681668318382,
+      "ci95_high_percent": 3.3901571380548674,
+      "retention_local": 1.0,
+      "retention_original": 0.9148905641849219
+    },
+    {
+      "seed": 44,
+      "comparison": "N_vs_D512",
+      "role": "width_sweep",
+      "state_kib": 16,
+      "mse_reference": 0.47323767948273404,
+      "mse_treatment": 0.4634206603698711,
+      "gain_percent": 2.0744373363493107,
+      "ci95_low_percent": 1.6375549375540717,
+      "ci95_high_percent": 2.5285051807525494,
+      "retention_local": 0.6989072508428141,
+      "retention_original": 0.6394236490365149
+    },
+    {
+      "seed": 44,
+      "comparison": "N_vs_D256",
+      "role": "width_sweep",
+      "state_kib": 8,
+      "mse_reference": 0.47323767948273404,
+      "mse_treatment": 0.46047884001362804,
+      "gain_percent": 2.696074303096885,
+      "ci95_low_percent": 2.3137955950356632,
+      "ci95_high_percent": 3.0885301383378727,
+      "retention_local": 0.9083455287984196,
+      "retention_original": 0.8310367533172371
+    },
+    {
+      "seed": 44,
+      "comparison": "N_vs_D128",
+      "role": "width_sweep",
+      "state_kib": 4,
+      "mse_reference": 0.47323767948273404,
+      "mse_treatment": 0.4627403001153584,
+      "gain_percent": 2.2182044715563842,
+      "ci95_low_percent": 1.812410029783377,
+      "ci95_high_percent": 2.6611856712704616,
+      "retention_local": 0.7473444301533005,
+      "retention_original": 0.683738367343412
+    },
+    {
+      "seed": 44,
+      "comparison": "D1024_vs_D512",
+      "role": "width_sweep",
+      "state_kib": 16,
+      "mse_reference": 0.45919143929703765,
+      "mse_treatment": 0.4634206603698711,
+      "gain_percent": -0.9210147905430954,
+      "ci95_low_percent": -1.1960716203750466,
+      "ci95_high_percent": -0.6356050245938838,
+      "retention_local": 0.6989072508428141,
+      "retention_original": 0.6394236490365149
+    },
+    {
+      "seed": 44,
+      "comparison": "D1024_vs_D256",
+      "role": "width_sweep",
+      "state_kib": 8,
+      "mse_reference": 0.45919143929703765,
+      "mse_treatment": 0.46047884001362804,
+      "gain_percent": -0.2803625256083242,
+      "ci95_low_percent": -0.488627187232446,
+      "ci95_high_percent": -0.06356429677579938,
+      "retention_local": 0.9083455287984196,
+      "retention_original": 0.8310367533172371
+    },
+    {
+      "seed": 44,
+      "comparison": "D1024_vs_D128",
+      "role": "width_sweep",
+      "state_kib": 4,
+      "mse_reference": 0.45919143929703765,
+      "mse_treatment": 0.4627403001153584,
+      "gain_percent": -0.7728499520273324,
+      "ci95_low_percent": -0.9593313782363426,
+      "ci95_high_percent": -0.5807201782214563,
+      "retention_local": 0.7473444301533005,
+      "retention_original": 0.683738367343412
+    },
+    {
+      "seed": 44,
+      "comparison": "K4_vs_D256",
+      "role": "exploratory_equal_bytes",
+      "state_kib": 8,
+      "mse_reference": 0.4623751666227557,
+      "mse_treatment": 0.46047884001362804,
+      "gain_percent": 0.41012726158686785,
+      "ci95_low_percent": 0.04515804254039829,
+      "ci95_high_percent": 0.7570522812342407,
+      "retention_local": 0.9083455287984196,
+      "retention_original": 0.8310367533172371
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "val": {
+    "q_teacher_token_cosine": 0.8388495985847263,
+    "role": "auxiliary feature agreement; not a checkpoint-selection metric"
+  },
+  "test": {
+    "q_teacher_token_cosine": 0.8207190961526315,
+    "role": "auxiliary feature agreement; not a checkpoint-selection metric"
+  }
+}
