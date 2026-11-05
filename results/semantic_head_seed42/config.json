@@ -1,0 +1,30 @@
+{
+  "root": ".",
+  "steps": 3000,
+  "batch_size": 16,
+  "lr": 0.0002,
+  "seed": 42,
+  "eval_every": 100,
+  "resume": true,
+  "train_windows": 1624,
+  "val_windows": 475,
+  "parameters": 1398080,
+  "target": "phi_a",
+  "latent_slice": [
+    1,
+    5
+  ],
+  "feature_use": "per-token L2 normalized",
+  "selection": "highest validation group/class macro centered positive-negative margin",
+  "aggregation": "window -> video -> source group -> class macro",
+  "train_mean_baseline_cosine": 0.7143001998350931,
+  "train_mean_baseline_per_class": {
+    "BasketballDunk": 0.7350774774327874,
+    "Diving": 0.6988456483250336,
+    "GolfSwing": 0.7115362955345994,
+    "LongJump": 0.649544249244389,
+    "TennisSwing": 0.7378525416411105,
+    "VolleyballSpiking": 0.7529449868326386
+  },
+  "retrieval_negatives": 8
+}

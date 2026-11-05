@@ -1,0 +1,61 @@
+{
+  "cosine": 0.8388495689001743,
+  "centered_cosine": 0.6088924685833118,
+  "positive_negative_margin": 0.22556788917808304,
+  "pairwise_accuracy": 0.973488136574074,
+  "retrieval_top1": 0.8784308862433864,
+  "loss": 0.16115043109982574,
+  "negative_count": 8,
+  "retrieval_chance": 0.1111111111111111,
+  "prediction_variance_ratio": 0.6339483857154846,
+  "per_class": {
+    "BasketballDunk": {
+      "cosine": 0.8607728095725179,
+      "centered_cosine": 0.6518336134031415,
+      "positive_negative_margin": 0.19495003866031765,
+      "pairwise_accuracy": 0.916015625,
+      "retrieval_top1": 0.578125
+    },
+    "Diving": {
+      "cosine": 0.8767836448396482,
+      "centered_cosine": 0.731585510562928,
+      "positive_negative_margin": 0.13084538429532022,
+      "pairwise_accuracy": 0.9618365575396824,
+      "retrieval_top1": 0.8524305555555556
+    },
+    "GolfSwing": {
+      "cosine": 0.8396238286402964,
+      "centered_cosine": 0.6097759872541896,
+      "positive_negative_margin": 0.20478191488378103,
+      "pairwise_accuracy": 0.96875,
+      "retrieval_top1": 0.8854166666666667
+    },
+    "LongJump": {
+      "cosine": 0.7983341896019521,
+      "centered_cosine": 0.5876234819713448,
+      "positive_negative_margin": 0.2153185422620958,
+      "pairwise_accuracy": 0.9969308035714286,
+      "retrieval_top1": 0.9754464285714286
+    },
+    "TennisSwing": {
+      "cosine": 0.8294177000366506,
+      "centered_cosine": 0.5490876454416486,
+      "positive_negative_margin": 0.31383347342766466,
+      "pairwise_accuracy": 1.0,
+      "retrieval_top1": 1.0
+    },
+    "VolleyballSpiking": {
+      "cosine": 0.8281652407099803,
+      "centered_cosine": 0.5234485728666186,
+      "positive_negative_margin": 0.29367798153931896,
+      "pairwise_accuracy": 0.9973958333333334,
+      "retrieval_top1": 0.9791666666666666
+    }
+  },
+  "step": 2800,
+  "train_loss": 0.11300922214984893,
+  "elapsed_seconds": 25.148936714977026,
+  "mean_baseline_cosine": 0.7143001998350931,
+  "cosine_gain_over_mean": 0.12454936906508118,
+  "peak_gpu_gib": 0.7377963066101074
+}

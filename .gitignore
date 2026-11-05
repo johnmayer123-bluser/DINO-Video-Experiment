@@ -1,0 +1,32 @@
+# Downloaded models, videos, frozen features and training checkpoints
+/models/
+/data/
+/cache/
+/runs/
+/logs/
+/third_party/
+
+# Python and editor state
+__pycache__/
+*.py[cod]
+.venv/
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Download archives and temporary transfers
+*.rar
+*.tar
+*.tar.gz
+*.zip
+*.part
+*.aria2
+*.tmp
+*.pt
+*.pth
+*.safetensors
+
+# Local credentials
+.env
+.env.*

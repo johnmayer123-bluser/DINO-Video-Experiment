@@ -1,0 +1,8 @@
+accelerate==1.11.0
+av==19.0.2
+diffusers==0.35.2
+einops==0.8.2
+matplotlib==3.10.5
+numpy==2.3.2
+safetensors==0.8.0
+transformers==4.57.1
