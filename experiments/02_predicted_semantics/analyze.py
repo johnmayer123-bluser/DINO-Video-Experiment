@@ -127,7 +127,7 @@ def plot(runs,directory,split):
     span=max(means)*.02
     for i,value in enumerate(means):axes[0].text(i,value+span/3,f"{value:.4f}",ha="center")
     axes[0].set(title=f"Overall {split} error",ylabel="Velocity MSE",xticks=range(4),
-                xticklabels=["N\nNone","T\nTeacher","D\nDirect swap","P\nAdapted"],ylim=(0,max(means)*1.12))
+                xticklabels=["No history","Teacher +\ndropout","Direct\nswap","Train on\npredictions"],ylim=(0,max(means)*1.12))
     for j,run in enumerate(runs):
         p=[run["pairs"][k]["primary"] for k in ("N_vs_T","N_vs_D","N_vs_P")]
         x=np.arange(3)+(j-1)*.12
@@ -137,11 +137,11 @@ def plot(runs,directory,split):
         ratios=[run["teacher_benefit_retained"][a] for a in ("D","P")]
         axes[2].plot(np.arange(2)+(j-1)*.12,[np.nan if r is None else 100*r for r in ratios],"o",color=f"C{j}",label=f"seed {run['seed']}")
     axes[1].axhline(0,color="black",lw=.8)
-    axes[1].set(title="Benefit over no-history N",ylabel="MSE reduction (%)",xticks=range(3),xticklabels=["T","D","P"])
+    axes[1].set(title="Benefit over no history",ylabel="MSE reduction (%)",xticks=range(3),xticklabels=["Teacher +\ndropout","Direct\nswap","Train on\npredictions"])
     axes[1].legend(title="95% source-group CI",loc="lower right")
     axes[2].axhline(100,color="grey",ls="--",lw=.9)
     axes[2].axhline(0,color="black",lw=.8)
-    axes[2].set(title="Teacher benefit retained",ylabel="R (%) — descriptive, no ratio CI",xticks=[0,1],xticklabels=["D: direct swap","P: adapted"])
+    axes[2].set(title="Teacher benefit retained",ylabel="R (%) — descriptive, no ratio CI",xticks=[0,1],xticklabels=["Direct swap","Train on\npredictions"])
     axes[2].legend(loc="best")
     fig.suptitle("Predicted semantics — frozen q, three denoiser seeds, final step 6000",fontsize=13)
     fig.savefig(directory/"comparison.png",dpi=180)

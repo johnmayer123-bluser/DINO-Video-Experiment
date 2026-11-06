@@ -126,20 +126,20 @@ def plot(runs,directory):
     for run in runs:
         axes[0].plot(x,[run["mse"][arm] for arm in CURVE],color="#0072B2",alpha=.25,lw=1)
     axes[0].plot(x,[np.mean([r["mse"][arm] for r in runs]) for arm in CURVE],"o-",color="#0072B2",lw=2,label="16-token width mean")
-    axes[0].axhline(np.mean([r["mse"]["N"] for r in runs]),color="#607080",ls="--",lw=1,label="N: no state (0 KiB)")
-    for kib,arm,marker,label in ((72,"L","D","L: latent (72 KiB)"),(128,"K64","^","Original K64 (128 KiB)"),(8,"K4","x","K4x1024: exploratory")):
+    axes[0].axhline(np.mean([r["mse"]["N"] for r in runs]),color="#607080",ls="--",lw=1,label="No history (0 KiB)")
+    for kib,arm,marker,label in ((72,"L","D","Full history latent (72 KiB)"),(128,"K64","^","64 tokens (128 KiB)"),(8,"K4","x","4 tokens × 1024 dims (exploratory)")):
         axes[0].plot(kib,np.mean([r["mse"][arm] for r in runs]),marker,color="black",label=label)
     axes[0].set_xscale("log",base=2)
     axes[0].set(title="State cost versus overall test error",xlabel="Persistent FP16 state (KiB)",ylabel="Velocity MSE",xticks=[4,8,16,32,72,128],xticklabels=["4","8","16","32","72","128"])
     axes[0].legend(loc="best")
-    for axis,name,title in ((axes[1],"local","Relative to Q4 K16x1024"),(axes[2],"original","Relative to Q3 K64x1024")):
+    for axis,name,title in ((axes[1],"local","Relative to 16 tokens × 1024 dims"),(axes[2],"original","Relative to 64 tokens × 1024 dims")):
         for run in runs:
             axis.plot(x,[np.nan if run["retention"][name][arm] is None else 100*run["retention"][name][arm] for arm in CURVE],"o-",alpha=.45,lw=1,label=f"seed {run['seed']}")
         mean=[100*np.mean([r["retention"][name][arm] for r in runs]) if all(r["retention"][name][arm] is not None for r in runs) else np.nan for arm in CURVE]
         axis.plot(x,mean,"o-",color="black",lw=2,label="Seed mean")
         axis.axhline(100,color="grey",ls="--",lw=.8);axis.axhline(0,color="grey",lw=.6)
         axis.set_xscale("log",base=2)
-        axis.set(title=title,xlabel="FP16 state KiB (dimension D)",ylabel="MSE-gain retention (%) — descriptive",xticks=x,xticklabels=["4\n128","8\n256","16\n512","32\n1024"])
+        axis.set(title=title,xlabel="FP16 state KiB (dimensions/token)",ylabel="MSE-gain retention (%) — descriptive",xticks=x,xticklabels=["4\n128","8\n256","16\n512","32\n1024"])
         axis.legend(loc="best")
     fig.suptitle("History compression — fixed 16 tokens, paired seeds 42/43/44, step 6000",fontsize=12)
     fig.savefig(directory/"comparison.png",dpi=180)

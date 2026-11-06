@@ -85,7 +85,7 @@ def plot(runs, directory):
         axes[0].scatter(np.arange(4)+(j-1)*.10,[run["mse"][arm] for arm in ARMS],s=19,
                         facecolors="white",edgecolors="black",linewidths=.7,zorder=3)
     axes[0].set(title="Overall test error",ylabel="Velocity MSE (lower is better)",xticks=range(4),
-                xticklabels=["N\nNo history","S\nSemantics","SD\nS + dropout","L\nHistory latent"],ylim=(0,.52))
+                xticklabels=["No history","Teacher\nsemantics","Teacher +\ndropout","Full history\nlatent"],ylim=(0,.52))
     for j, run in enumerate(runs):
         points=[run["pairs"][p]["primary"] for p in ("N_vs_SD","S_vs_SD")]
         x=np.arange(2)+(j-1)*.12
@@ -93,8 +93,8 @@ def plot(runs, directory):
                        [100*p["ci95"]["relative_improvement"][1] for p in points],color=f"C{j}")
         axes[1].plot(x,[100*p["relative_improvement"] for p in points],"o",color=f"C{j}",label=f"seed {run['seed']}")
     axes[1].axhline(0,color="black",lw=.8)
-    axes[1].set(title="SD improves overall test error",ylabel="MSE reduction (%)",xticks=[0,1],
-                xticklabels=["SD over N","SD over S"])
+    axes[1].set(title="Teacher + dropout: test benefit",ylabel="MSE reduction (%)",xticks=[0,1],
+                xticklabels=["Teacher + dropout\nvs no history","Teacher + dropout\nvs teacher semantics"])
     axes[1].legend(title="95% source-group CI",loc="lower right")
     fig.suptitle("History semantics — final step 6000, three training seeds",fontsize=13)
     fig.savefig(directory/"comparison.png",dpi=180)

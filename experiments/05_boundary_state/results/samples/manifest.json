@@ -1,0 +1,52 @@
+{
+  "seed": 42,
+  "euler_steps": 32,
+  "fps": 12,
+  "selection": "First sorted test window per class; selected without model scores",
+  "decoder": "All groups use identical observed A prefix for VAE decoding; denoisers only see their permitted conditions.",
+  "panels": [
+    "S8",
+    "B18",
+    "H26",
+    "S26",
+    "VAE reference"
+  ],
+  "cases": [
+    {
+      "case": 1,
+      "id": "v_BasketballDunk_g01_c03_s00000",
+      "video": "BasketballDunk/v_BasketballDunk_g01_c03.avi",
+      "noise_seed": 70042
+    },
+    {
+      "case": 2,
+      "id": "v_Diving_g01_c01_s00000",
+      "video": "Diving/v_Diving_g01_c01.avi",
+      "noise_seed": 70043
+    },
+    {
+      "case": 3,
+      "id": "v_GolfSwing_g01_c01_s00000",
+      "video": "GolfSwing/v_GolfSwing_g01_c01.avi",
+      "noise_seed": 70044
+    },
+    {
+      "case": 4,
+      "id": "v_LongJump_g01_c01_s00000",
+      "video": "LongJump/v_LongJump_g01_c01.avi",
+      "noise_seed": 70045
+    },
+    {
+      "case": 5,
+      "id": "v_TennisSwing_g01_c02_s00000",
+      "video": "TennisSwing/v_TennisSwing_g01_c02.avi",
+      "noise_seed": 70046
+    },
+    {
+      "case": 6,
+      "id": "v_VolleyballSpiking_g01_c01_s00000",
+      "video": "VolleyballSpiking/v_VolleyballSpiking_g01_c01.avi",
+      "noise_seed": 70047
+    }
+  ]
+}

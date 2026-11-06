@@ -1,0 +1,52 @@
+Completely REDESIGN the attached Experiment 01 figure. The old Where/How attention tutorial layout must be discarded. Create one concise ENGLISH research diagram explaining this experiment: Can the semantics of history chunk A help denoise next chunk B WITHOUT providing A's latent to the denoiser?
+
+Style: wide landscape 16:9, pure white, clean publication figure, flat colored blocks, thin precise connectors, generous whitespace, large readable labels, no gradients/shadows, no paragraphs. Blue=denoising features, orange=semantic tokens, gray=frozen or zero inputs, purple=loss. Minimal words; primarily visual. Do not reproduce the old oversized attention inset or its matrix equation. No detailed channel counts or lists.
+
+Exact title: "01  History semantics without history latents"
+
+STRUCTURE: a shared input preparation strip at top, followed by TWO aligned horizontal experiment lanes. Each lane contains its own independently trained 3D U-Net, represented by only Encoder -> Cross-attn -> Decoder. Each Cross-attn is inside its U-Net and has small label "Bottleneck". Both networks must retain identical structure.
+
+TOP SHARED INPUT STRIP:
+Blue block "Target latent z_B" and small noise symbol "ε" feed a tiny mixing node "Add noise" -> blue "Noisy B". Small time token "t" is also shown. The same Noisy B signal is branched and routed to BOTH experiment lanes. Do not show a VAE here: z_B is already cached. No z_A block exists anywhere.
+
+TOP LANE label "No history":
+Gray block "Zeros" and the shared blue Noisy B feed a small "Concat" junction -> blue "Encoder" -> "Cross-attn" -> blue "Decoder" -> "v̂_B" -> purple "MSE".
+A separate gray stack "Zero tokens" enters the Cross-attn from above, labeled "K,V". The arrow entering Cross-attn from Encoder is labeled "Q".
+The Zeros block stands for the historical-latent input slot and must NEVER be connected to any video A source. The Concat output is the ONLY input to Encoder.
+A small t arrow enters the U-Net to show time conditioning.
+
+BOTTOM LANE label "Semantics only":
+Exactly the same main flow: gray "Zeros" + SAME blue Noisy B -> "Concat" -> "Encoder" -> "Cross-attn" -> "Decoder" -> "v̂_B" -> purple "MSE".
+Immediately above this lane's Cross-attn, put a compact orange semantic source branch:
+small filmstrip "History A" -> gray PADLOCK "V-JEPA" -> orange token stack "φ(A)" -> small switch "Dropout" -> Cross-attn, arrow labeled "K,V".
+Under the switch write "0% / 10% (train)" to indicate TWO separately trained semantic variants; at test use full tokens. The orange arrow MUST end only at Cross-attn and NEVER reach Concat or Encoder. Encoder's incoming feature arrow into Cross-attn is labeled "Q".
+A small t arrow enters this U-Net as well.
+
+At the right edge between the two MSE loss boxes, a single purple-outlined target "z_B − ε" sends an arrow to EACH MSE. Each MSE compares its own prediction against the same target. No loss-arrow goes between the U-Nets, and they do NOT share learned weights.
+
+Three very short footer phrases, laid out on one line with generous separation:
+"History latent slot = 0"
+"Separate models · matched initialization, data and noise"
+"Full semantics at test"
+
+Critical constraints:
+- No raw historical latent z_A exists or enters either denoiser.
+- No independently trained predictor q; semantics come DIRECTLY from frozen V-JEPA on clean A.
+- Do not remove or bypass cross-attention for the no-history lane: its context tokens are zero.
+- Only the semantic branch distinguishes the two pathways (with the 0%/10% training-dropout variants).
+- Do not include results, percentages of MSE improvement, old group letters N/S/SD/L, detailed resolutions, any segmentation masks, or any new method components.
+- Ensure all forward arrows point LEFT TO RIGHT, semantic context arrows go INTO Cross-attn, and target arrows go INTO the loss boxes.
+Keep text compact and modules well separated. The figure should make the causal experiment clear at a glance.
+
+=== Revision ===
+Refine this scientific experiment diagram. Preserve all current labels, modules, two-lane layout, frozen V-JEPA branch, zeros inputs, losses, target, fonts, and colors EXCEPT the exact corrections below. Do not add explanatory text.
+
+1. Remove the incorrect black long overhead connectors in BOTH experiment lanes: the horizontal black line above Encoder/Cross-attn/Decoder with downward arrowheads into Encoder and Decoder must be completely erased. Do not replace it with another bypass. Preserve the short t -> Encoder arrow, the vertical Zero tokens -> Cross-attn arrow, the orange φ(A)/Dropout -> Cross-attn arrow, and the straight main Encoder -> Cross-attn -> Decoder arrows. The semantics or zero context must feed ONLY Cross-attn.
+
+2. Correct the shared Noisy B signal. Its blue output line must form ONE CONTINUOUS spine connecting the top preparation-strip Noisy B box to BOTH small Noisy B input boxes in the two experiment lanes. Use a single vertical blue line just to the right of the two lane-input boxes, with two short left-pointing branches into the right edge of those boxes. The lower lane must not start from the first lane's border: it must be continuously connected to the same shared Noisy B source. Remove the unused short blue line/dot to the right of the top Noisy B source.
+
+3. Simplify the TOP preparation strip only: replace its current Target latent / ε / plus-circle / Add noise nodes with ONE light-blue rounded box showing the exact equation:
+"z_B(t) = (1 − t) ε + t z_B"
+Connect this equation box with a right-pointing black arrow to the EXISTING top-strip Noisy B box. Keep the equation box entirely to the left of that Noisy B box. Remove the isolated t box from the TOP STRIP ONLY; retain both t boxes above the two Encoders. This is flow-matching interpolation, not a simple unweighted sum.
+
+Do not touch any other labels, modules, φ(A), 0%/10% dropout annotation, prediction arrows, MSE boxes, shared z_B−ε target or footer. Make the three routing fixes crisp and unambiguous.

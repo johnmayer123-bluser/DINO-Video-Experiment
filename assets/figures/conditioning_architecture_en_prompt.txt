@@ -1,0 +1,99 @@
+Use case: scientific-educational / infographic-diagram.
+Create ONE polished English-language scientific architecture figure for a computer-vision paper. Wide landscape, ideally 3840 x 2160, high resolution. White background, crisp vector-like raster drawing, sharp readable sans-serif text, thin precise arrows, ample whitespace, restrained academic styling. No photography, no decorative glow, no watermark. The diagram must be scientifically faithful to the architecture below.
+
+TITLE: "Latent Inputs and Compressed History Conditioning"
+Small subtitle: "Current 3D U-Net architecture with a 16 x 256 history state"
+
+COMPOSITION: One integrated multi-panel figure. Panel (a), top left: input construction and the learned history encoder. Panel (b), across the lower portion and visually dominant: the actual U-shaped 3D U-Net, with encoder on the left, bottleneck at the bottom, decoder on the right, and two skip connections. Panel (c), top right: a clean magnified view of bottleneck cross-attention. Use clearly routed connectors to show the same signals flowing between panels.
+COLOR KEY: blue = noisy-target / U-Net feature stream; orange = learned history-token conditioning; green = direct history-latent conditioning; purple = diffusion/flow timestep conditioning. Light gray = frozen VAE / other infrastructure. Use orange and green consistently to make the two historical-conditioning mechanisms visually distinct.
+
+(a) "Inputs and history encoding"
+A tiny abstract filmstrip labeled "Training clip: anchor + A + B" enters ONE box labeled "Frozen causal 3D VAE". This encodes the entire window; do NOT show A and B encoded by separate VAEs.
+The VAE output splits into:
+  "History latent z_A" with shape "16 x 4 x 24 x 24".
+  "Clean target latent z_B" with shape "16 x 4 x 24 x 24".
+Only z_A goes to the orange history-encoding branch:
+  "Trainable 3D history encoder" -> "Pool to 4 x 2 x 2 + token L2 norm" -> a clearly drawn 16-token matrix labeled "m_A: 16 x 256" and "8 KiB, FP16".
+A small note under the encoder: "Conv3D: 16 -> 64 -> 128 -> 256 -> 256". This is a compact summary of channels, not a transformer. Another small note if space allows: "4 x 4 x 4 grid before final pooling".
+The z_B branch and Gaussian noise epsilon enter a blue "Flow corruption" box labeled "z_B,t = (1-t) epsilon + t z_B". Its output is "Noisy B latent z_B,t".
+Do not route the clean future z_B to the history encoder or to attention K/V.
+Draw a green dashed route from z_A to the optional history-input selector adjacent to panel (b). It represents the full-latent BASELINE, not the current compressed-only model.
+
+(b) "3D U-Net denoiser"
+At the entrance, show a clear green/blue two-input CHANNEL CONCATENATION symbol, not addition:
+  green input "History slot h_A" with shape "16 x 4 x 24 x 24";
+  blue input "Noisy B latent z_B,t" with shape "16 x 4 x 24 x 24".
+Their output: "Channel concat" with shape "32 x 4 x 24 x 24".
+The green history-slot selector MUST prominently state:
+  "Current compact model: h_A = 0"
+  "Full-latent baseline: h_A = z_A"
+For the full-latent-only baseline, also state in the small configuration legend that "m_A = 0".
+Thus the main current compact model does not receive raw z_A directly. Its orange m_A branch remains active.
+
+Exact U-Net feature path, draw in a conventional U shape with matching skips:
+  Input Conv3D 32 -> 64, then "ResBlock" at "64 x 4 x 24 x 24".
+  Spatial downsample, then "ResBlock" at "128 x 4 x 12 x 12".
+  Spatial downsample, then "ResBlock" at "256 x 4 x 6 x 6".
+  Distinct orange-highlighted "Bottleneck cross-attention" at the same "256 x 4 x 6 x 6" shape.
+  Another "ResBlock" at "256 x 4 x 6 x 6".
+  Spatial upsample, CONCAT the skip from the 128-channel encoder level, then "ResBlock" producing "128 x 4 x 12 x 12".
+  Spatial upsample, CONCAT the skip from the 64-channel encoder level, then "ResBlock" producing "64 x 4 x 24 x 24".
+  "Output Conv3D 64 -> 16" -> "Predicted flow velocity v_hat_B" with shape "16 x 4 x 24 x 24".
+The temporal length stays 4 throughout; only spatial height and width are down/up-sampled. There are two encoder-decoder skip connections. Do not label skips as additions; they are concatenations. The bottleneck order is ResBlock -> cross-attention -> ResBlock.
+Route the orange history tokens directly into this bottleneck attention block, NOT into the input concatenation.
+Show a small purple side box "t -> sinusoidal embedding + MLP" and annotate "Scale / shift in all ResBlocks". Do NOT concatenate timestep channels into the input. A dashed purple bus is sufficient; do not crowd the figure with six crossing arrows.
+
+(c) "How history tokens condition the bottleneck"
+Make query versus key/value origins unmistakable.
+Blue bottleneck feature map F, "256 x 4 x 6 x 6" -> "Flatten + LayerNorm + position" -> "Query tokens: 144 x 256".
+Orange m_A, "16 x 256" -> "LayerNorm + Linear + position" -> "Context tokens: 16 x 256".
+The query tokens go to the Q port; context tokens go to BOTH K and V ports of ONE box labeled "8-head cross-attention".
+Output -> "Residual + FFN" -> "Reshape to 256 x 4 x 6 x 6".
+Add a clear concise line: "Queries from the noisy-video features; keys and values from history tokens."
+Connect this inset as a zoom callout to the attention block in (b); do not imply a second attention layer.
+You may include the concise formula "Attention(Q,K,V) = softmax(QK^T / sqrt(d)) V" if readable.
+
+BOTTOM CAPTION / LEGEND, exact technical meaning, concise:
+"Direct latent conditioning = channel concatenation at the input."
+"Compressed history conditioning = cross-attention at the bottleneck."
+"Both are model inputs; they enter through different operators."
+"Current training: flow-matching loss only; no V-JEPA alignment."
+"Shapes omit batch. Feature-map order: C x T x H x W."
+If space permits add "Loss: MSE(v_hat_B, z_B - epsilon)" near the output, but avoid clutter.
+
+ACCURACY CONSTRAINTS:
+This is a convolutional 3D U-Net, NOT a DiT. The current history encoder is trainable and uses only past chunk A. The VAE is frozen. The model predicts velocity, not decoded RGB frames. There is NO active V-JEPA teacher branch and NO two-pass/self-conditioning loop in this figure. There is NO recursive long-history module or implemented Q5 boundary branch. Do not label m_A as guaranteed pure semantic information; use "compressed history tokens" or "learned history state". The original name "semantic condition" describes the attention interface, not a separate teacher in the current model.
+Keep arrows correct, labels legible, and modules aligned. Prefer fewer explanatory words over tiny text, but preserve all essential shapes, the zero-history choice, and query/key/value direction.
+
+
+--- Image edit: conditioning_architecture_en_edit_prompt.txt ---
+
+Edit this English scientific architecture diagram with exactly two local connection fixes. Preserve the entire existing composition, resolution, text, colors, shapes, all other arrows, and panel layout.
+
+1. In panel (b), add a short green right-pointing solid arrow from the right edge of the green "History-input selector (for history slot h_A)" box to the left edge of the adjacent green "History slot h_A, 16 x 4 x 24 x 24" box. This makes the selector visibly feed the history slot.
+
+2. In the left encoder of panel (b), correct the connection into the SECOND gray spatial-downsample box (the lower one, between the 128-channel and 256-channel ResBlocks). Currently a vertical line from the FIRST downsample output continues directly into the SECOND downsample, visually bypassing the 128 x 4 x 12 x 12 ResBlock. Remove only that bypass segment. Keep the first downsample output entering the left edge of the 128-channel ResBlock. Draw a black elbow connector that begins at the BOTTOM edge of the 128 x 4 x 12 x 12 ResBlock, then routes a short distance down, then left and into the RIGHT edge of the SECOND gray downsample box with an arrowhead pointing into that box. Avoid overlapping the nearby purple dashed timestep-conditioning arrow. Keep the existing blue horizontal skip connection from the right side of the 128-channel ResBlock to the decoder. Keep the second downsample output connected to the 256 x 4 x 6 x 6 ResBlock. The unambiguous encoder order must be: first downsample -> 128-channel ResBlock -> second downsample -> 256-channel ResBlock.
+
+No other edits. Do not add any modules, labels, annotations, or content.
+
+
+
+--- Image edit: conditioning_architecture_en_edit2_prompt.txt ---
+
+Make ONLY two tiny black-arrow corrections in panel (b), preserving every other pixel and label as closely as possible.
+The encoder on the left must be a serial chain: upper gray spatial-downsample box -> blue 128 x 4 x 12 x 12 ResBlock -> lower gray spatial-downsample box -> blue 256 x 4 x 6 x 6 ResBlock.
+
+(1) Restore the missing arrow from the UPPER gray spatial-downsample box to the blue 128-channel ResBlock to its lower right. Draw a black line out of the BOTTOM CENTER of the upper gray downsample box, descend to the vertical center of the blue 128-channel ResBlock, then turn RIGHT and finish with one right-pointing arrowhead entering the LEFT EDGE of that blue 128-channel ResBlock. The connector must be continuous, including the short vertical segment below the upper gray box. It may cross the purple dashed timestep line but must not join it.
+
+(2) The existing elbow line from the BOTTOM of the blue 128-channel ResBlock to the RIGHT EDGE of the LOWER gray downsample box should have ONLY ONE arrowhead, pointing LEFT into the lower gray box. Remove the extra upward-facing arrowhead that currently points back into the BOTTOM of the blue 128-channel ResBlock. Keep the elbow line, and retain the left-facing arrowhead into the gray box. Thus the line emerges without an arrowhead from the blue block, goes down, and goes left into the lower gray block.
+
+Do not change the green selector arrow, the skip connections, the other encoder/decoder connections, any text, or the layout.
+
+
+
+--- Image edit: conditioning_architecture_en_edit3_prompt.txt ---
+
+Surgical cleanup of ONE tiny erroneous arrowhead. Keep the entire image unchanged except for this:
+Locate the blue encoder box reading "ResBlock 128 x 4 x 12 x 12", near 44% image width and 68% image height. At its bottom-right edge there is a small BLACK TRIANGULAR ARROWHEAD pointing UP into this blue box. ERASE THAT BLACK TRIANGLE ONLY. Retain the thin black vertical line underneath the triangle so that this line simply touches the bottom of the blue box WITHOUT an arrowhead. This black line continues downward, then leftward, ending in a left-pointing arrowhead into the gray lower spatial-downsample box. Retain that left-pointing arrowhead.
+It is essential that there is NO upward-pointing black triangle under the 128-channel encoder ResBlock. The flow direction is from this blue ResBlock DOWN, then LEFT into the gray downsample.
+Do not change any other part of the image, text or connectors. Do not introduce another arrowhead at this spot. All text and layout must remain identical.

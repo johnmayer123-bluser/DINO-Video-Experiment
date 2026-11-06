@@ -52,9 +52,9 @@ def main():
     fig, axes = plt.subplots(1, 2, figsize=(11.2, 4.3), constrained_layout=True)
 
     axes[0].plot(steps, mse_a, marker="o", markersize=3.5, linewidth=1.8,
-                 color="#4C78A8", label="A: history latent")
+                 color="#4C78A8", label="Latent only")
     axes[0].plot(steps, mse_b, marker="o", markersize=3.5, linewidth=1.8,
-                 color="#E45756", label="B: + predicted semantics")
+                 color="#E45756", label="Latent + prediction")
     axes[0].set_xlabel("Optimizer updates")
     axes[0].set_ylabel("Validation velocity MSE\n(class-macro mean over five t values)")
     axes[0].set_title("Equal-budget validation curves")
@@ -77,7 +77,7 @@ def main():
 
     seed = config.get("seed", "unknown")
     fig.suptitle(
-        f"Denoiser A/B experiment — seed {seed}, fixed step {args.step}\n"
+        f"Latent history with predicted semantics — seed {seed}, fixed step {args.step}\n"
         "Fixed validation noise; paired source-group bootstrap within class",
         fontsize=12,
     )

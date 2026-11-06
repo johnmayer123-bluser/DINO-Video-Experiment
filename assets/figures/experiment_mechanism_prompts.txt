@@ -1,0 +1,85 @@
+Generated with built-in image_gen. English experiment mechanism figures.
+
+=== exp00_pipeline_en.png ===
+Use case: scientific-educational. Create a publication-quality English mechanism figure for a computer vision research paper. Wide landscape, pure white background, exceptionally clean flat vector-like design, no gradient, no 3D rendering, no shadows. Thin consistent arrows, readable modern sans-serif type, ample white space. Short labels only: mostly 1–3 words. Explain through geometry and arrows, never paragraphs. Muted blue = denoising/video features; green = direct history latent; warm orange = semantic/history tokens; gray = frozen teacher or frozen modules; purple = loss. The output must be a single polished research diagram, not a poster, slide deck, screenshot, or infographic full of prose. Use exact English labels specified below; do not add explanatory footnotes, results, implementation lists, parameter counts, or legends larger than the diagram. Draw each dependency once. Arrows must have correct direction and connect to the appropriate module.
+Title: "00  Latent + prediction"
+Two separated stages arranged left to right. Left panel about one-third width, right panel two-thirds. Stage labels "(a) Pretrain predictor" and "(b) Train denoiser".
+
+Panel (a), small and simple:
+Top row: small clean video filmstrip "Video A" -> gray locked "V-JEPA" -> orange token stack "φ(A)".
+Bottom row: green latent block "z_A" -> orange outlined "Predictor q" -> orange token stack "q(z_A)".
+The two token stacks feed a small purple node "Cosine loss", so the teacher supervises the predictor. V-JEPA is frozen, q is trainable in this panel. Put a single rightward transition marker between panels reading "Freeze q". No connection from the teacher to the denoiser.
+
+Panel (b):
+At the TOP, a tiny filmstrip "A | B" -> locked gray "VAE" -> a horizontal latent timeline with one small gray anchor cell then two longer colored groups labeled "z_A" (green) and "z_B" (blue). Under the timeline put the brief label "Temporal split". This is splitting an encoded latent sequence along time, not segmentation masks. No segmentation network.
+From z_A make TWO clearly branched arrows: one green into the denoiser input "Concat"; one into a small locked "Predictor q" -> orange token stack "History tokens". The latter follows an orange line into the U-Net bottleneck.
+From z_B draw -> small "Add noise" node -> blue block "z_B(t)" -> the SAME input "Concat". Label that junction "Channel concat" (never time concat).
+Draw the 3D U-Net below as a clean U with ONLY five stage boxes: left top "Encoder" with small "24²"; left lower "12²"; bottom center orange-accented "Cross-attn" with small "6²"; right lower "12²"; right top "Decoder" with small "24²". Connect in ONE serial U-shaped route: encoder24 -> encoder12 -> bottleneck6 -> decoder12 -> decoder24 -> "v̂_B". Thin horizontal skip arrows connect matching 24² and 12² scales. Label outline "3D U-Net". The orange history-token line ends at Cross-attn, not at Concat. The green raw latent line ends at Concat, not at Cross-attn.
+Use two tiny comparison labels at bottom: "Latent only: zero tokens" and "Latent + prediction: q(z_A)". No old group letters A/B in these labels: A/B denote video chunks only.
+Keep total visible text under 85 words. This is the historical Exp.00 with 64-token semantic predictions, NOT the current 16-token model; do not show 16×256, recurrent memory, two-pass generation, or a trainable teacher.
+
+=== exp01_bottleneck_attention_en.png ===
+Current design and revision prompts: exp01_history_semantics_prompt.txt
+
+=== exp02_condition_transfer_en.png ===
+Use case: scientific-educational. Create a publication-quality English mechanism figure for a computer vision research paper. Wide landscape, pure white background, exceptionally clean flat vector-like design, no gradient, no 3D rendering, no shadows. Thin consistent arrows, readable modern sans-serif type, ample white space. Short labels only: mostly 1–3 words. Explain through geometry and arrows, never paragraphs. Muted blue = denoising/video features; green = direct history latent; warm orange = semantic/history tokens; gray = frozen teacher or frozen modules; purple = loss. The output must be a single polished research diagram, not a poster, slide deck, screenshot, or infographic full of prose. Use exact English labels specified below; do not add explanatory footnotes, results, implementation lists, parameter counts, or legends larger than the diagram. Draw each dependency once. Arrows must have correct direction and connect to the appropriate module.
+Title: "02  Teacher → predicted conditions"
+Create an elegant visual comparison with THREE HORIZONTAL ROWS and TWO COLUMNS, column labels "Train" and "Test". Wide enough for comfortable spacing. Row names written boldly at the far left, NOT old single-letter arm IDs:
+"Teacher + dropout"
+"Direct swap"
+"Train on predictions"
+
+Row 1, TRAIN cell:
+orange "φ(A)" token stack -> miniature "10% dropout" gate -> blue trainable "U-Net θ_T" -> small purple "FM loss".
+Row 1, TEST cell:
+orange "φ(A)" -> blue "U-Net θ_T" -> "v̂_B".
+
+Row 2, TRAIN cell:
+Do NOT draw a second training pipeline. Put a light gray bracket from row1 trained U-Net down to a compact label "Reuse θ_T". It must unmistakably mean no new training for direct swap.
+Row 2, TEST cell:
+green "z_A" -> gray locked "Predictor q" -> orange predicted token stack -> blue "U-Net θ_T" -> "v̂_B".
+Between row1 and row2 TEST U-Nets draw a small shared-weight connector labeled "Same weights". Change only their condition source: teacher to predictor. Avoid any arrow indicating gradients or training here.
+
+Row 3, TRAIN cell:
+green "z_A" -> gray locked "Predictor q" -> orange predicted tokens -> tiny "10% dropout" gate -> blue trainable "U-Net θ_P" -> purple "FM loss".
+Below θ_P write only "From scratch". It MUST NOT connect to θ_T as initialization.
+Row 3, TEST cell:
+green "z_A" -> gray locked "Predictor q" -> orange predicted tokens -> blue "U-Net θ_P" -> "v̂_B".
+
+Every U-Net has a small blue input arrow labeled "Noisy B" entering from below; no raw z_A arrow enters a U-Net. The predictor is frozen in ALL cells. A concise bottom key "φ(A): frozen V-JEPA features" and "q: frozen predictor" is allowed. A gray padlock on q is sufficient; no repeated paragraphs. No image grid full of prose, no statistics, no MSE results, no T/D/P letter legends. Short, diagrammatic, approximately 80 visible words or fewer. Preserve ample white space.
+
+=== exp03_alignment_en.png ===
+Use case: scientific-educational. Create a publication-quality English mechanism figure for a computer vision research paper. Wide landscape, pure white background, exceptionally clean flat vector-like design, no gradient, no 3D rendering, no shadows. Thin consistent arrows, readable modern sans-serif type, ample white space. Short labels only: mostly 1–3 words. Explain through geometry and arrows, never paragraphs. Muted blue = denoising/video features; green = direct history latent; warm orange = semantic/history tokens; gray = frozen teacher or frozen modules; purple = loss. The output must be a single polished research diagram, not a poster, slide deck, screenshot, or infographic full of prose. Use exact English labels specified below; do not add explanatory footnotes, results, implementation lists, parameter counts, or legends larger than the diagram. Draw each dependency once. Arrows must have correct direction and connect to the appropriate module.
+Title: "03  Does teacher alignment help?"
+Two parallel horizontal lanes, same architecture and aligned module positions. Top lane header "FM only"; bottom lane header "FM + alignment". The difference must be obvious at a glance: only the bottom lane adds a frozen teacher and a token-alignment loss.
+
+In BOTH lanes, draw:
+green latent "z_A" -> trainable orange "History encoder" -> small orange "Tokens" stack -> tiny "Dropout" switch -> blue trainable "3D U-Net" -> blue "v̂_B" -> purple "FM loss".
+A short blue arrow "Noisy B" enters each U-Net from below. No direct raw history-latent bypass to U-Net. Indicate blue trainable modules with solid colored borders. A subtle backward dashed arrow along each main chain, labeled only "Gradients", runs from FM loss toward the U-Net and history encoder: both modules learn from next-chunk denoising.
+
+BOTTOM lane ONLY:
+Under the history encoder/tokens, small filmstrip "Video A" -> gray locked "V-JEPA" -> orange teacher token stack "φ(A)".
+The teacher stack and a branch from the student's "Tokens" stack BOTH enter a purple node "Token cosine loss". This student's alignment branch leaves the Tokens BEFORE the Dropout switch. Show little paired lines between two equal token stacks to convey position-wise correspondence.
+Put the single small equation "L = L_FM + L_align" under this lane.
+A short dashed backward arrow from Token cosine loss goes ONLY to History encoder, never into V-JEPA or U-Net. Label teacher branch "Training only". Gray lock clearly indicates frozen V-JEPA.
+
+Top lane small equation: "L = L_FM".
+Bottom footer ONLY: "Same initialization · Encoder and U-Net trained jointly".
+Optional tiny dropout annotation "10%" once, not repeated.
+No q pretraining or preloaded predictor: both encoders start from scratch. No feature alignment at U-Net bottleneck or flow output: the aligned object is the HISTORY ENCODER token representation of A. No old C/J letters, no tables, statistics, dense tensor shapes or extra prose. Keep visible text below 85 words and use spatial layout to explain.
+
+
+=== Revision: exp00 ===
+Edit ONLY the routing of input/output arrows in panel (b) of this scientific figure. Preserve panel (a), title, all labels, colors, modules, comparison labels, and overall style. The current wiring incorrectly bypasses Concat and visually routes semantic tokens into Concat. Make these local fixes:
+1. Move the blue "Concat" box LEFT so it sits directly ABOVE the "Encoder 24²" box. Place the "Channel concat" label neatly above or beside it.
+2. The green z_A line splits to exactly two destinations: frozen Predictor q and the Concat box. Delete the extra green segment/arrow that enters Encoder directly. Green must terminate at Concat, not Encoder.
+3. Reroute the blue z_B(t) elbow line to enter the RIGHT edge of the moved Concat box.
+4. From the BOTTOM CENTER of Concat draw one short black downward arrow entering the TOP of Encoder 24². Remove the old Concat arrow into the U-Net frame/title.
+5. From History tokens draw a continuous orange line routed through the open central area, completely avoiding the moved Concat box and its label, entering ONLY the TOP of Cross-attn 6². No orange line may enter Concat. It may cross thin U-Net skip lines without a junction.
+6. Extend the final output arrow so it begins at the RIGHT EDGE of Decoder 24² and ends at v̂_B; the enclosing U-Net border is not its source.
+Keep the serial U path and both skip arrows exactly as they are. No new text, modules, or decorative elements.
+
+=== Revision: exp03 ===
+Edit only the extra purple dashed alignment-gradient connector in the LOWER lane of this scientific diagram.
+The short purple dashed line currently appears to start at the teacher-token black input line, which is wrong. Delete this ambiguous short purple dashed connector entirely. Replace it with a purple dashed arrow that visibly starts at the TOP edge of the purple "Token cosine loss" rectangle, goes a short distance UP, then LEFT through the open horizontal space between the lower History encoder and the frozen teacher branch, then UP into the BOTTOM edge of the lower "History encoder". Only the encoder end has an arrowhead. There must be a visible continuous dashed route starting at the LOSS BOX, never starting at the orange teacher tokens or their black connection. Cross existing thin black data lines with a tiny bridge/gap if needed to avoid looking connected. Do not connect it to V-JEPA or the U-Net.
+Preserve both long FM-gradient dashed lines, all black forward paths, pre-dropout student branch, teacher tokens, equations, text, layout and colors. No new text or modules. Only reroute this one alignment-gradient arrow.

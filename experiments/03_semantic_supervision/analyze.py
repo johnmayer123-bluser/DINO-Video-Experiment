@@ -132,7 +132,7 @@ def plot(runs,directory,split):
     axes[0].bar(range(2),means,color=["#D55E00","#9B59B6"],width=.6,alpha=.85)
     for i,value in enumerate(means):axes[0].text(i,value+max(means)*.008,f"{value:.4f}",ha="center")
     axes[0].set(title=f"Overall {split} error: same {len(runs)} seeds",ylabel="Velocity MSE (lower is better)",xticks=range(2),
-                xticklabels=["C\nFM only","J\nFM + alignment"],ylim=(0,max(means)*1.12))
+                xticklabels=["FM only","FM + alignment"],ylim=(0,max(means)*1.12))
     for i,run in enumerate(runs):
         p=run["pairs"]["C_vs_J"]["primary"];lo,hi=100*np.array(p["ci95"]["relative_improvement"])
         gain=100*p["relative_improvement"];color="#0072B2" if gain>=0 else "#D55E00"
@@ -142,11 +142,11 @@ def plot(runs,directory,split):
     if interval is not None:axes[1].hlines(len(runs),*interval,color="black",lw=2)
     axes[1].plot(seed_stats["mean"],len(runs),"D",color="black")
     axes[1].axvline(0,color="grey",lw=.8)
-    axes[1].set(title="J over C — two distinct 95% intervals",xlabel="MSE reduction (%)",
+    axes[1].set(title="FM + alignment vs FM only\nTwo distinct 95% intervals",xlabel="MSE reduction (%)",
                 yticks=range(len(runs)+1),yticklabels=[f"Seed {r['seed']}" for r in runs]+["Seed mean\n(training t CI)"])
     axes[1].invert_yaxis()
     axes[1].set_xlabel("MSE reduction (%)\nSeed rows: source-group CI; mean row: seed t CI",fontsize=9)
-    fig.suptitle("Semantic supervision — paired C/J, final step 6000",fontsize=12)
+    fig.suptitle("Semantic supervision — FM only vs FM + alignment, step 6000",fontsize=12)
     fig.savefig(directory/"comparison.png",dpi=180)
     plt.close(fig)
 
