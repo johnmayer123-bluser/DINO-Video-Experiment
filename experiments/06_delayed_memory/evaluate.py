@@ -8,6 +8,7 @@ calibration uses exactly this same approximation.
 import argparse
 from collections import defaultdict
 from contextlib import nullcontext
+from functools import lru_cache
 import hashlib
 import json
 from pathlib import Path
@@ -87,6 +88,23 @@ def object_mask(frames):
     return ((maximum - minimum) > 0.22) & (maximum > 0.35)
 
 
+class PreparedTemplates(tuple):
+    """Ordered metric-only masks, areas and RGB means; no RGB clips retained."""
+
+
+def prepare_templates(templates):
+    masks = {str(key): object_mask(value) for key, value in templates.items()}
+    prepared = []
+    for key, template in templates.items():
+        key = str(key)
+        reference = _rgb(template)
+        target_mask = masks[key]
+        target_area = max(1, int(target_mask.sum()))
+        target_color = reference[target_mask].mean(0) if target_mask.any() else np.zeros(3)
+        prepared.append((key, target_mask, target_area, target_color))
+    return PreparedTemplates(prepared)
+
+
 def score_frames(frames, templates, expected_attr=None, calibration=None):
     """Classify visible RGB with explicit missing/fuzzy rejection.
 
@@ -95,27 +113,23 @@ def score_frames(frames, templates, expected_attr=None, calibration=None):
     Color and shape accuracies include presence failures in their denominator.
     """
     frames = _rgb(frames)
-    masks = {str(key): object_mask(value) for key, value in templates.items()}
+    if not isinstance(templates, PreparedTemplates):
+        templates = prepare_templates(templates)
     observed = object_mask(frames)
     settings = {'min_area_ratio': 0.20, 'max_area_ratio': 2.5,
                 'min_iou': 0.35, 'max_color_distance': 0.45}
     if calibration:
         settings.update(calibration)
     best, diagnostics = None, {}
-    for key, template in templates.items():
-        key = str(key)
-        reference = _rgb(template)
-        target_mask = masks[key]
+    for key, target_mask, target_area, target_color in templates:
         # Restrict color estimates to the known object's region, while IoU
         # penalizes saturated clutter anywhere in the frame.
         intersection = (observed & target_mask).sum()
         union = (observed | target_mask).sum()
         iou = float(intersection / max(1, union))
-        target_area = max(1, int(target_mask.sum()))
         ratio = float(observed.sum() / target_area)
         valid = observed & target_mask
         color = frames[valid].mean(0) if valid.any() else np.zeros(3)
-        target_color = reference[target_mask].mean(0) if target_mask.any() else np.zeros(3)
         distance = float(np.linalg.norm(color - target_color))
         diagnostics[key] = {'iou': iou, 'area_ratio': ratio, 'color_distance': distance}
         merit = iou - distance
@@ -169,9 +183,44 @@ def aggregate(cases):
     return result
 
 
-def row_templates(row):
+@lru_cache(maxsize=64)
+def _scene_templates(scene_key):
     from data import render_chunk
-    return {str(attr): render_chunk(row, attr, kind='return') for attr in range(12)}
+    row = {'scene': json.loads(scene_key)}
+    return prepare_templates({str(attr): render_chunk(row, attr, kind='return') for attr in range(12)})
+
+
+def row_templates(row):
+    return _scene_templates(json.dumps(row['scene'], sort_keys=True))
+
+
+def completed_arm(output, seed, arm, config, checkpoint_metadata, rows, interventions):
+    """Reuse only complete, scientifically matching arm results."""
+    case_path = output / f'cases_seed{seed}_{arm}.json'
+    summary_path = output / f'summary_seed{seed}_{arm}.json'
+    if not case_path.exists() and not summary_path.exists():
+        return None
+    if not case_path.exists() or not summary_path.exists():
+        raise ValueError(f'Incomplete resume artifacts for seed={seed} arm={arm}; both cases and summary are required')
+    cases = json.loads(case_path.read_text(encoding='utf-8'))
+    summary = json.loads(summary_path.read_text(encoding='utf-8'))
+    expected_metadata = json.loads(json.dumps(
+        {**config, 'seed': seed, 'arm': arm, 'checkpoint_metadata': checkpoint_metadata}))
+    mismatches = [key for key, value in expected_metadata.items() if key not in summary or summary[key] != value]
+    if mismatches:
+        raise ValueError(f'Resume mismatch for seed={seed} arm={arm}: {mismatches}')
+    expected = set()
+    for row in rows:
+        for history in ('truth_history', 'closed_loop'):
+            conditions = ('none', 'zero_state', 'swap_state') if interventions and arm == 'memory' and history == 'truth_history' else ('none',)
+            for delay in config['delays']:
+                for condition in conditions:
+                    expected.add((seed, arm, row['id'], row['pair_id'], row['mode'], history, delay, condition, str(row['final_attr'])))
+    actual = [(case['seed'], case['arm'], case['id'], case['pair_id'], case['mode'], case['history'],
+               case['delay'], case['intervention'], str(case['expected_attr'])) for case in cases]
+    if len(actual) != len(expected) or set(actual) != expected or aggregate(cases) != summary.get('metrics'):
+        raise ValueError(f'Resume cases are incomplete or inconsistent for seed={seed} arm={arm}')
+    return cases
 
 
 def metrics_for(frames, row):
@@ -300,6 +349,7 @@ def main():
     parser.add_argument('--no-interventions', action='store_true')
     parser.add_argument('--save-latents', action='store_true')
     parser.add_argument('--calibration-only', action='store_true')
+    parser.add_argument('--resume', action='store_true', help='Skip completed arms only when saved configuration, checkpoint metadata and cases match')
     args = parser.parse_args()
     if any(delay not in (1, 3, 6) for delay in args.delays):
         parser.error('Evaluation delays are 1, 3, 6')
@@ -337,6 +387,13 @@ def main():
         del checkpoint
         seed_cases = []
         for arm in args.arms:
+            if args.resume:
+                existing = completed_arm(output, seed, arm, config, checkpoint_metadata, rows,
+                                         not args.no_interventions)
+                if existing is not None:
+                    seed_cases.extend(existing)
+                    print(f'resume seed={seed} arm={arm}: reused {len(existing)} completed cases', flush=True)
+                    continue
             started = time.perf_counter()
             model = load_model(args.root, seed, arm, args.device)
             cases = evaluate_arm(model, args.root, rows, decoder, seed, arm, args.delays,
