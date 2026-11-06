@@ -33,6 +33,7 @@
 | 04 · token 压缩 | 仅用去噪监督，状态能压到多小？ | 3 | 128→32 KiB，平均保留 95.1% 的原基准收益；[实验](experiments/04_history_compression/README.md) |
 | 04B · 维度压缩 | 固定 16 个 token，继续缩小维度 | 3 | 32→8 KiB，保留局部基准 96.0%、原基准 90.7% 的收益；[实验](experiments/04_history_compression/width_sweep/README.md) |
 | 05 · 边界与表示 | 仅压缩表示、仅边界 latent、两者结合，哪种更有效？ | 3 | 26 KiB 组合比等预算纯表示改善 12.87%，比仅边界改善 1.48%；[实验](experiments/05_boundary_state/README.md) |
+| 06 · 递归状态 | 相同最近块和边界下，递归更新能否利用更早历史？ | 3 | 测试平均改善 0.022%，尚无稳定优势；正确旧状态与同类错配差异很小；[实验](experiments/06_recurrent_state/README.md) |
 
 ## 当前压缩结果
 

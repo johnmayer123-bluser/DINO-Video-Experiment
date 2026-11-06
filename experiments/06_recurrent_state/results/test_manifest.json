@@ -1,0 +1,2302 @@
+[
+  {
+    "id": "v_BasketballDunk_g02_c02_s00000",
+    "video": "BasketballDunk/v_BasketballDunk_g02_c02.avi",
+    "group": "BasketballDunk_02"
+  },
+  {
+    "id": "v_BasketballDunk_g02_c02_s00001",
+    "video": "BasketballDunk/v_BasketballDunk_g02_c02.avi",
+    "group": "BasketballDunk_02"
+  },
+  {
+    "id": "v_BasketballDunk_g02_c02_s00002",
+    "video": "BasketballDunk/v_BasketballDunk_g02_c02.avi",
+    "group": "BasketballDunk_02"
+  },
+  {
+    "id": "v_BasketballDunk_g02_c02_s00003",
+    "video": "BasketballDunk/v_BasketballDunk_g02_c02.avi",
+    "group": "BasketballDunk_02"
+  },
+  {
+    "id": "v_Diving_g01_c01_s00000",
+    "video": "Diving/v_Diving_g01_c01.avi",
+    "group": "Diving_01"
+  },
+  {
+    "id": "v_Diving_g01_c01_s00018",
+    "video": "Diving/v_Diving_g01_c01.avi",
+    "group": "Diving_01"
+  },
+  {
+    "id": "v_Diving_g01_c01_s00036",
+    "video": "Diving/v_Diving_g01_c01.avi",
+    "group": "Diving_01"
+  },
+  {
+    "id": "v_Diving_g01_c01_s00055",
+    "video": "Diving/v_Diving_g01_c01.avi",
+    "group": "Diving_01"
+  },
+  {
+    "id": "v_Diving_g01_c02_s00000",
+    "video": "Diving/v_Diving_g01_c02.avi",
+    "group": "Diving_01"
+  },
+  {
+    "id": "v_Diving_g01_c02_s00021",
+    "video": "Diving/v_Diving_g01_c02.avi",
+    "group": "Diving_01"
+  },
+  {
+    "id": "v_Diving_g01_c02_s00042",
+    "video": "Diving/v_Diving_g01_c02.avi",
+    "group": "Diving_01"
+  },
+  {
+    "id": "v_Diving_g01_c02_s00064",
+    "video": "Diving/v_Diving_g01_c02.avi",
+    "group": "Diving_01"
+  },
+  {
+    "id": "v_Diving_g01_c03_s00000",
+    "video": "Diving/v_Diving_g01_c03.avi",
+    "group": "Diving_01"
+  },
+  {
+    "id": "v_Diving_g01_c03_s00012",
+    "video": "Diving/v_Diving_g01_c03.avi",
+    "group": "Diving_01"
+  },
+  {
+    "id": "v_Diving_g01_c03_s00024",
+    "video": "Diving/v_Diving_g01_c03.avi",
+    "group": "Diving_01"
+  },
+  {
+    "id": "v_Diving_g01_c03_s00037",
+    "video": "Diving/v_Diving_g01_c03.avi",
+    "group": "Diving_01"
+  },
+  {
+    "id": "v_Diving_g01_c04_s00000",
+    "video": "Diving/v_Diving_g01_c04.avi",
+    "group": "Diving_01"
+  },
+  {
+    "id": "v_Diving_g01_c04_s00014",
+    "video": "Diving/v_Diving_g01_c04.avi",
+    "group": "Diving_01"
+  },
+  {
+    "id": "v_Diving_g01_c04_s00029",
+    "video": "Diving/v_Diving_g01_c04.avi",
+    "group": "Diving_01"
+  },
+  {
+    "id": "v_Diving_g01_c04_s00044",
+    "video": "Diving/v_Diving_g01_c04.avi",
+    "group": "Diving_01"
+  },
+  {
+    "id": "v_Diving_g01_c05_s00000",
+    "video": "Diving/v_Diving_g01_c05.avi",
+    "group": "Diving_01"
+  },
+  {
+    "id": "v_Diving_g01_c05_s00015",
+    "video": "Diving/v_Diving_g01_c05.avi",
+    "group": "Diving_01"
+  },
+  {
+    "id": "v_Diving_g01_c05_s00030",
+    "video": "Diving/v_Diving_g01_c05.avi",
+    "group": "Diving_01"
+  },
+  {
+    "id": "v_Diving_g01_c05_s00045",
+    "video": "Diving/v_Diving_g01_c05.avi",
+    "group": "Diving_01"
+  },
+  {
+    "id": "v_Diving_g01_c06_s00000",
+    "video": "Diving/v_Diving_g01_c06.avi",
+    "group": "Diving_01"
+  },
+  {
+    "id": "v_Diving_g01_c06_s00017",
+    "video": "Diving/v_Diving_g01_c06.avi",
+    "group": "Diving_01"
+  },
+  {
+    "id": "v_Diving_g01_c06_s00035",
+    "video": "Diving/v_Diving_g01_c06.avi",
+    "group": "Diving_01"
+  },
+  {
+    "id": "v_Diving_g01_c06_s00053",
+    "video": "Diving/v_Diving_g01_c06.avi",
+    "group": "Diving_01"
+  },
+  {
+    "id": "v_Diving_g01_c07_s00000",
+    "video": "Diving/v_Diving_g01_c07.avi",
+    "group": "Diving_01"
+  },
+  {
+    "id": "v_Diving_g01_c07_s00016",
+    "video": "Diving/v_Diving_g01_c07.avi",
+    "group": "Diving_01"
+  },
+  {
+    "id": "v_Diving_g01_c07_s00032",
+    "video": "Diving/v_Diving_g01_c07.avi",
+    "group": "Diving_01"
+  },
+  {
+    "id": "v_Diving_g01_c07_s00048",
+    "video": "Diving/v_Diving_g01_c07.avi",
+    "group": "Diving_01"
+  },
+  {
+    "id": "v_Diving_g02_c01_s00000",
+    "video": "Diving/v_Diving_g02_c01.avi",
+    "group": "Diving_02"
+  },
+  {
+    "id": "v_Diving_g02_c01_s00001",
+    "video": "Diving/v_Diving_g02_c01.avi",
+    "group": "Diving_02"
+  },
+  {
+    "id": "v_Diving_g02_c01_s00003",
+    "video": "Diving/v_Diving_g02_c01.avi",
+    "group": "Diving_02"
+  },
+  {
+    "id": "v_Diving_g02_c01_s00005",
+    "video": "Diving/v_Diving_g02_c01.avi",
+    "group": "Diving_02"
+  },
+  {
+    "id": "v_Diving_g02_c02_s00000",
+    "video": "Diving/v_Diving_g02_c02.avi",
+    "group": "Diving_02"
+  },
+  {
+    "id": "v_Diving_g02_c02_s00004",
+    "video": "Diving/v_Diving_g02_c02.avi",
+    "group": "Diving_02"
+  },
+  {
+    "id": "v_Diving_g02_c02_s00008",
+    "video": "Diving/v_Diving_g02_c02.avi",
+    "group": "Diving_02"
+  },
+  {
+    "id": "v_Diving_g02_c02_s00012",
+    "video": "Diving/v_Diving_g02_c02.avi",
+    "group": "Diving_02"
+  },
+  {
+    "id": "v_Diving_g02_c03_s00000",
+    "video": "Diving/v_Diving_g02_c03.avi",
+    "group": "Diving_02"
+  },
+  {
+    "id": "v_Diving_g02_c03_s00001",
+    "video": "Diving/v_Diving_g02_c03.avi",
+    "group": "Diving_02"
+  },
+  {
+    "id": "v_Diving_g02_c03_s00002",
+    "video": "Diving/v_Diving_g02_c03.avi",
+    "group": "Diving_02"
+  },
+  {
+    "id": "v_Diving_g02_c04_s00000",
+    "video": "Diving/v_Diving_g02_c04.avi",
+    "group": "Diving_02"
+  },
+  {
+    "id": "v_Diving_g02_c04_s00005",
+    "video": "Diving/v_Diving_g02_c04.avi",
+    "group": "Diving_02"
+  },
+  {
+    "id": "v_Diving_g02_c04_s00010",
+    "video": "Diving/v_Diving_g02_c04.avi",
+    "group": "Diving_02"
+  },
+  {
+    "id": "v_Diving_g02_c04_s00015",
+    "video": "Diving/v_Diving_g02_c04.avi",
+    "group": "Diving_02"
+  },
+  {
+    "id": "v_Diving_g02_c05_s00000",
+    "video": "Diving/v_Diving_g02_c05.avi",
+    "group": "Diving_02"
+  },
+  {
+    "id": "v_Diving_g02_c05_s00010",
+    "video": "Diving/v_Diving_g02_c05.avi",
+    "group": "Diving_02"
+  },
+  {
+    "id": "v_Diving_g02_c05_s00020",
+    "video": "Diving/v_Diving_g02_c05.avi",
+    "group": "Diving_02"
+  },
+  {
+    "id": "v_Diving_g02_c05_s00031",
+    "video": "Diving/v_Diving_g02_c05.avi",
+    "group": "Diving_02"
+  },
+  {
+    "id": "v_Diving_g02_c06_s00000",
+    "video": "Diving/v_Diving_g02_c06.avi",
+    "group": "Diving_02"
+  },
+  {
+    "id": "v_Diving_g02_c06_s00004",
+    "video": "Diving/v_Diving_g02_c06.avi",
+    "group": "Diving_02"
+  },
+  {
+    "id": "v_Diving_g02_c06_s00008",
+    "video": "Diving/v_Diving_g02_c06.avi",
+    "group": "Diving_02"
+  },
+  {
+    "id": "v_Diving_g02_c06_s00012",
+    "video": "Diving/v_Diving_g02_c06.avi",
+    "group": "Diving_02"
+  },
+  {
+    "id": "v_Diving_g02_c07_s00000",
+    "video": "Diving/v_Diving_g02_c07.avi",
+    "group": "Diving_02"
+  },
+  {
+    "id": "v_Diving_g03_c01_s00000",
+    "video": "Diving/v_Diving_g03_c01.avi",
+    "group": "Diving_03"
+  },
+  {
+    "id": "v_Diving_g03_c01_s00009",
+    "video": "Diving/v_Diving_g03_c01.avi",
+    "group": "Diving_03"
+  },
+  {
+    "id": "v_Diving_g03_c01_s00018",
+    "video": "Diving/v_Diving_g03_c01.avi",
+    "group": "Diving_03"
+  },
+  {
+    "id": "v_Diving_g03_c01_s00028",
+    "video": "Diving/v_Diving_g03_c01.avi",
+    "group": "Diving_03"
+  },
+  {
+    "id": "v_Diving_g03_c02_s00000",
+    "video": "Diving/v_Diving_g03_c02.avi",
+    "group": "Diving_03"
+  },
+  {
+    "id": "v_Diving_g03_c02_s00009",
+    "video": "Diving/v_Diving_g03_c02.avi",
+    "group": "Diving_03"
+  },
+  {
+    "id": "v_Diving_g03_c02_s00018",
+    "video": "Diving/v_Diving_g03_c02.avi",
+    "group": "Diving_03"
+  },
+  {
+    "id": "v_Diving_g03_c02_s00028",
+    "video": "Diving/v_Diving_g03_c02.avi",
+    "group": "Diving_03"
+  },
+  {
+    "id": "v_Diving_g03_c03_s00000",
+    "video": "Diving/v_Diving_g03_c03.avi",
+    "group": "Diving_03"
+  },
+  {
+    "id": "v_Diving_g03_c03_s00008",
+    "video": "Diving/v_Diving_g03_c03.avi",
+    "group": "Diving_03"
+  },
+  {
+    "id": "v_Diving_g03_c03_s00017",
+    "video": "Diving/v_Diving_g03_c03.avi",
+    "group": "Diving_03"
+  },
+  {
+    "id": "v_Diving_g03_c03_s00026",
+    "video": "Diving/v_Diving_g03_c03.avi",
+    "group": "Diving_03"
+  },
+  {
+    "id": "v_Diving_g03_c04_s00000",
+    "video": "Diving/v_Diving_g03_c04.avi",
+    "group": "Diving_03"
+  },
+  {
+    "id": "v_Diving_g03_c04_s00010",
+    "video": "Diving/v_Diving_g03_c04.avi",
+    "group": "Diving_03"
+  },
+  {
+    "id": "v_Diving_g03_c04_s00020",
+    "video": "Diving/v_Diving_g03_c04.avi",
+    "group": "Diving_03"
+  },
+  {
+    "id": "v_Diving_g03_c04_s00030",
+    "video": "Diving/v_Diving_g03_c04.avi",
+    "group": "Diving_03"
+  },
+  {
+    "id": "v_Diving_g03_c05_s00000",
+    "video": "Diving/v_Diving_g03_c05.avi",
+    "group": "Diving_03"
+  },
+  {
+    "id": "v_Diving_g03_c05_s00016",
+    "video": "Diving/v_Diving_g03_c05.avi",
+    "group": "Diving_03"
+  },
+  {
+    "id": "v_Diving_g03_c05_s00033",
+    "video": "Diving/v_Diving_g03_c05.avi",
+    "group": "Diving_03"
+  },
+  {
+    "id": "v_Diving_g03_c05_s00050",
+    "video": "Diving/v_Diving_g03_c05.avi",
+    "group": "Diving_03"
+  },
+  {
+    "id": "v_Diving_g04_c03_s00000",
+    "video": "Diving/v_Diving_g04_c03.avi",
+    "group": "Diving_04"
+  },
+  {
+    "id": "v_Diving_g04_c03_s00003",
+    "video": "Diving/v_Diving_g04_c03.avi",
+    "group": "Diving_04"
+  },
+  {
+    "id": "v_Diving_g04_c03_s00006",
+    "video": "Diving/v_Diving_g04_c03.avi",
+    "group": "Diving_04"
+  },
+  {
+    "id": "v_Diving_g04_c03_s00010",
+    "video": "Diving/v_Diving_g04_c03.avi",
+    "group": "Diving_04"
+  },
+  {
+    "id": "v_Diving_g04_c04_s00000",
+    "video": "Diving/v_Diving_g04_c04.avi",
+    "group": "Diving_04"
+  },
+  {
+    "id": "v_Diving_g04_c04_s00021",
+    "video": "Diving/v_Diving_g04_c04.avi",
+    "group": "Diving_04"
+  },
+  {
+    "id": "v_Diving_g04_c04_s00043",
+    "video": "Diving/v_Diving_g04_c04.avi",
+    "group": "Diving_04"
+  },
+  {
+    "id": "v_Diving_g04_c04_s00065",
+    "video": "Diving/v_Diving_g04_c04.avi",
+    "group": "Diving_04"
+  },
+  {
+    "id": "v_Diving_g04_c05_s00000",
+    "video": "Diving/v_Diving_g04_c05.avi",
+    "group": "Diving_04"
+  },
+  {
+    "id": "v_Diving_g04_c05_s00003",
+    "video": "Diving/v_Diving_g04_c05.avi",
+    "group": "Diving_04"
+  },
+  {
+    "id": "v_Diving_g04_c05_s00007",
+    "video": "Diving/v_Diving_g04_c05.avi",
+    "group": "Diving_04"
+  },
+  {
+    "id": "v_Diving_g04_c05_s00011",
+    "video": "Diving/v_Diving_g04_c05.avi",
+    "group": "Diving_04"
+  },
+  {
+    "id": "v_Diving_g04_c07_s00000",
+    "video": "Diving/v_Diving_g04_c07.avi",
+    "group": "Diving_04"
+  },
+  {
+    "id": "v_Diving_g04_c07_s00003",
+    "video": "Diving/v_Diving_g04_c07.avi",
+    "group": "Diving_04"
+  },
+  {
+    "id": "v_Diving_g04_c07_s00007",
+    "video": "Diving/v_Diving_g04_c07.avi",
+    "group": "Diving_04"
+  },
+  {
+    "id": "v_Diving_g04_c07_s00011",
+    "video": "Diving/v_Diving_g04_c07.avi",
+    "group": "Diving_04"
+  },
+  {
+    "id": "v_Diving_g05_c02_s00000",
+    "video": "Diving/v_Diving_g05_c02.avi",
+    "group": "Diving_05"
+  },
+  {
+    "id": "v_Diving_g05_c02_s00004",
+    "video": "Diving/v_Diving_g05_c02.avi",
+    "group": "Diving_05"
+  },
+  {
+    "id": "v_Diving_g05_c02_s00009",
+    "video": "Diving/v_Diving_g05_c02.avi",
+    "group": "Diving_05"
+  },
+  {
+    "id": "v_Diving_g05_c02_s00014",
+    "video": "Diving/v_Diving_g05_c02.avi",
+    "group": "Diving_05"
+  },
+  {
+    "id": "v_Diving_g05_c04_s00000",
+    "video": "Diving/v_Diving_g05_c04.avi",
+    "group": "Diving_05"
+  },
+  {
+    "id": "v_Diving_g05_c04_s00001",
+    "video": "Diving/v_Diving_g05_c04.avi",
+    "group": "Diving_05"
+  },
+  {
+    "id": "v_Diving_g05_c04_s00002",
+    "video": "Diving/v_Diving_g05_c04.avi",
+    "group": "Diving_05"
+  },
+  {
+    "id": "v_Diving_g05_c04_s00003",
+    "video": "Diving/v_Diving_g05_c04.avi",
+    "group": "Diving_05"
+  },
+  {
+    "id": "v_Diving_g06_c01_s00000",
+    "video": "Diving/v_Diving_g06_c01.avi",
+    "group": "Diving_06"
+  },
+  {
+    "id": "v_Diving_g06_c01_s00012",
+    "video": "Diving/v_Diving_g06_c01.avi",
+    "group": "Diving_06"
+  },
+  {
+    "id": "v_Diving_g06_c01_s00024",
+    "video": "Diving/v_Diving_g06_c01.avi",
+    "group": "Diving_06"
+  },
+  {
+    "id": "v_Diving_g06_c01_s00036",
+    "video": "Diving/v_Diving_g06_c01.avi",
+    "group": "Diving_06"
+  },
+  {
+    "id": "v_Diving_g06_c02_s00000",
+    "video": "Diving/v_Diving_g06_c02.avi",
+    "group": "Diving_06"
+  },
+  {
+    "id": "v_Diving_g06_c02_s00011",
+    "video": "Diving/v_Diving_g06_c02.avi",
+    "group": "Diving_06"
+  },
+  {
+    "id": "v_Diving_g06_c02_s00023",
+    "video": "Diving/v_Diving_g06_c02.avi",
+    "group": "Diving_06"
+  },
+  {
+    "id": "v_Diving_g06_c02_s00035",
+    "video": "Diving/v_Diving_g06_c02.avi",
+    "group": "Diving_06"
+  },
+  {
+    "id": "v_Diving_g06_c03_s00000",
+    "video": "Diving/v_Diving_g06_c03.avi",
+    "group": "Diving_06"
+  },
+  {
+    "id": "v_Diving_g06_c03_s00015",
+    "video": "Diving/v_Diving_g06_c03.avi",
+    "group": "Diving_06"
+  },
+  {
+    "id": "v_Diving_g06_c03_s00030",
+    "video": "Diving/v_Diving_g06_c03.avi",
+    "group": "Diving_06"
+  },
+  {
+    "id": "v_Diving_g06_c03_s00046",
+    "video": "Diving/v_Diving_g06_c03.avi",
+    "group": "Diving_06"
+  },
+  {
+    "id": "v_Diving_g06_c04_s00000",
+    "video": "Diving/v_Diving_g06_c04.avi",
+    "group": "Diving_06"
+  },
+  {
+    "id": "v_Diving_g06_c04_s00012",
+    "video": "Diving/v_Diving_g06_c04.avi",
+    "group": "Diving_06"
+  },
+  {
+    "id": "v_Diving_g06_c04_s00025",
+    "video": "Diving/v_Diving_g06_c04.avi",
+    "group": "Diving_06"
+  },
+  {
+    "id": "v_Diving_g06_c04_s00038",
+    "video": "Diving/v_Diving_g06_c04.avi",
+    "group": "Diving_06"
+  },
+  {
+    "id": "v_Diving_g06_c05_s00000",
+    "video": "Diving/v_Diving_g06_c05.avi",
+    "group": "Diving_06"
+  },
+  {
+    "id": "v_Diving_g06_c05_s00001",
+    "video": "Diving/v_Diving_g06_c05.avi",
+    "group": "Diving_06"
+  },
+  {
+    "id": "v_Diving_g06_c06_s00000",
+    "video": "Diving/v_Diving_g06_c06.avi",
+    "group": "Diving_06"
+  },
+  {
+    "id": "v_Diving_g06_c06_s00013",
+    "video": "Diving/v_Diving_g06_c06.avi",
+    "group": "Diving_06"
+  },
+  {
+    "id": "v_Diving_g06_c06_s00026",
+    "video": "Diving/v_Diving_g06_c06.avi",
+    "group": "Diving_06"
+  },
+  {
+    "id": "v_Diving_g06_c06_s00039",
+    "video": "Diving/v_Diving_g06_c06.avi",
+    "group": "Diving_06"
+  },
+  {
+    "id": "v_Diving_g06_c07_s00000",
+    "video": "Diving/v_Diving_g06_c07.avi",
+    "group": "Diving_06"
+  },
+  {
+    "id": "v_Diving_g06_c07_s00016",
+    "video": "Diving/v_Diving_g06_c07.avi",
+    "group": "Diving_06"
+  },
+  {
+    "id": "v_Diving_g06_c07_s00032",
+    "video": "Diving/v_Diving_g06_c07.avi",
+    "group": "Diving_06"
+  },
+  {
+    "id": "v_Diving_g06_c07_s00048",
+    "video": "Diving/v_Diving_g06_c07.avi",
+    "group": "Diving_06"
+  },
+  {
+    "id": "v_Diving_g07_c01_s00000",
+    "video": "Diving/v_Diving_g07_c01.avi",
+    "group": "Diving_07"
+  },
+  {
+    "id": "v_Diving_g07_c01_s00007",
+    "video": "Diving/v_Diving_g07_c01.avi",
+    "group": "Diving_07"
+  },
+  {
+    "id": "v_Diving_g07_c01_s00015",
+    "video": "Diving/v_Diving_g07_c01.avi",
+    "group": "Diving_07"
+  },
+  {
+    "id": "v_Diving_g07_c01_s00023",
+    "video": "Diving/v_Diving_g07_c01.avi",
+    "group": "Diving_07"
+  },
+  {
+    "id": "v_Diving_g07_c02_s00000",
+    "video": "Diving/v_Diving_g07_c02.avi",
+    "group": "Diving_07"
+  },
+  {
+    "id": "v_Diving_g07_c02_s00004",
+    "video": "Diving/v_Diving_g07_c02.avi",
+    "group": "Diving_07"
+  },
+  {
+    "id": "v_Diving_g07_c02_s00009",
+    "video": "Diving/v_Diving_g07_c02.avi",
+    "group": "Diving_07"
+  },
+  {
+    "id": "v_Diving_g07_c02_s00014",
+    "video": "Diving/v_Diving_g07_c02.avi",
+    "group": "Diving_07"
+  },
+  {
+    "id": "v_Diving_g07_c03_s00000",
+    "video": "Diving/v_Diving_g07_c03.avi",
+    "group": "Diving_07"
+  },
+  {
+    "id": "v_Diving_g07_c03_s00012",
+    "video": "Diving/v_Diving_g07_c03.avi",
+    "group": "Diving_07"
+  },
+  {
+    "id": "v_Diving_g07_c03_s00025",
+    "video": "Diving/v_Diving_g07_c03.avi",
+    "group": "Diving_07"
+  },
+  {
+    "id": "v_Diving_g07_c03_s00038",
+    "video": "Diving/v_Diving_g07_c03.avi",
+    "group": "Diving_07"
+  },
+  {
+    "id": "v_Diving_g07_c04_s00000",
+    "video": "Diving/v_Diving_g07_c04.avi",
+    "group": "Diving_07"
+  },
+  {
+    "id": "v_Diving_g07_c04_s00006",
+    "video": "Diving/v_Diving_g07_c04.avi",
+    "group": "Diving_07"
+  },
+  {
+    "id": "v_Diving_g07_c04_s00013",
+    "video": "Diving/v_Diving_g07_c04.avi",
+    "group": "Diving_07"
+  },
+  {
+    "id": "v_Diving_g07_c04_s00020",
+    "video": "Diving/v_Diving_g07_c04.avi",
+    "group": "Diving_07"
+  },
+  {
+    "id": "v_GolfSwing_g01_c01_s00000",
+    "video": "GolfSwing/v_GolfSwing_g01_c01.avi",
+    "group": "GolfSwing_01"
+  },
+  {
+    "id": "v_GolfSwing_g01_c01_s00006",
+    "video": "GolfSwing/v_GolfSwing_g01_c01.avi",
+    "group": "GolfSwing_01"
+  },
+  {
+    "id": "v_GolfSwing_g01_c01_s00013",
+    "video": "GolfSwing/v_GolfSwing_g01_c01.avi",
+    "group": "GolfSwing_01"
+  },
+  {
+    "id": "v_GolfSwing_g01_c01_s00020",
+    "video": "GolfSwing/v_GolfSwing_g01_c01.avi",
+    "group": "GolfSwing_01"
+  },
+  {
+    "id": "v_GolfSwing_g01_c03_s00000",
+    "video": "GolfSwing/v_GolfSwing_g01_c03.avi",
+    "group": "GolfSwing_01"
+  },
+  {
+    "id": "v_GolfSwing_g01_c03_s00009",
+    "video": "GolfSwing/v_GolfSwing_g01_c03.avi",
+    "group": "GolfSwing_01"
+  },
+  {
+    "id": "v_GolfSwing_g01_c03_s00018",
+    "video": "GolfSwing/v_GolfSwing_g01_c03.avi",
+    "group": "GolfSwing_01"
+  },
+  {
+    "id": "v_GolfSwing_g01_c03_s00028",
+    "video": "GolfSwing/v_GolfSwing_g01_c03.avi",
+    "group": "GolfSwing_01"
+  },
+  {
+    "id": "v_GolfSwing_g01_c05_s00000",
+    "video": "GolfSwing/v_GolfSwing_g01_c05.avi",
+    "group": "GolfSwing_01"
+  },
+  {
+    "id": "v_GolfSwing_g01_c05_s00066",
+    "video": "GolfSwing/v_GolfSwing_g01_c05.avi",
+    "group": "GolfSwing_01"
+  },
+  {
+    "id": "v_GolfSwing_g01_c05_s00133",
+    "video": "GolfSwing/v_GolfSwing_g01_c05.avi",
+    "group": "GolfSwing_01"
+  },
+  {
+    "id": "v_GolfSwing_g01_c05_s00200",
+    "video": "GolfSwing/v_GolfSwing_g01_c05.avi",
+    "group": "GolfSwing_01"
+  },
+  {
+    "id": "v_GolfSwing_g01_c06_s00000",
+    "video": "GolfSwing/v_GolfSwing_g01_c06.avi",
+    "group": "GolfSwing_01"
+  },
+  {
+    "id": "v_GolfSwing_g01_c06_s00053",
+    "video": "GolfSwing/v_GolfSwing_g01_c06.avi",
+    "group": "GolfSwing_01"
+  },
+  {
+    "id": "v_GolfSwing_g01_c06_s00106",
+    "video": "GolfSwing/v_GolfSwing_g01_c06.avi",
+    "group": "GolfSwing_01"
+  },
+  {
+    "id": "v_GolfSwing_g01_c06_s00159",
+    "video": "GolfSwing/v_GolfSwing_g01_c06.avi",
+    "group": "GolfSwing_01"
+  },
+  {
+    "id": "v_GolfSwing_g02_c01_s00000",
+    "video": "GolfSwing/v_GolfSwing_g02_c01.avi",
+    "group": "GolfSwing_02"
+  },
+  {
+    "id": "v_GolfSwing_g02_c01_s00002",
+    "video": "GolfSwing/v_GolfSwing_g02_c01.avi",
+    "group": "GolfSwing_02"
+  },
+  {
+    "id": "v_GolfSwing_g02_c01_s00004",
+    "video": "GolfSwing/v_GolfSwing_g02_c01.avi",
+    "group": "GolfSwing_02"
+  },
+  {
+    "id": "v_GolfSwing_g02_c01_s00007",
+    "video": "GolfSwing/v_GolfSwing_g02_c01.avi",
+    "group": "GolfSwing_02"
+  },
+  {
+    "id": "v_GolfSwing_g02_c04_s00000",
+    "video": "GolfSwing/v_GolfSwing_g02_c04.avi",
+    "group": "GolfSwing_02"
+  },
+  {
+    "id": "v_GolfSwing_g03_c01_s00000",
+    "video": "GolfSwing/v_GolfSwing_g03_c01.avi",
+    "group": "GolfSwing_03"
+  },
+  {
+    "id": "v_GolfSwing_g03_c01_s00001",
+    "video": "GolfSwing/v_GolfSwing_g03_c01.avi",
+    "group": "GolfSwing_03"
+  },
+  {
+    "id": "v_GolfSwing_g03_c01_s00002",
+    "video": "GolfSwing/v_GolfSwing_g03_c01.avi",
+    "group": "GolfSwing_03"
+  },
+  {
+    "id": "v_GolfSwing_g03_c01_s00004",
+    "video": "GolfSwing/v_GolfSwing_g03_c01.avi",
+    "group": "GolfSwing_03"
+  },
+  {
+    "id": "v_GolfSwing_g03_c03_s00000",
+    "video": "GolfSwing/v_GolfSwing_g03_c03.avi",
+    "group": "GolfSwing_03"
+  },
+  {
+    "id": "v_GolfSwing_g03_c03_s00007",
+    "video": "GolfSwing/v_GolfSwing_g03_c03.avi",
+    "group": "GolfSwing_03"
+  },
+  {
+    "id": "v_GolfSwing_g03_c03_s00015",
+    "video": "GolfSwing/v_GolfSwing_g03_c03.avi",
+    "group": "GolfSwing_03"
+  },
+  {
+    "id": "v_GolfSwing_g03_c03_s00023",
+    "video": "GolfSwing/v_GolfSwing_g03_c03.avi",
+    "group": "GolfSwing_03"
+  },
+  {
+    "id": "v_GolfSwing_g03_c04_s00000",
+    "video": "GolfSwing/v_GolfSwing_g03_c04.avi",
+    "group": "GolfSwing_03"
+  },
+  {
+    "id": "v_GolfSwing_g03_c04_s00003",
+    "video": "GolfSwing/v_GolfSwing_g03_c04.avi",
+    "group": "GolfSwing_03"
+  },
+  {
+    "id": "v_GolfSwing_g03_c04_s00006",
+    "video": "GolfSwing/v_GolfSwing_g03_c04.avi",
+    "group": "GolfSwing_03"
+  },
+  {
+    "id": "v_GolfSwing_g03_c04_s00009",
+    "video": "GolfSwing/v_GolfSwing_g03_c04.avi",
+    "group": "GolfSwing_03"
+  },
+  {
+    "id": "v_GolfSwing_g03_c05_s00000",
+    "video": "GolfSwing/v_GolfSwing_g03_c05.avi",
+    "group": "GolfSwing_03"
+  },
+  {
+    "id": "v_GolfSwing_g03_c05_s00003",
+    "video": "GolfSwing/v_GolfSwing_g03_c05.avi",
+    "group": "GolfSwing_03"
+  },
+  {
+    "id": "v_GolfSwing_g03_c05_s00006",
+    "video": "GolfSwing/v_GolfSwing_g03_c05.avi",
+    "group": "GolfSwing_03"
+  },
+  {
+    "id": "v_GolfSwing_g03_c05_s00010",
+    "video": "GolfSwing/v_GolfSwing_g03_c05.avi",
+    "group": "GolfSwing_03"
+  },
+  {
+    "id": "v_GolfSwing_g03_c06_s00000",
+    "video": "GolfSwing/v_GolfSwing_g03_c06.avi",
+    "group": "GolfSwing_03"
+  },
+  {
+    "id": "v_GolfSwing_g03_c06_s00017",
+    "video": "GolfSwing/v_GolfSwing_g03_c06.avi",
+    "group": "GolfSwing_03"
+  },
+  {
+    "id": "v_GolfSwing_g03_c06_s00034",
+    "video": "GolfSwing/v_GolfSwing_g03_c06.avi",
+    "group": "GolfSwing_03"
+  },
+  {
+    "id": "v_GolfSwing_g03_c06_s00052",
+    "video": "GolfSwing/v_GolfSwing_g03_c06.avi",
+    "group": "GolfSwing_03"
+  },
+  {
+    "id": "v_GolfSwing_g03_c07_s00000",
+    "video": "GolfSwing/v_GolfSwing_g03_c07.avi",
+    "group": "GolfSwing_03"
+  },
+  {
+    "id": "v_GolfSwing_g03_c07_s00006",
+    "video": "GolfSwing/v_GolfSwing_g03_c07.avi",
+    "group": "GolfSwing_03"
+  },
+  {
+    "id": "v_GolfSwing_g03_c07_s00013",
+    "video": "GolfSwing/v_GolfSwing_g03_c07.avi",
+    "group": "GolfSwing_03"
+  },
+  {
+    "id": "v_GolfSwing_g03_c07_s00020",
+    "video": "GolfSwing/v_GolfSwing_g03_c07.avi",
+    "group": "GolfSwing_03"
+  },
+  {
+    "id": "v_GolfSwing_g04_c01_s00000",
+    "video": "GolfSwing/v_GolfSwing_g04_c01.avi",
+    "group": "GolfSwing_04"
+  },
+  {
+    "id": "v_GolfSwing_g04_c01_s00001",
+    "video": "GolfSwing/v_GolfSwing_g04_c01.avi",
+    "group": "GolfSwing_04"
+  },
+  {
+    "id": "v_GolfSwing_g04_c02_s00000",
+    "video": "GolfSwing/v_GolfSwing_g04_c02.avi",
+    "group": "GolfSwing_04"
+  },
+  {
+    "id": "v_GolfSwing_g04_c03_s00000",
+    "video": "GolfSwing/v_GolfSwing_g04_c03.avi",
+    "group": "GolfSwing_04"
+  },
+  {
+    "id": "v_GolfSwing_g04_c03_s00006",
+    "video": "GolfSwing/v_GolfSwing_g04_c03.avi",
+    "group": "GolfSwing_04"
+  },
+  {
+    "id": "v_GolfSwing_g04_c03_s00013",
+    "video": "GolfSwing/v_GolfSwing_g04_c03.avi",
+    "group": "GolfSwing_04"
+  },
+  {
+    "id": "v_GolfSwing_g04_c03_s00020",
+    "video": "GolfSwing/v_GolfSwing_g04_c03.avi",
+    "group": "GolfSwing_04"
+  },
+  {
+    "id": "v_GolfSwing_g04_c04_s00000",
+    "video": "GolfSwing/v_GolfSwing_g04_c04.avi",
+    "group": "GolfSwing_04"
+  },
+  {
+    "id": "v_GolfSwing_g04_c04_s00008",
+    "video": "GolfSwing/v_GolfSwing_g04_c04.avi",
+    "group": "GolfSwing_04"
+  },
+  {
+    "id": "v_GolfSwing_g04_c04_s00016",
+    "video": "GolfSwing/v_GolfSwing_g04_c04.avi",
+    "group": "GolfSwing_04"
+  },
+  {
+    "id": "v_GolfSwing_g04_c04_s00024",
+    "video": "GolfSwing/v_GolfSwing_g04_c04.avi",
+    "group": "GolfSwing_04"
+  },
+  {
+    "id": "v_GolfSwing_g04_c05_s00000",
+    "video": "GolfSwing/v_GolfSwing_g04_c05.avi",
+    "group": "GolfSwing_04"
+  },
+  {
+    "id": "v_GolfSwing_g04_c05_s00029",
+    "video": "GolfSwing/v_GolfSwing_g04_c05.avi",
+    "group": "GolfSwing_04"
+  },
+  {
+    "id": "v_GolfSwing_g04_c05_s00059",
+    "video": "GolfSwing/v_GolfSwing_g04_c05.avi",
+    "group": "GolfSwing_04"
+  },
+  {
+    "id": "v_GolfSwing_g04_c05_s00089",
+    "video": "GolfSwing/v_GolfSwing_g04_c05.avi",
+    "group": "GolfSwing_04"
+  },
+  {
+    "id": "v_GolfSwing_g04_c06_s00000",
+    "video": "GolfSwing/v_GolfSwing_g04_c06.avi",
+    "group": "GolfSwing_04"
+  },
+  {
+    "id": "v_GolfSwing_g04_c06_s00014",
+    "video": "GolfSwing/v_GolfSwing_g04_c06.avi",
+    "group": "GolfSwing_04"
+  },
+  {
+    "id": "v_GolfSwing_g04_c06_s00029",
+    "video": "GolfSwing/v_GolfSwing_g04_c06.avi",
+    "group": "GolfSwing_04"
+  },
+  {
+    "id": "v_GolfSwing_g04_c06_s00044",
+    "video": "GolfSwing/v_GolfSwing_g04_c06.avi",
+    "group": "GolfSwing_04"
+  },
+  {
+    "id": "v_GolfSwing_g05_c04_s00000",
+    "video": "GolfSwing/v_GolfSwing_g05_c04.avi",
+    "group": "GolfSwing_05"
+  },
+  {
+    "id": "v_GolfSwing_g05_c04_s00005",
+    "video": "GolfSwing/v_GolfSwing_g05_c04.avi",
+    "group": "GolfSwing_05"
+  },
+  {
+    "id": "v_GolfSwing_g05_c04_s00010",
+    "video": "GolfSwing/v_GolfSwing_g05_c04.avi",
+    "group": "GolfSwing_05"
+  },
+  {
+    "id": "v_GolfSwing_g05_c04_s00016",
+    "video": "GolfSwing/v_GolfSwing_g05_c04.avi",
+    "group": "GolfSwing_05"
+  },
+  {
+    "id": "v_GolfSwing_g05_c06_s00000",
+    "video": "GolfSwing/v_GolfSwing_g05_c06.avi",
+    "group": "GolfSwing_05"
+  },
+  {
+    "id": "v_GolfSwing_g05_c06_s00008",
+    "video": "GolfSwing/v_GolfSwing_g05_c06.avi",
+    "group": "GolfSwing_05"
+  },
+  {
+    "id": "v_GolfSwing_g05_c06_s00016",
+    "video": "GolfSwing/v_GolfSwing_g05_c06.avi",
+    "group": "GolfSwing_05"
+  },
+  {
+    "id": "v_GolfSwing_g05_c06_s00024",
+    "video": "GolfSwing/v_GolfSwing_g05_c06.avi",
+    "group": "GolfSwing_05"
+  },
+  {
+    "id": "v_GolfSwing_g05_c07_s00000",
+    "video": "GolfSwing/v_GolfSwing_g05_c07.avi",
+    "group": "GolfSwing_05"
+  },
+  {
+    "id": "v_GolfSwing_g05_c07_s00001",
+    "video": "GolfSwing/v_GolfSwing_g05_c07.avi",
+    "group": "GolfSwing_05"
+  },
+  {
+    "id": "v_GolfSwing_g05_c07_s00002",
+    "video": "GolfSwing/v_GolfSwing_g05_c07.avi",
+    "group": "GolfSwing_05"
+  },
+  {
+    "id": "v_GolfSwing_g05_c07_s00004",
+    "video": "GolfSwing/v_GolfSwing_g05_c07.avi",
+    "group": "GolfSwing_05"
+  },
+  {
+    "id": "v_GolfSwing_g06_c01_s00000",
+    "video": "GolfSwing/v_GolfSwing_g06_c01.avi",
+    "group": "GolfSwing_06"
+  },
+  {
+    "id": "v_GolfSwing_g06_c01_s00004",
+    "video": "GolfSwing/v_GolfSwing_g06_c01.avi",
+    "group": "GolfSwing_06"
+  },
+  {
+    "id": "v_GolfSwing_g06_c01_s00009",
+    "video": "GolfSwing/v_GolfSwing_g06_c01.avi",
+    "group": "GolfSwing_06"
+  },
+  {
+    "id": "v_GolfSwing_g06_c01_s00014",
+    "video": "GolfSwing/v_GolfSwing_g06_c01.avi",
+    "group": "GolfSwing_06"
+  },
+  {
+    "id": "v_GolfSwing_g06_c04_s00000",
+    "video": "GolfSwing/v_GolfSwing_g06_c04.avi",
+    "group": "GolfSwing_06"
+  },
+  {
+    "id": "v_GolfSwing_g06_c04_s00001",
+    "video": "GolfSwing/v_GolfSwing_g06_c04.avi",
+    "group": "GolfSwing_06"
+  },
+  {
+    "id": "v_GolfSwing_g06_c04_s00002",
+    "video": "GolfSwing/v_GolfSwing_g06_c04.avi",
+    "group": "GolfSwing_06"
+  },
+  {
+    "id": "v_GolfSwing_g07_c01_s00000",
+    "video": "GolfSwing/v_GolfSwing_g07_c01.avi",
+    "group": "GolfSwing_07"
+  },
+  {
+    "id": "v_GolfSwing_g07_c01_s00004",
+    "video": "GolfSwing/v_GolfSwing_g07_c01.avi",
+    "group": "GolfSwing_07"
+  },
+  {
+    "id": "v_GolfSwing_g07_c01_s00008",
+    "video": "GolfSwing/v_GolfSwing_g07_c01.avi",
+    "group": "GolfSwing_07"
+  },
+  {
+    "id": "v_GolfSwing_g07_c01_s00012",
+    "video": "GolfSwing/v_GolfSwing_g07_c01.avi",
+    "group": "GolfSwing_07"
+  },
+  {
+    "id": "v_GolfSwing_g07_c03_s00000",
+    "video": "GolfSwing/v_GolfSwing_g07_c03.avi",
+    "group": "GolfSwing_07"
+  },
+  {
+    "id": "v_GolfSwing_g07_c03_s00001",
+    "video": "GolfSwing/v_GolfSwing_g07_c03.avi",
+    "group": "GolfSwing_07"
+  },
+  {
+    "id": "v_GolfSwing_g07_c03_s00002",
+    "video": "GolfSwing/v_GolfSwing_g07_c03.avi",
+    "group": "GolfSwing_07"
+  },
+  {
+    "id": "v_GolfSwing_g07_c05_s00000",
+    "video": "GolfSwing/v_GolfSwing_g07_c05.avi",
+    "group": "GolfSwing_07"
+  },
+  {
+    "id": "v_GolfSwing_g07_c05_s00001",
+    "video": "GolfSwing/v_GolfSwing_g07_c05.avi",
+    "group": "GolfSwing_07"
+  },
+  {
+    "id": "v_GolfSwing_g07_c05_s00003",
+    "video": "GolfSwing/v_GolfSwing_g07_c05.avi",
+    "group": "GolfSwing_07"
+  },
+  {
+    "id": "v_GolfSwing_g07_c05_s00005",
+    "video": "GolfSwing/v_GolfSwing_g07_c05.avi",
+    "group": "GolfSwing_07"
+  },
+  {
+    "id": "v_LongJump_g01_c01_s00000",
+    "video": "LongJump/v_LongJump_g01_c01.avi",
+    "group": "LongJump_01"
+  },
+  {
+    "id": "v_LongJump_g01_c01_s00006",
+    "video": "LongJump/v_LongJump_g01_c01.avi",
+    "group": "LongJump_01"
+  },
+  {
+    "id": "v_LongJump_g01_c01_s00013",
+    "video": "LongJump/v_LongJump_g01_c01.avi",
+    "group": "LongJump_01"
+  },
+  {
+    "id": "v_LongJump_g01_c01_s00020",
+    "video": "LongJump/v_LongJump_g01_c01.avi",
+    "group": "LongJump_01"
+  },
+  {
+    "id": "v_LongJump_g01_c02_s00000",
+    "video": "LongJump/v_LongJump_g01_c02.avi",
+    "group": "LongJump_01"
+  },
+  {
+    "id": "v_LongJump_g01_c02_s00012",
+    "video": "LongJump/v_LongJump_g01_c02.avi",
+    "group": "LongJump_01"
+  },
+  {
+    "id": "v_LongJump_g01_c02_s00024",
+    "video": "LongJump/v_LongJump_g01_c02.avi",
+    "group": "LongJump_01"
+  },
+  {
+    "id": "v_LongJump_g01_c02_s00036",
+    "video": "LongJump/v_LongJump_g01_c02.avi",
+    "group": "LongJump_01"
+  },
+  {
+    "id": "v_LongJump_g01_c03_s00000",
+    "video": "LongJump/v_LongJump_g01_c03.avi",
+    "group": "LongJump_01"
+  },
+  {
+    "id": "v_LongJump_g01_c03_s00006",
+    "video": "LongJump/v_LongJump_g01_c03.avi",
+    "group": "LongJump_01"
+  },
+  {
+    "id": "v_LongJump_g01_c03_s00012",
+    "video": "LongJump/v_LongJump_g01_c03.avi",
+    "group": "LongJump_01"
+  },
+  {
+    "id": "v_LongJump_g01_c03_s00019",
+    "video": "LongJump/v_LongJump_g01_c03.avi",
+    "group": "LongJump_01"
+  },
+  {
+    "id": "v_LongJump_g01_c04_s00000",
+    "video": "LongJump/v_LongJump_g01_c04.avi",
+    "group": "LongJump_01"
+  },
+  {
+    "id": "v_LongJump_g01_c04_s00004",
+    "video": "LongJump/v_LongJump_g01_c04.avi",
+    "group": "LongJump_01"
+  },
+  {
+    "id": "v_LongJump_g01_c04_s00008",
+    "video": "LongJump/v_LongJump_g01_c04.avi",
+    "group": "LongJump_01"
+  },
+  {
+    "id": "v_LongJump_g01_c04_s00012",
+    "video": "LongJump/v_LongJump_g01_c04.avi",
+    "group": "LongJump_01"
+  },
+  {
+    "id": "v_LongJump_g01_c05_s00000",
+    "video": "LongJump/v_LongJump_g01_c05.avi",
+    "group": "LongJump_01"
+  },
+  {
+    "id": "v_LongJump_g01_c05_s00008",
+    "video": "LongJump/v_LongJump_g01_c05.avi",
+    "group": "LongJump_01"
+  },
+  {
+    "id": "v_LongJump_g01_c05_s00016",
+    "video": "LongJump/v_LongJump_g01_c05.avi",
+    "group": "LongJump_01"
+  },
+  {
+    "id": "v_LongJump_g01_c05_s00024",
+    "video": "LongJump/v_LongJump_g01_c05.avi",
+    "group": "LongJump_01"
+  },
+  {
+    "id": "v_LongJump_g01_c07_s00000",
+    "video": "LongJump/v_LongJump_g01_c07.avi",
+    "group": "LongJump_01"
+  },
+  {
+    "id": "v_LongJump_g01_c07_s00003",
+    "video": "LongJump/v_LongJump_g01_c07.avi",
+    "group": "LongJump_01"
+  },
+  {
+    "id": "v_LongJump_g01_c07_s00006",
+    "video": "LongJump/v_LongJump_g01_c07.avi",
+    "group": "LongJump_01"
+  },
+  {
+    "id": "v_LongJump_g01_c07_s00010",
+    "video": "LongJump/v_LongJump_g01_c07.avi",
+    "group": "LongJump_01"
+  },
+  {
+    "id": "v_LongJump_g02_c01_s00000",
+    "video": "LongJump/v_LongJump_g02_c01.avi",
+    "group": "LongJump_02"
+  },
+  {
+    "id": "v_LongJump_g02_c01_s00001",
+    "video": "LongJump/v_LongJump_g02_c01.avi",
+    "group": "LongJump_02"
+  },
+  {
+    "id": "v_LongJump_g02_c01_s00002",
+    "video": "LongJump/v_LongJump_g02_c01.avi",
+    "group": "LongJump_02"
+  },
+  {
+    "id": "v_LongJump_g02_c01_s00004",
+    "video": "LongJump/v_LongJump_g02_c01.avi",
+    "group": "LongJump_02"
+  },
+  {
+    "id": "v_LongJump_g02_c02_s00000",
+    "video": "LongJump/v_LongJump_g02_c02.avi",
+    "group": "LongJump_02"
+  },
+  {
+    "id": "v_LongJump_g02_c02_s00002",
+    "video": "LongJump/v_LongJump_g02_c02.avi",
+    "group": "LongJump_02"
+  },
+  {
+    "id": "v_LongJump_g02_c02_s00004",
+    "video": "LongJump/v_LongJump_g02_c02.avi",
+    "group": "LongJump_02"
+  },
+  {
+    "id": "v_LongJump_g02_c02_s00007",
+    "video": "LongJump/v_LongJump_g02_c02.avi",
+    "group": "LongJump_02"
+  },
+  {
+    "id": "v_LongJump_g02_c03_s00000",
+    "video": "LongJump/v_LongJump_g02_c03.avi",
+    "group": "LongJump_02"
+  },
+  {
+    "id": "v_LongJump_g02_c03_s00007",
+    "video": "LongJump/v_LongJump_g02_c03.avi",
+    "group": "LongJump_02"
+  },
+  {
+    "id": "v_LongJump_g02_c03_s00014",
+    "video": "LongJump/v_LongJump_g02_c03.avi",
+    "group": "LongJump_02"
+  },
+  {
+    "id": "v_LongJump_g02_c03_s00021",
+    "video": "LongJump/v_LongJump_g02_c03.avi",
+    "group": "LongJump_02"
+  },
+  {
+    "id": "v_LongJump_g02_c04_s00000",
+    "video": "LongJump/v_LongJump_g02_c04.avi",
+    "group": "LongJump_02"
+  },
+  {
+    "id": "v_LongJump_g02_c04_s00002",
+    "video": "LongJump/v_LongJump_g02_c04.avi",
+    "group": "LongJump_02"
+  },
+  {
+    "id": "v_LongJump_g02_c04_s00004",
+    "video": "LongJump/v_LongJump_g02_c04.avi",
+    "group": "LongJump_02"
+  },
+  {
+    "id": "v_LongJump_g02_c04_s00007",
+    "video": "LongJump/v_LongJump_g02_c04.avi",
+    "group": "LongJump_02"
+  },
+  {
+    "id": "v_LongJump_g03_c03_s00000",
+    "video": "LongJump/v_LongJump_g03_c03.avi",
+    "group": "LongJump_03"
+  },
+  {
+    "id": "v_LongJump_g03_c03_s00001",
+    "video": "LongJump/v_LongJump_g03_c03.avi",
+    "group": "LongJump_03"
+  },
+  {
+    "id": "v_LongJump_g03_c03_s00002",
+    "video": "LongJump/v_LongJump_g03_c03.avi",
+    "group": "LongJump_03"
+  },
+  {
+    "id": "v_LongJump_g03_c03_s00003",
+    "video": "LongJump/v_LongJump_g03_c03.avi",
+    "group": "LongJump_03"
+  },
+  {
+    "id": "v_LongJump_g03_c05_s00000",
+    "video": "LongJump/v_LongJump_g03_c05.avi",
+    "group": "LongJump_03"
+  },
+  {
+    "id": "v_LongJump_g03_c05_s00001",
+    "video": "LongJump/v_LongJump_g03_c05.avi",
+    "group": "LongJump_03"
+  },
+  {
+    "id": "v_LongJump_g03_c05_s00002",
+    "video": "LongJump/v_LongJump_g03_c05.avi",
+    "group": "LongJump_03"
+  },
+  {
+    "id": "v_LongJump_g03_c05_s00003",
+    "video": "LongJump/v_LongJump_g03_c05.avi",
+    "group": "LongJump_03"
+  },
+  {
+    "id": "v_LongJump_g04_c01_s00000",
+    "video": "LongJump/v_LongJump_g04_c01.avi",
+    "group": "LongJump_04"
+  },
+  {
+    "id": "v_LongJump_g04_c01_s00002",
+    "video": "LongJump/v_LongJump_g04_c01.avi",
+    "group": "LongJump_04"
+  },
+  {
+    "id": "v_LongJump_g04_c01_s00004",
+    "video": "LongJump/v_LongJump_g04_c01.avi",
+    "group": "LongJump_04"
+  },
+  {
+    "id": "v_LongJump_g04_c01_s00007",
+    "video": "LongJump/v_LongJump_g04_c01.avi",
+    "group": "LongJump_04"
+  },
+  {
+    "id": "v_LongJump_g04_c02_s00000",
+    "video": "LongJump/v_LongJump_g04_c02.avi",
+    "group": "LongJump_04"
+  },
+  {
+    "id": "v_LongJump_g04_c02_s00006",
+    "video": "LongJump/v_LongJump_g04_c02.avi",
+    "group": "LongJump_04"
+  },
+  {
+    "id": "v_LongJump_g04_c02_s00012",
+    "video": "LongJump/v_LongJump_g04_c02.avi",
+    "group": "LongJump_04"
+  },
+  {
+    "id": "v_LongJump_g04_c02_s00019",
+    "video": "LongJump/v_LongJump_g04_c02.avi",
+    "group": "LongJump_04"
+  },
+  {
+    "id": "v_LongJump_g04_c03_s00000",
+    "video": "LongJump/v_LongJump_g04_c03.avi",
+    "group": "LongJump_04"
+  },
+  {
+    "id": "v_LongJump_g04_c03_s00006",
+    "video": "LongJump/v_LongJump_g04_c03.avi",
+    "group": "LongJump_04"
+  },
+  {
+    "id": "v_LongJump_g04_c03_s00012",
+    "video": "LongJump/v_LongJump_g04_c03.avi",
+    "group": "LongJump_04"
+  },
+  {
+    "id": "v_LongJump_g04_c03_s00019",
+    "video": "LongJump/v_LongJump_g04_c03.avi",
+    "group": "LongJump_04"
+  },
+  {
+    "id": "v_LongJump_g04_c04_s00000",
+    "video": "LongJump/v_LongJump_g04_c04.avi",
+    "group": "LongJump_04"
+  },
+  {
+    "id": "v_LongJump_g04_c04_s00003",
+    "video": "LongJump/v_LongJump_g04_c04.avi",
+    "group": "LongJump_04"
+  },
+  {
+    "id": "v_LongJump_g04_c04_s00007",
+    "video": "LongJump/v_LongJump_g04_c04.avi",
+    "group": "LongJump_04"
+  },
+  {
+    "id": "v_LongJump_g04_c04_s00011",
+    "video": "LongJump/v_LongJump_g04_c04.avi",
+    "group": "LongJump_04"
+  },
+  {
+    "id": "v_LongJump_g04_c05_s00000",
+    "video": "LongJump/v_LongJump_g04_c05.avi",
+    "group": "LongJump_04"
+  },
+  {
+    "id": "v_LongJump_g04_c05_s00002",
+    "video": "LongJump/v_LongJump_g04_c05.avi",
+    "group": "LongJump_04"
+  },
+  {
+    "id": "v_LongJump_g04_c05_s00004",
+    "video": "LongJump/v_LongJump_g04_c05.avi",
+    "group": "LongJump_04"
+  },
+  {
+    "id": "v_LongJump_g04_c05_s00007",
+    "video": "LongJump/v_LongJump_g04_c05.avi",
+    "group": "LongJump_04"
+  },
+  {
+    "id": "v_LongJump_g04_c06_s00000",
+    "video": "LongJump/v_LongJump_g04_c06.avi",
+    "group": "LongJump_04"
+  },
+  {
+    "id": "v_LongJump_g04_c06_s00007",
+    "video": "LongJump/v_LongJump_g04_c06.avi",
+    "group": "LongJump_04"
+  },
+  {
+    "id": "v_LongJump_g04_c06_s00015",
+    "video": "LongJump/v_LongJump_g04_c06.avi",
+    "group": "LongJump_04"
+  },
+  {
+    "id": "v_LongJump_g04_c06_s00023",
+    "video": "LongJump/v_LongJump_g04_c06.avi",
+    "group": "LongJump_04"
+  },
+  {
+    "id": "v_LongJump_g04_c07_s00000",
+    "video": "LongJump/v_LongJump_g04_c07.avi",
+    "group": "LongJump_04"
+  },
+  {
+    "id": "v_LongJump_g04_c07_s00002",
+    "video": "LongJump/v_LongJump_g04_c07.avi",
+    "group": "LongJump_04"
+  },
+  {
+    "id": "v_LongJump_g04_c07_s00005",
+    "video": "LongJump/v_LongJump_g04_c07.avi",
+    "group": "LongJump_04"
+  },
+  {
+    "id": "v_LongJump_g04_c07_s00008",
+    "video": "LongJump/v_LongJump_g04_c07.avi",
+    "group": "LongJump_04"
+  },
+  {
+    "id": "v_LongJump_g05_c01_s00000",
+    "video": "LongJump/v_LongJump_g05_c01.avi",
+    "group": "LongJump_05"
+  },
+  {
+    "id": "v_LongJump_g05_c01_s00001",
+    "video": "LongJump/v_LongJump_g05_c01.avi",
+    "group": "LongJump_05"
+  },
+  {
+    "id": "v_LongJump_g05_c01_s00002",
+    "video": "LongJump/v_LongJump_g05_c01.avi",
+    "group": "LongJump_05"
+  },
+  {
+    "id": "v_LongJump_g05_c01_s00004",
+    "video": "LongJump/v_LongJump_g05_c01.avi",
+    "group": "LongJump_05"
+  },
+  {
+    "id": "v_LongJump_g05_c03_s00000",
+    "video": "LongJump/v_LongJump_g05_c03.avi",
+    "group": "LongJump_05"
+  },
+  {
+    "id": "v_LongJump_g05_c03_s00005",
+    "video": "LongJump/v_LongJump_g05_c03.avi",
+    "group": "LongJump_05"
+  },
+  {
+    "id": "v_LongJump_g05_c03_s00010",
+    "video": "LongJump/v_LongJump_g05_c03.avi",
+    "group": "LongJump_05"
+  },
+  {
+    "id": "v_LongJump_g05_c03_s00015",
+    "video": "LongJump/v_LongJump_g05_c03.avi",
+    "group": "LongJump_05"
+  },
+  {
+    "id": "v_LongJump_g05_c04_s00000",
+    "video": "LongJump/v_LongJump_g05_c04.avi",
+    "group": "LongJump_05"
+  },
+  {
+    "id": "v_LongJump_g05_c04_s00004",
+    "video": "LongJump/v_LongJump_g05_c04.avi",
+    "group": "LongJump_05"
+  },
+  {
+    "id": "v_LongJump_g05_c04_s00009",
+    "video": "LongJump/v_LongJump_g05_c04.avi",
+    "group": "LongJump_05"
+  },
+  {
+    "id": "v_LongJump_g05_c04_s00014",
+    "video": "LongJump/v_LongJump_g05_c04.avi",
+    "group": "LongJump_05"
+  },
+  {
+    "id": "v_LongJump_g05_c05_s00000",
+    "video": "LongJump/v_LongJump_g05_c05.avi",
+    "group": "LongJump_05"
+  },
+  {
+    "id": "v_LongJump_g05_c05_s00007",
+    "video": "LongJump/v_LongJump_g05_c05.avi",
+    "group": "LongJump_05"
+  },
+  {
+    "id": "v_LongJump_g05_c05_s00014",
+    "video": "LongJump/v_LongJump_g05_c05.avi",
+    "group": "LongJump_05"
+  },
+  {
+    "id": "v_LongJump_g05_c05_s00021",
+    "video": "LongJump/v_LongJump_g05_c05.avi",
+    "group": "LongJump_05"
+  },
+  {
+    "id": "v_LongJump_g06_c03_s00000",
+    "video": "LongJump/v_LongJump_g06_c03.avi",
+    "group": "LongJump_06"
+  },
+  {
+    "id": "v_LongJump_g06_c03_s00005",
+    "video": "LongJump/v_LongJump_g06_c03.avi",
+    "group": "LongJump_06"
+  },
+  {
+    "id": "v_LongJump_g06_c03_s00010",
+    "video": "LongJump/v_LongJump_g06_c03.avi",
+    "group": "LongJump_06"
+  },
+  {
+    "id": "v_LongJump_g06_c03_s00016",
+    "video": "LongJump/v_LongJump_g06_c03.avi",
+    "group": "LongJump_06"
+  },
+  {
+    "id": "v_LongJump_g06_c04_s00000",
+    "video": "LongJump/v_LongJump_g06_c04.avi",
+    "group": "LongJump_06"
+  },
+  {
+    "id": "v_LongJump_g06_c04_s00004",
+    "video": "LongJump/v_LongJump_g06_c04.avi",
+    "group": "LongJump_06"
+  },
+  {
+    "id": "v_LongJump_g06_c04_s00008",
+    "video": "LongJump/v_LongJump_g06_c04.avi",
+    "group": "LongJump_06"
+  },
+  {
+    "id": "v_LongJump_g06_c04_s00012",
+    "video": "LongJump/v_LongJump_g06_c04.avi",
+    "group": "LongJump_06"
+  },
+  {
+    "id": "v_LongJump_g07_c01_s00000",
+    "video": "LongJump/v_LongJump_g07_c01.avi",
+    "group": "LongJump_07"
+  },
+  {
+    "id": "v_LongJump_g07_c01_s00003",
+    "video": "LongJump/v_LongJump_g07_c01.avi",
+    "group": "LongJump_07"
+  },
+  {
+    "id": "v_LongJump_g07_c01_s00006",
+    "video": "LongJump/v_LongJump_g07_c01.avi",
+    "group": "LongJump_07"
+  },
+  {
+    "id": "v_LongJump_g07_c01_s00010",
+    "video": "LongJump/v_LongJump_g07_c01.avi",
+    "group": "LongJump_07"
+  },
+  {
+    "id": "v_LongJump_g07_c02_s00000",
+    "video": "LongJump/v_LongJump_g07_c02.avi",
+    "group": "LongJump_07"
+  },
+  {
+    "id": "v_LongJump_g07_c02_s00011",
+    "video": "LongJump/v_LongJump_g07_c02.avi",
+    "group": "LongJump_07"
+  },
+  {
+    "id": "v_LongJump_g07_c02_s00022",
+    "video": "LongJump/v_LongJump_g07_c02.avi",
+    "group": "LongJump_07"
+  },
+  {
+    "id": "v_LongJump_g07_c02_s00033",
+    "video": "LongJump/v_LongJump_g07_c02.avi",
+    "group": "LongJump_07"
+  },
+  {
+    "id": "v_LongJump_g07_c03_s00000",
+    "video": "LongJump/v_LongJump_g07_c03.avi",
+    "group": "LongJump_07"
+  },
+  {
+    "id": "v_LongJump_g07_c05_s00000",
+    "video": "LongJump/v_LongJump_g07_c05.avi",
+    "group": "LongJump_07"
+  },
+  {
+    "id": "v_LongJump_g07_c05_s00002",
+    "video": "LongJump/v_LongJump_g07_c05.avi",
+    "group": "LongJump_07"
+  },
+  {
+    "id": "v_LongJump_g07_c05_s00005",
+    "video": "LongJump/v_LongJump_g07_c05.avi",
+    "group": "LongJump_07"
+  },
+  {
+    "id": "v_LongJump_g07_c05_s00008",
+    "video": "LongJump/v_LongJump_g07_c05.avi",
+    "group": "LongJump_07"
+  },
+  {
+    "id": "v_TennisSwing_g02_c05_s00000",
+    "video": "TennisSwing/v_TennisSwing_g02_c05.avi",
+    "group": "TennisSwing_02"
+  },
+  {
+    "id": "v_TennisSwing_g02_c05_s00007",
+    "video": "TennisSwing/v_TennisSwing_g02_c05.avi",
+    "group": "TennisSwing_02"
+  },
+  {
+    "id": "v_TennisSwing_g02_c05_s00014",
+    "video": "TennisSwing/v_TennisSwing_g02_c05.avi",
+    "group": "TennisSwing_02"
+  },
+  {
+    "id": "v_TennisSwing_g02_c05_s00022",
+    "video": "TennisSwing/v_TennisSwing_g02_c05.avi",
+    "group": "TennisSwing_02"
+  },
+  {
+    "id": "v_TennisSwing_g02_c07_s00000",
+    "video": "TennisSwing/v_TennisSwing_g02_c07.avi",
+    "group": "TennisSwing_02"
+  },
+  {
+    "id": "v_TennisSwing_g02_c07_s00012",
+    "video": "TennisSwing/v_TennisSwing_g02_c07.avi",
+    "group": "TennisSwing_02"
+  },
+  {
+    "id": "v_TennisSwing_g02_c07_s00025",
+    "video": "TennisSwing/v_TennisSwing_g02_c07.avi",
+    "group": "TennisSwing_02"
+  },
+  {
+    "id": "v_TennisSwing_g02_c07_s00038",
+    "video": "TennisSwing/v_TennisSwing_g02_c07.avi",
+    "group": "TennisSwing_02"
+  },
+  {
+    "id": "v_TennisSwing_g04_c01_s00000",
+    "video": "TennisSwing/v_TennisSwing_g04_c01.avi",
+    "group": "TennisSwing_04"
+  },
+  {
+    "id": "v_TennisSwing_g04_c01_s00003",
+    "video": "TennisSwing/v_TennisSwing_g04_c01.avi",
+    "group": "TennisSwing_04"
+  },
+  {
+    "id": "v_TennisSwing_g04_c01_s00006",
+    "video": "TennisSwing/v_TennisSwing_g04_c01.avi",
+    "group": "TennisSwing_04"
+  },
+  {
+    "id": "v_TennisSwing_g04_c01_s00010",
+    "video": "TennisSwing/v_TennisSwing_g04_c01.avi",
+    "group": "TennisSwing_04"
+  },
+  {
+    "id": "v_TennisSwing_g04_c05_s00000",
+    "video": "TennisSwing/v_TennisSwing_g04_c05.avi",
+    "group": "TennisSwing_04"
+  },
+  {
+    "id": "v_TennisSwing_g04_c07_s00000",
+    "video": "TennisSwing/v_TennisSwing_g04_c07.avi",
+    "group": "TennisSwing_04"
+  },
+  {
+    "id": "v_TennisSwing_g04_c07_s00001",
+    "video": "TennisSwing/v_TennisSwing_g04_c07.avi",
+    "group": "TennisSwing_04"
+  },
+  {
+    "id": "v_TennisSwing_g04_c07_s00002",
+    "video": "TennisSwing/v_TennisSwing_g04_c07.avi",
+    "group": "TennisSwing_04"
+  },
+  {
+    "id": "v_TennisSwing_g04_c07_s00004",
+    "video": "TennisSwing/v_TennisSwing_g04_c07.avi",
+    "group": "TennisSwing_04"
+  },
+  {
+    "id": "v_TennisSwing_g05_c01_s00000",
+    "video": "TennisSwing/v_TennisSwing_g05_c01.avi",
+    "group": "TennisSwing_05"
+  },
+  {
+    "id": "v_TennisSwing_g05_c02_s00000",
+    "video": "TennisSwing/v_TennisSwing_g05_c02.avi",
+    "group": "TennisSwing_05"
+  },
+  {
+    "id": "v_TennisSwing_g05_c02_s00007",
+    "video": "TennisSwing/v_TennisSwing_g05_c02.avi",
+    "group": "TennisSwing_05"
+  },
+  {
+    "id": "v_TennisSwing_g05_c02_s00014",
+    "video": "TennisSwing/v_TennisSwing_g05_c02.avi",
+    "group": "TennisSwing_05"
+  },
+  {
+    "id": "v_TennisSwing_g05_c02_s00021",
+    "video": "TennisSwing/v_TennisSwing_g05_c02.avi",
+    "group": "TennisSwing_05"
+  },
+  {
+    "id": "v_TennisSwing_g05_c03_s00000",
+    "video": "TennisSwing/v_TennisSwing_g05_c03.avi",
+    "group": "TennisSwing_05"
+  },
+  {
+    "id": "v_TennisSwing_g05_c03_s00006",
+    "video": "TennisSwing/v_TennisSwing_g05_c03.avi",
+    "group": "TennisSwing_05"
+  },
+  {
+    "id": "v_TennisSwing_g05_c03_s00012",
+    "video": "TennisSwing/v_TennisSwing_g05_c03.avi",
+    "group": "TennisSwing_05"
+  },
+  {
+    "id": "v_TennisSwing_g05_c03_s00018",
+    "video": "TennisSwing/v_TennisSwing_g05_c03.avi",
+    "group": "TennisSwing_05"
+  },
+  {
+    "id": "v_TennisSwing_g05_c04_s00000",
+    "video": "TennisSwing/v_TennisSwing_g05_c04.avi",
+    "group": "TennisSwing_05"
+  },
+  {
+    "id": "v_TennisSwing_g05_c04_s00002",
+    "video": "TennisSwing/v_TennisSwing_g05_c04.avi",
+    "group": "TennisSwing_05"
+  },
+  {
+    "id": "v_TennisSwing_g05_c04_s00005",
+    "video": "TennisSwing/v_TennisSwing_g05_c04.avi",
+    "group": "TennisSwing_05"
+  },
+  {
+    "id": "v_TennisSwing_g05_c04_s00008",
+    "video": "TennisSwing/v_TennisSwing_g05_c04.avi",
+    "group": "TennisSwing_05"
+  },
+  {
+    "id": "v_TennisSwing_g05_c05_s00000",
+    "video": "TennisSwing/v_TennisSwing_g05_c05.avi",
+    "group": "TennisSwing_05"
+  },
+  {
+    "id": "v_TennisSwing_g05_c05_s00004",
+    "video": "TennisSwing/v_TennisSwing_g05_c05.avi",
+    "group": "TennisSwing_05"
+  },
+  {
+    "id": "v_TennisSwing_g05_c05_s00008",
+    "video": "TennisSwing/v_TennisSwing_g05_c05.avi",
+    "group": "TennisSwing_05"
+  },
+  {
+    "id": "v_TennisSwing_g05_c05_s00013",
+    "video": "TennisSwing/v_TennisSwing_g05_c05.avi",
+    "group": "TennisSwing_05"
+  },
+  {
+    "id": "v_TennisSwing_g05_c06_s00000",
+    "video": "TennisSwing/v_TennisSwing_g05_c06.avi",
+    "group": "TennisSwing_05"
+  },
+  {
+    "id": "v_TennisSwing_g05_c06_s00006",
+    "video": "TennisSwing/v_TennisSwing_g05_c06.avi",
+    "group": "TennisSwing_05"
+  },
+  {
+    "id": "v_TennisSwing_g05_c06_s00012",
+    "video": "TennisSwing/v_TennisSwing_g05_c06.avi",
+    "group": "TennisSwing_05"
+  },
+  {
+    "id": "v_TennisSwing_g05_c06_s00018",
+    "video": "TennisSwing/v_TennisSwing_g05_c06.avi",
+    "group": "TennisSwing_05"
+  },
+  {
+    "id": "v_TennisSwing_g06_c01_s00000",
+    "video": "TennisSwing/v_TennisSwing_g06_c01.avi",
+    "group": "TennisSwing_06"
+  },
+  {
+    "id": "v_TennisSwing_g06_c01_s00002",
+    "video": "TennisSwing/v_TennisSwing_g06_c01.avi",
+    "group": "TennisSwing_06"
+  },
+  {
+    "id": "v_TennisSwing_g06_c01_s00004",
+    "video": "TennisSwing/v_TennisSwing_g06_c01.avi",
+    "group": "TennisSwing_06"
+  },
+  {
+    "id": "v_TennisSwing_g06_c01_s00007",
+    "video": "TennisSwing/v_TennisSwing_g06_c01.avi",
+    "group": "TennisSwing_06"
+  },
+  {
+    "id": "v_TennisSwing_g06_c02_s00000",
+    "video": "TennisSwing/v_TennisSwing_g06_c02.avi",
+    "group": "TennisSwing_06"
+  },
+  {
+    "id": "v_TennisSwing_g06_c02_s00012",
+    "video": "TennisSwing/v_TennisSwing_g06_c02.avi",
+    "group": "TennisSwing_06"
+  },
+  {
+    "id": "v_TennisSwing_g06_c02_s00024",
+    "video": "TennisSwing/v_TennisSwing_g06_c02.avi",
+    "group": "TennisSwing_06"
+  },
+  {
+    "id": "v_TennisSwing_g06_c02_s00036",
+    "video": "TennisSwing/v_TennisSwing_g06_c02.avi",
+    "group": "TennisSwing_06"
+  },
+  {
+    "id": "v_TennisSwing_g06_c03_s00000",
+    "video": "TennisSwing/v_TennisSwing_g06_c03.avi",
+    "group": "TennisSwing_06"
+  },
+  {
+    "id": "v_TennisSwing_g06_c03_s00016",
+    "video": "TennisSwing/v_TennisSwing_g06_c03.avi",
+    "group": "TennisSwing_06"
+  },
+  {
+    "id": "v_TennisSwing_g06_c03_s00032",
+    "video": "TennisSwing/v_TennisSwing_g06_c03.avi",
+    "group": "TennisSwing_06"
+  },
+  {
+    "id": "v_TennisSwing_g06_c03_s00049",
+    "video": "TennisSwing/v_TennisSwing_g06_c03.avi",
+    "group": "TennisSwing_06"
+  },
+  {
+    "id": "v_TennisSwing_g06_c04_s00000",
+    "video": "TennisSwing/v_TennisSwing_g06_c04.avi",
+    "group": "TennisSwing_06"
+  },
+  {
+    "id": "v_TennisSwing_g06_c04_s00014",
+    "video": "TennisSwing/v_TennisSwing_g06_c04.avi",
+    "group": "TennisSwing_06"
+  },
+  {
+    "id": "v_TennisSwing_g06_c04_s00029",
+    "video": "TennisSwing/v_TennisSwing_g06_c04.avi",
+    "group": "TennisSwing_06"
+  },
+  {
+    "id": "v_TennisSwing_g06_c04_s00044",
+    "video": "TennisSwing/v_TennisSwing_g06_c04.avi",
+    "group": "TennisSwing_06"
+  },
+  {
+    "id": "v_TennisSwing_g06_c05_s00000",
+    "video": "TennisSwing/v_TennisSwing_g06_c05.avi",
+    "group": "TennisSwing_06"
+  },
+  {
+    "id": "v_TennisSwing_g06_c05_s00016",
+    "video": "TennisSwing/v_TennisSwing_g06_c05.avi",
+    "group": "TennisSwing_06"
+  },
+  {
+    "id": "v_TennisSwing_g06_c05_s00032",
+    "video": "TennisSwing/v_TennisSwing_g06_c05.avi",
+    "group": "TennisSwing_06"
+  },
+  {
+    "id": "v_TennisSwing_g06_c05_s00049",
+    "video": "TennisSwing/v_TennisSwing_g06_c05.avi",
+    "group": "TennisSwing_06"
+  },
+  {
+    "id": "v_TennisSwing_g06_c06_s00000",
+    "video": "TennisSwing/v_TennisSwing_g06_c06.avi",
+    "group": "TennisSwing_06"
+  },
+  {
+    "id": "v_TennisSwing_g06_c06_s00011",
+    "video": "TennisSwing/v_TennisSwing_g06_c06.avi",
+    "group": "TennisSwing_06"
+  },
+  {
+    "id": "v_TennisSwing_g06_c06_s00022",
+    "video": "TennisSwing/v_TennisSwing_g06_c06.avi",
+    "group": "TennisSwing_06"
+  },
+  {
+    "id": "v_TennisSwing_g06_c06_s00033",
+    "video": "TennisSwing/v_TennisSwing_g06_c06.avi",
+    "group": "TennisSwing_06"
+  },
+  {
+    "id": "v_TennisSwing_g06_c07_s00000",
+    "video": "TennisSwing/v_TennisSwing_g06_c07.avi",
+    "group": "TennisSwing_06"
+  },
+  {
+    "id": "v_TennisSwing_g06_c07_s00008",
+    "video": "TennisSwing/v_TennisSwing_g06_c07.avi",
+    "group": "TennisSwing_06"
+  },
+  {
+    "id": "v_TennisSwing_g06_c07_s00017",
+    "video": "TennisSwing/v_TennisSwing_g06_c07.avi",
+    "group": "TennisSwing_06"
+  },
+  {
+    "id": "v_TennisSwing_g06_c07_s00026",
+    "video": "TennisSwing/v_TennisSwing_g06_c07.avi",
+    "group": "TennisSwing_06"
+  },
+  {
+    "id": "v_TennisSwing_g07_c01_s00000",
+    "video": "TennisSwing/v_TennisSwing_g07_c01.avi",
+    "group": "TennisSwing_07"
+  },
+  {
+    "id": "v_TennisSwing_g07_c01_s00011",
+    "video": "TennisSwing/v_TennisSwing_g07_c01.avi",
+    "group": "TennisSwing_07"
+  },
+  {
+    "id": "v_TennisSwing_g07_c01_s00022",
+    "video": "TennisSwing/v_TennisSwing_g07_c01.avi",
+    "group": "TennisSwing_07"
+  },
+  {
+    "id": "v_TennisSwing_g07_c01_s00033",
+    "video": "TennisSwing/v_TennisSwing_g07_c01.avi",
+    "group": "TennisSwing_07"
+  },
+  {
+    "id": "v_TennisSwing_g07_c02_s00000",
+    "video": "TennisSwing/v_TennisSwing_g07_c02.avi",
+    "group": "TennisSwing_07"
+  },
+  {
+    "id": "v_TennisSwing_g07_c02_s00016",
+    "video": "TennisSwing/v_TennisSwing_g07_c02.avi",
+    "group": "TennisSwing_07"
+  },
+  {
+    "id": "v_TennisSwing_g07_c02_s00033",
+    "video": "TennisSwing/v_TennisSwing_g07_c02.avi",
+    "group": "TennisSwing_07"
+  },
+  {
+    "id": "v_TennisSwing_g07_c02_s00050",
+    "video": "TennisSwing/v_TennisSwing_g07_c02.avi",
+    "group": "TennisSwing_07"
+  },
+  {
+    "id": "v_TennisSwing_g07_c03_s00000",
+    "video": "TennisSwing/v_TennisSwing_g07_c03.avi",
+    "group": "TennisSwing_07"
+  },
+  {
+    "id": "v_TennisSwing_g07_c03_s00001",
+    "video": "TennisSwing/v_TennisSwing_g07_c03.avi",
+    "group": "TennisSwing_07"
+  },
+  {
+    "id": "v_TennisSwing_g07_c03_s00002",
+    "video": "TennisSwing/v_TennisSwing_g07_c03.avi",
+    "group": "TennisSwing_07"
+  },
+  {
+    "id": "v_TennisSwing_g07_c03_s00003",
+    "video": "TennisSwing/v_TennisSwing_g07_c03.avi",
+    "group": "TennisSwing_07"
+  },
+  {
+    "id": "v_TennisSwing_g07_c04_s00000",
+    "video": "TennisSwing/v_TennisSwing_g07_c04.avi",
+    "group": "TennisSwing_07"
+  },
+  {
+    "id": "v_TennisSwing_g07_c05_s00000",
+    "video": "TennisSwing/v_TennisSwing_g07_c05.avi",
+    "group": "TennisSwing_07"
+  },
+  {
+    "id": "v_TennisSwing_g07_c05_s00006",
+    "video": "TennisSwing/v_TennisSwing_g07_c05.avi",
+    "group": "TennisSwing_07"
+  },
+  {
+    "id": "v_TennisSwing_g07_c05_s00013",
+    "video": "TennisSwing/v_TennisSwing_g07_c05.avi",
+    "group": "TennisSwing_07"
+  },
+  {
+    "id": "v_TennisSwing_g07_c05_s00020",
+    "video": "TennisSwing/v_TennisSwing_g07_c05.avi",
+    "group": "TennisSwing_07"
+  },
+  {
+    "id": "v_TennisSwing_g07_c06_s00000",
+    "video": "TennisSwing/v_TennisSwing_g07_c06.avi",
+    "group": "TennisSwing_07"
+  },
+  {
+    "id": "v_TennisSwing_g07_c06_s00006",
+    "video": "TennisSwing/v_TennisSwing_g07_c06.avi",
+    "group": "TennisSwing_07"
+  },
+  {
+    "id": "v_TennisSwing_g07_c06_s00012",
+    "video": "TennisSwing/v_TennisSwing_g07_c06.avi",
+    "group": "TennisSwing_07"
+  },
+  {
+    "id": "v_TennisSwing_g07_c06_s00019",
+    "video": "TennisSwing/v_TennisSwing_g07_c06.avi",
+    "group": "TennisSwing_07"
+  },
+  {
+    "id": "v_TennisSwing_g07_c07_s00000",
+    "video": "TennisSwing/v_TennisSwing_g07_c07.avi",
+    "group": "TennisSwing_07"
+  },
+  {
+    "id": "v_TennisSwing_g07_c07_s00003",
+    "video": "TennisSwing/v_TennisSwing_g07_c07.avi",
+    "group": "TennisSwing_07"
+  },
+  {
+    "id": "v_TennisSwing_g07_c07_s00006",
+    "video": "TennisSwing/v_TennisSwing_g07_c07.avi",
+    "group": "TennisSwing_07"
+  },
+  {
+    "id": "v_TennisSwing_g07_c07_s00009",
+    "video": "TennisSwing/v_TennisSwing_g07_c07.avi",
+    "group": "TennisSwing_07"
+  },
+  {
+    "id": "v_VolleyballSpiking_g01_c02_s00000",
+    "video": "VolleyballSpiking/v_VolleyballSpiking_g01_c02.avi",
+    "group": "VolleyballSpiking_01"
+  },
+  {
+    "id": "v_VolleyballSpiking_g01_c02_s00011",
+    "video": "VolleyballSpiking/v_VolleyballSpiking_g01_c02.avi",
+    "group": "VolleyballSpiking_01"
+  },
+  {
+    "id": "v_VolleyballSpiking_g01_c02_s00023",
+    "video": "VolleyballSpiking/v_VolleyballSpiking_g01_c02.avi",
+    "group": "VolleyballSpiking_01"
+  },
+  {
+    "id": "v_VolleyballSpiking_g01_c02_s00035",
+    "video": "VolleyballSpiking/v_VolleyballSpiking_g01_c02.avi",
+    "group": "VolleyballSpiking_01"
+  },
+  {
+    "id": "v_VolleyballSpiking_g01_c03_s00000",
+    "video": "VolleyballSpiking/v_VolleyballSpiking_g01_c03.avi",
+    "group": "VolleyballSpiking_01"
+  },
+  {
+    "id": "v_VolleyballSpiking_g01_c03_s00004",
+    "video": "VolleyballSpiking/v_VolleyballSpiking_g01_c03.avi",
+    "group": "VolleyballSpiking_01"
+  },
+  {
+    "id": "v_VolleyballSpiking_g01_c03_s00008",
+    "video": "VolleyballSpiking/v_VolleyballSpiking_g01_c03.avi",
+    "group": "VolleyballSpiking_01"
+  },
+  {
+    "id": "v_VolleyballSpiking_g01_c03_s00013",
+    "video": "VolleyballSpiking/v_VolleyballSpiking_g01_c03.avi",
+    "group": "VolleyballSpiking_01"
+  },
+  {
+    "id": "v_VolleyballSpiking_g02_c02_s00000",
+    "video": "VolleyballSpiking/v_VolleyballSpiking_g02_c02.avi",
+    "group": "VolleyballSpiking_02"
+  },
+  {
+    "id": "v_VolleyballSpiking_g03_c03_s00000",
+    "video": "VolleyballSpiking/v_VolleyballSpiking_g03_c03.avi",
+    "group": "VolleyballSpiking_03"
+  },
+  {
+    "id": "v_VolleyballSpiking_g04_c07_s00000",
+    "video": "VolleyballSpiking/v_VolleyballSpiking_g04_c07.avi",
+    "group": "VolleyballSpiking_04"
+  },
+  {
+    "id": "v_VolleyballSpiking_g04_c07_s00001",
+    "video": "VolleyballSpiking/v_VolleyballSpiking_g04_c07.avi",
+    "group": "VolleyballSpiking_04"
+  },
+  {
+    "id": "v_VolleyballSpiking_g04_c07_s00002",
+    "video": "VolleyballSpiking/v_VolleyballSpiking_g04_c07.avi",
+    "group": "VolleyballSpiking_04"
+  },
+  {
+    "id": "v_VolleyballSpiking_g04_c07_s00003",
+    "video": "VolleyballSpiking/v_VolleyballSpiking_g04_c07.avi",
+    "group": "VolleyballSpiking_04"
+  },
+  {
+    "id": "v_VolleyballSpiking_g06_c01_s00000",
+    "video": "VolleyballSpiking/v_VolleyballSpiking_g06_c01.avi",
+    "group": "VolleyballSpiking_06"
+  },
+  {
+    "id": "v_VolleyballSpiking_g06_c03_s00000",
+    "video": "VolleyballSpiking/v_VolleyballSpiking_g06_c03.avi",
+    "group": "VolleyballSpiking_06"
+  },
+  {
+    "id": "v_VolleyballSpiking_g06_c04_s00000",
+    "video": "VolleyballSpiking/v_VolleyballSpiking_g06_c04.avi",
+    "group": "VolleyballSpiking_06"
+  },
+  {
+    "id": "v_VolleyballSpiking_g06_c04_s00003",
+    "video": "VolleyballSpiking/v_VolleyballSpiking_g06_c04.avi",
+    "group": "VolleyballSpiking_06"
+  },
+  {
+    "id": "v_VolleyballSpiking_g06_c04_s00006",
+    "video": "VolleyballSpiking/v_VolleyballSpiking_g06_c04.avi",
+    "group": "VolleyballSpiking_06"
+  },
+  {
+    "id": "v_VolleyballSpiking_g06_c04_s00010",
+    "video": "VolleyballSpiking/v_VolleyballSpiking_g06_c04.avi",
+    "group": "VolleyballSpiking_06"
+  }
+]
