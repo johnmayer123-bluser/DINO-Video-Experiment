@@ -1,0 +1,9 @@
+{
+  "training_seconds": 288.5531793925911,
+  "peak_allocated_bytes": 556087296,
+  "peak_reserved_bytes": 650117120,
+  "arm": "N",
+  "step": 6000,
+  "timing_scope": "synchronized training steps including CPU batch packing and transfer; excludes preload and checkpoint I/O",
+  "memory_scope": "only this model, optimizer and training batch resident on CUDA"
+}

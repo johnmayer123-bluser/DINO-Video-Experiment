@@ -1,0 +1,130 @@
+[
+  {
+    "id": "test_00002_v0",
+    "pair_id": "test_00002",
+    "variant": 0,
+    "video": "test_00002_v0.mp4",
+    "frame_sheet": "test_00002_v0.png",
+    "frames": 16,
+    "fps": 12,
+    "cue": "true external observation, never generated",
+    "panels": [
+      "cue TRUE OBSERVATION",
+      "return TRUE TARGET",
+      "N GENERATED",
+      "C GENERATED"
+    ]
+  },
+  {
+    "id": "test_00002_v1",
+    "pair_id": "test_00002",
+    "variant": 1,
+    "video": "test_00002_v1.mp4",
+    "frame_sheet": "test_00002_v1.png",
+    "frames": 16,
+    "fps": 12,
+    "cue": "true external observation, never generated",
+    "panels": [
+      "cue TRUE OBSERVATION",
+      "return TRUE TARGET",
+      "N GENERATED",
+      "C GENERATED"
+    ]
+  },
+  {
+    "id": "test_00003_v0",
+    "pair_id": "test_00003",
+    "variant": 0,
+    "video": "test_00003_v0.mp4",
+    "frame_sheet": "test_00003_v0.png",
+    "frames": 16,
+    "fps": 12,
+    "cue": "true external observation, never generated",
+    "panels": [
+      "cue TRUE OBSERVATION",
+      "return TRUE TARGET",
+      "N GENERATED",
+      "C GENERATED"
+    ]
+  },
+  {
+    "id": "test_00003_v1",
+    "pair_id": "test_00003",
+    "variant": 1,
+    "video": "test_00003_v1.mp4",
+    "frame_sheet": "test_00003_v1.png",
+    "frames": 16,
+    "fps": 12,
+    "cue": "true external observation, never generated",
+    "panels": [
+      "cue TRUE OBSERVATION",
+      "return TRUE TARGET",
+      "N GENERATED",
+      "C GENERATED"
+    ]
+  },
+  {
+    "id": "test_00000_v0",
+    "pair_id": "test_00000",
+    "variant": 0,
+    "video": "test_00000_v0.mp4",
+    "frame_sheet": "test_00000_v0.png",
+    "frames": 16,
+    "fps": 12,
+    "cue": "true external observation, never generated",
+    "panels": [
+      "cue TRUE OBSERVATION",
+      "return TRUE TARGET",
+      "N GENERATED",
+      "C GENERATED"
+    ]
+  },
+  {
+    "id": "test_00000_v1",
+    "pair_id": "test_00000",
+    "variant": 1,
+    "video": "test_00000_v1.mp4",
+    "frame_sheet": "test_00000_v1.png",
+    "frames": 16,
+    "fps": 12,
+    "cue": "true external observation, never generated",
+    "panels": [
+      "cue TRUE OBSERVATION",
+      "return TRUE TARGET",
+      "N GENERATED",
+      "C GENERATED"
+    ]
+  },
+  {
+    "id": "test_00001_v0",
+    "pair_id": "test_00001",
+    "variant": 0,
+    "video": "test_00001_v0.mp4",
+    "frame_sheet": "test_00001_v0.png",
+    "frames": 16,
+    "fps": 12,
+    "cue": "true external observation, never generated",
+    "panels": [
+      "cue TRUE OBSERVATION",
+      "return TRUE TARGET",
+      "N GENERATED",
+      "C GENERATED"
+    ]
+  },
+  {
+    "id": "test_00001_v1",
+    "pair_id": "test_00001",
+    "variant": 1,
+    "video": "test_00001_v1.mp4",
+    "frame_sheet": "test_00001_v1.png",
+    "frames": 16,
+    "fps": 12,
+    "cue": "true external observation, never generated",
+    "panels": [
+      "cue TRUE OBSERVATION",
+      "return TRUE TARGET",
+      "N GENERATED",
+      "C GENERATED"
+    ]
+  }
+]

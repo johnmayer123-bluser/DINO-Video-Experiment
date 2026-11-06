@@ -1,0 +1,99 @@
+{
+  "seed": 42,
+  "pairs": 60,
+  "cases": 480,
+  "metrics": {
+    "N/normal": {
+      "n": 120,
+      "presence": 1.0,
+      "color_classifiable": 1.0,
+      "shape_classifiable": 1.0,
+      "color_accuracy": 0.20833333333333334,
+      "shape_accuracy": 0.3333333333333333,
+      "joint_accuracy": 0.05,
+      "spatial_iou": 0.36640880809728493,
+      "color_accuracy_when_classifiable": 0.20833333333333334,
+      "shape_accuracy_when_classifiable": 0.3333333333333333,
+      "paired_both_correct": 0.0,
+      "paired_control_following": 0.0
+    },
+    "C/normal": {
+      "n": 120,
+      "presence": 1.0,
+      "color_classifiable": 1.0,
+      "shape_classifiable": 1.0,
+      "color_accuracy": 1.0,
+      "shape_accuracy": 0.9979166666666667,
+      "joint_accuracy": 0.9979166666666667,
+      "spatial_iou": 0.9217481447422645,
+      "color_accuracy_when_classifiable": 1.0,
+      "shape_accuracy_when_classifiable": 0.9979166666666667,
+      "paired_both_correct": 1.0,
+      "paired_control_following": 1.0
+    },
+    "C/zero": {
+      "n": 120,
+      "presence": 1.0,
+      "color_classifiable": 1.0,
+      "shape_classifiable": 1.0,
+      "color_accuracy": 0.25,
+      "shape_accuracy": 0.33645833333333336,
+      "joint_accuracy": 0.08958333333333333,
+      "spatial_iou": 0.44120294923013786,
+      "color_accuracy_when_classifiable": 0.25,
+      "shape_accuracy_when_classifiable": 0.33645833333333336,
+      "paired_both_correct": 0.0,
+      "paired_control_following": 0.0
+    },
+    "C/swap": {
+      "n": 120,
+      "presence": 1.0,
+      "color_classifiable": 1.0,
+      "shape_classifiable": 1.0,
+      "color_accuracy": 0.5,
+      "shape_accuracy": 0.5020833333333333,
+      "joint_accuracy": 0.0020833333333333333,
+      "spatial_iou": 0.7632440099259814,
+      "color_accuracy_when_classifiable": 0.5,
+      "shape_accuracy_when_classifiable": 0.5020833333333333,
+      "paired_both_correct": 0.0,
+      "paired_control_following": 0.0
+    }
+  },
+  "interventions": {
+    "zero_drop_color_accuracy": 0.75,
+    "zero_drop_shape_accuracy": 0.6614583333333333,
+    "zero_drop_joint_accuracy": 0.9083333333333333,
+    "swap_donor_color_accuracy": 1.0,
+    "swap_original_color_accuracy": 0.5,
+    "swap_donor_shape_accuracy": 0.9979166666666667,
+    "swap_original_shape_accuracy": 0.5020833333333333,
+    "swap_donor_joint_accuracy": 0.9979166666666667,
+    "swap_original_joint_accuracy": 0.0020833333333333333,
+    "paired_control_following": 1.0
+  },
+  "calibration_decoded_truth": {
+    "presence": 1.0,
+    "color_classifiable": 1.0,
+    "shape_classifiable": 1.0,
+    "color_accuracy": 1.0,
+    "shape_accuracy": 1.0,
+    "joint_accuracy": 1.0,
+    "spatial_iou": 0.9760427360271695
+  },
+  "calibration_all_attributes": true,
+  "thresholds": {
+    "saturation": 0.22,
+    "brightness": 0.35,
+    "min_area_pixels": 12,
+    "min_area_fraction": 0.0004,
+    "max_area_fraction": 0.3,
+    "max_color_distance": 0.65,
+    "min_aligned_shape_iou": 0.4
+  },
+  "shape_templates": "per-frame visible renderer silhouettes; bbox aligned; scene cached",
+  "classification_mask": "largest connected saturated component; spatial IoU uses all saturated pixels",
+  "paired_success_rule": "both variants joint accuracy > 0.5 over last8 frames; changed-attribute control following also requires > 0.5",
+  "resources_file": "resources.json",
+  "deterministic_reuse": "Per pair: N variants share one output; C zero variants share one output; C swap exactly reuses donor normal output. Four unique rollouts/decodes per pair; swap is a deterministic controlled response, not independent additional evidence."
+}

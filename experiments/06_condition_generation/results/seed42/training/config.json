@@ -1,0 +1,22 @@
+{
+  "seed": 42,
+  "steps": 6000,
+  "arms": [
+    "N",
+    "C"
+  ],
+  "scene_pairs": 1000,
+  "batch_pairs": 8,
+  "batch_targets": 16,
+  "lr": 0.0002,
+  "weight_decay": 0.01,
+  "gradient_clip": 1.0,
+  "dropout": 0.1,
+  "phase": 1,
+  "state": "FP16 16x256",
+  "precision": "BF16 CUDA autocast, FP32 loss; CPU FP32 debug",
+  "condition": "N zero state; C once U(0,E(cue)); shared boundary",
+  "loss": "per-sample 0.5 foreground mean + 0.5 background mean after channel average",
+  "t": "equal mixture of U[0,.2] and U[0,1]; t=0 pure noise",
+  "pairing": "same init, scene pairs, noise, t and dropout across arms; variants share noise/t/dropout"
+}
