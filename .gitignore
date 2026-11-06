@@ -5,7 +5,6 @@
 /runs/
 /logs/
 /third_party/
-/results/delayed_memory/
 
 # Python and editor state
 __pycache__/

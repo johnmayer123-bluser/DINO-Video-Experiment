@@ -33,7 +33,6 @@
 | 04 · token 压缩 | 仅用去噪监督，状态能压到多小？ | 3 | 128→32 KiB，平均保留 95.1% 的原基准收益；[实验](experiments/04_history_compression/README.md) |
 | 04B · 维度压缩 | 固定 16 个 token，继续缩小维度 | 3 | 32→8 KiB，保留局部基准 96.0%、原基准 90.7% 的收益；[实验](experiments/04_history_compression/width_sweep/README.md) |
 | 05 · 边界与表示 | 仅压缩表示、仅边界 latent、两者结合，哪种更有效？ | 3 | 26 KiB 组合比等预算纯表示改善 12.87%，比仅边界改善 1.48%；[实验](experiments/05_boundary_state/README.md) |
-| 06 · 延迟记忆 | 固定容量表示能否跨越遮挡保存并更新历史？ | 3（计划） | 已启动；比较最近块、固定首块、持续更新，并评估生成质量与资源消耗；[方案与命令](experiments/06_delayed_memory/README.md) |
 
 ## 当前压缩结果
 
@@ -140,8 +139,7 @@ DINO-Video-Experiment/
 │   ├── 02_predicted_semantics/    # 直接替换与预测条件训练
 │   ├── 03_semantic_supervision/   # 十种子仅去噪／加语义对齐同容量对照
 │   ├── 04_history_compression/    # token 压缩与 width_sweep/
-│   ├── 05_boundary_state/         # 表示与最近边界的互补性
-│   └── 06_delayed_memory/         # 延迟记忆、闭环生成与资源消耗
+│   └── 05_boundary_state/         # 表示与最近边界的互补性
 ├── scripts/                      # 公共下载、缓存、模型与初始 A/B 代码
 ├── assets/                       # 初始实验图
 ├── results/                      # 初始实验结果；后续结果随各实验目录保存
