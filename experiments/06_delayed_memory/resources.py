@@ -120,6 +120,18 @@ def measure(args):
                               max(r['peak_allocated_bytes'], r['initial_cues_peak_bytes'] or 0)
                               for r in subset),
                           'cache_bytes': sorted({r['persistent_cache_bytes'] for r in subset})}
+        summaries[arm]['by_delay'] = []
+        for delay in args.delays:
+            group = [r for r in subset if r['delay'] == delay]
+            summaries[arm]['by_delay'].append({
+                'delay': delay, 'episodes': len(rows), 'generated_chunks_per_episode': delay + 1,
+                'sample_median_ms': float(np.median([r['sample_ms'] for r in group])),
+                'hidden_update_median_ms': float(np.median([r['update_ms'] for r in group if not r['phase']])),
+                'episode_generator_mean_ms': sum(r['sample_plus_update_ms'] + (r['initial_cues_ms'] or 0)
+                                                 for r in group) / len(rows),
+                'peak_allocated_bytes': max(max(r['peak_allocated_bytes'], r['initial_cues_peak_bytes'] or 0)
+                                             for r in group),
+                'cache_bytes': sorted({r['persistent_cache_bytes'] for r in group})})
         if args.decode:
             from diffusers import AutoencoderKLWan
             vae = AutoencoderKLWan.from_pretrained(root / 'models/wan-vae',

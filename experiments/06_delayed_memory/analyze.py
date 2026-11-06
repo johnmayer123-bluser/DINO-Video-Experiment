@@ -288,6 +288,24 @@ def resource_report(path, output):
     figure.suptitle('Measured resources: batch 1, one loaded arm; VAE measured separately')
     figure.savefig(output / 'resources.png', dpi=180)
     plt.close(figure)
+    if all(raw[arm].get('by_delay') for arm in arms):
+        figure, axes = plt.subplots(1, 2, figsize=(9, 3.8), constrained_layout=True)
+        for arm in arms:
+            points = sorted(raw[arm]['by_delay'], key=lambda value: value['delay'])
+            x = [point['delay'] for point in points]
+            axes[0].plot(x, [point['sample_median_ms'] + point['hidden_update_median_ms']
+                            for point in points], marker='o', label=arm)
+            axes[1].plot(x, [point['episode_generator_mean_ms'] for point in points],
+                         marker='o', label=arm)
+        for ax in axes:
+            ax.set(xlabel='Hidden chunks', ylabel='ms', xticks=(1, 3, 6))
+            ax.grid(alpha=.2)
+            ax.legend(frameon=False)
+        axes[0].set_title('Per chunk: sampling + state update medians')
+        axes[1].set_title('Whole episode: mean generator compute')
+        figure.suptitle('History-length scaling; VAE decode excluded and reported separately')
+        figure.savefig(output / 'resources_by_delay.png', dpi=180)
+        plt.close(figure)
     return result
 
 
