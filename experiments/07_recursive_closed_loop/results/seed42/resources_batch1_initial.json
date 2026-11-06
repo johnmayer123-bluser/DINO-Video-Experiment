@@ -1,0 +1,255 @@
+{
+  "seed": 42,
+  "batch_size": 1,
+  "euler_steps": 32,
+  "repeats": 3,
+  "scope": "cue observation + delay generated blank chunks and their observations + one generated return; no VAE",
+  "informative_persistent_condition_kib": 26,
+  "persistent_scope": "FP16 [1,16,256] state + owned [1,16,1,24,24] boundary; excludes cue, sampling/work buffers and model parameters",
+  "noise": "identical per pair/chunk across arms; return shared across delays",
+  "arms": {
+    "F": {
+      "warmup_complete_rollouts": 3,
+      "vae_resident": false,
+      "delays": {
+        "1": {
+          "delay": 1,
+          "total_samples_ms": [
+            377.5795716792345,
+            376.20264384895563,
+            370.138892903924
+          ],
+          "total_median_ms": 376.20264384895563,
+          "generated_chunks": 2,
+          "amortized_ms_per_generated_chunk": 188.10132192447782,
+          "amortized_scope": "includes cue encoding and all updates; not isolated single sampler latency",
+          "actual_persistent_tensor_kib": 26.0,
+          "peak_allocated_bytes": 98135552,
+          "peak_reserved_bytes": 111149056
+        },
+        "4": {
+          "delay": 4,
+          "total_samples_ms": [
+            933.136435225606,
+            743.6222685500979,
+            704.938898794353
+          ],
+          "total_median_ms": 743.6222685500979,
+          "generated_chunks": 5,
+          "amortized_ms_per_generated_chunk": 148.7244537100196,
+          "amortized_scope": "includes cue encoding and all updates; not isolated single sampler latency",
+          "actual_persistent_tensor_kib": 26.0,
+          "peak_allocated_bytes": 98135552,
+          "peak_reserved_bytes": 111149056
+        },
+        "8": {
+          "delay": 8,
+          "total_samples_ms": [
+            1230.2706353366375,
+            1248.1778291985393,
+            1253.5668602213264
+          ],
+          "total_median_ms": 1248.1778291985393,
+          "generated_chunks": 9,
+          "amortized_ms_per_generated_chunk": 138.68642546650437,
+          "amortized_scope": "includes cue encoding and all updates; not isolated single sampler latency",
+          "actual_persistent_tensor_kib": 26.0,
+          "peak_allocated_bytes": 98135552,
+          "peak_reserved_bytes": 111149056
+        },
+        "16": {
+          "delay": 16,
+          "total_samples_ms": [
+            2360.9709162265062,
+            2350.7867325097322,
+            2392.412514425814
+          ],
+          "total_median_ms": 2360.9709162265062,
+          "generated_chunks": 17,
+          "amortized_ms_per_generated_chunk": 138.88064213097095,
+          "amortized_scope": "includes cue encoding and all updates; not isolated single sampler latency",
+          "actual_persistent_tensor_kib": 26.0,
+          "peak_allocated_bytes": 98135552,
+          "peak_reserved_bytes": 111149056
+        },
+        "32": {
+          "delay": 32,
+          "total_samples_ms": [
+            4545.945333316922,
+            4696.616166271269,
+            4557.893878780305
+          ],
+          "total_median_ms": 4557.893878780305,
+          "generated_chunks": 33,
+          "amortized_ms_per_generated_chunk": 138.11799632667592,
+          "amortized_scope": "includes cue encoding and all updates; not isolated single sampler latency",
+          "actual_persistent_tensor_kib": 26.0,
+          "peak_allocated_bytes": 98135552,
+          "peak_reserved_bytes": 111149056
+        }
+      }
+    },
+    "L": {
+      "warmup_complete_rollouts": 3,
+      "vae_resident": false,
+      "delays": {
+        "1": {
+          "delay": 1,
+          "total_samples_ms": [
+            279.54493649303913,
+            275.07401909679174,
+            279.1632292792201
+          ],
+          "total_median_ms": 279.1632292792201,
+          "generated_chunks": 2,
+          "amortized_ms_per_generated_chunk": 139.58161463961005,
+          "amortized_scope": "includes cue encoding and all updates; not isolated single sampler latency",
+          "actual_persistent_tensor_kib": 26.0,
+          "peak_allocated_bytes": 98397696,
+          "peak_reserved_bytes": 111149056
+        },
+        "4": {
+          "delay": 4,
+          "total_samples_ms": [
+            699.7471246868372,
+            695.7567343488336,
+            688.0387170240283
+          ],
+          "total_median_ms": 695.7567343488336,
+          "generated_chunks": 5,
+          "amortized_ms_per_generated_chunk": 139.1513468697667,
+          "amortized_scope": "includes cue encoding and all updates; not isolated single sampler latency",
+          "actual_persistent_tensor_kib": 26.0,
+          "peak_allocated_bytes": 98397696,
+          "peak_reserved_bytes": 111149056
+        },
+        "8": {
+          "delay": 8,
+          "total_samples_ms": [
+            1270.6552594900131,
+            1265.8556401729584,
+            1263.0649702623487
+          ],
+          "total_median_ms": 1265.8556401729584,
+          "generated_chunks": 9,
+          "amortized_ms_per_generated_chunk": 140.65062668588428,
+          "amortized_scope": "includes cue encoding and all updates; not isolated single sampler latency",
+          "actual_persistent_tensor_kib": 26.0,
+          "peak_allocated_bytes": 98397696,
+          "peak_reserved_bytes": 111149056
+        },
+        "16": {
+          "delay": 16,
+          "total_samples_ms": [
+            2330.271400511265,
+            2317.9061328992248,
+            2309.5664950087667
+          ],
+          "total_median_ms": 2317.9061328992248,
+          "generated_chunks": 17,
+          "amortized_ms_per_generated_chunk": 136.34741958230734,
+          "amortized_scope": "includes cue encoding and all updates; not isolated single sampler latency",
+          "actual_persistent_tensor_kib": 26.0,
+          "peak_allocated_bytes": 98397696,
+          "peak_reserved_bytes": 111149056
+        },
+        "32": {
+          "delay": 32,
+          "total_samples_ms": [
+            4490.980641916394,
+            4526.008258573711,
+            4516.4115484803915
+          ],
+          "total_median_ms": 4516.4115484803915,
+          "generated_chunks": 33,
+          "amortized_ms_per_generated_chunk": 136.86095601455733,
+          "amortized_scope": "includes cue encoding and all updates; not isolated single sampler latency",
+          "actual_persistent_tensor_kib": 26.0,
+          "peak_allocated_bytes": 98397696,
+          "peak_reserved_bytes": 111149056
+        }
+      }
+    },
+    "R": {
+      "warmup_complete_rollouts": 3,
+      "vae_resident": false,
+      "delays": {
+        "1": {
+          "delay": 1,
+          "total_samples_ms": [
+            270.1338632032275,
+            266.6209852322936,
+            270.6134868785739
+          ],
+          "total_median_ms": 270.1338632032275,
+          "generated_chunks": 2,
+          "amortized_ms_per_generated_chunk": 135.06693160161376,
+          "amortized_scope": "includes cue encoding and all updates; not isolated single sampler latency",
+          "actual_persistent_tensor_kib": 26.0,
+          "peak_allocated_bytes": 98397696,
+          "peak_reserved_bytes": 111149056
+        },
+        "4": {
+          "delay": 4,
+          "total_samples_ms": [
+            681.9999655708671,
+            697.4721811711788,
+            676.5342485159636
+          ],
+          "total_median_ms": 681.9999655708671,
+          "generated_chunks": 5,
+          "amortized_ms_per_generated_chunk": 136.3999931141734,
+          "amortized_scope": "includes cue encoding and all updates; not isolated single sampler latency",
+          "actual_persistent_tensor_kib": 26.0,
+          "peak_allocated_bytes": 98397696,
+          "peak_reserved_bytes": 111149056
+        },
+        "8": {
+          "delay": 8,
+          "total_samples_ms": [
+            1215.5327079817653,
+            1240.9362634643912,
+            1213.1201522424817
+          ],
+          "total_median_ms": 1215.5327079817653,
+          "generated_chunks": 9,
+          "amortized_ms_per_generated_chunk": 135.0591897757517,
+          "amortized_scope": "includes cue encoding and all updates; not isolated single sampler latency",
+          "actual_persistent_tensor_kib": 26.0,
+          "peak_allocated_bytes": 98397696,
+          "peak_reserved_bytes": 111149056
+        },
+        "16": {
+          "delay": 16,
+          "total_samples_ms": [
+            2315.5356599017978,
+            2316.6514290496707,
+            2316.7990557849407
+          ],
+          "total_median_ms": 2316.6514290496707,
+          "generated_chunks": 17,
+          "amortized_ms_per_generated_chunk": 136.27361347351004,
+          "amortized_scope": "includes cue encoding and all updates; not isolated single sampler latency",
+          "actual_persistent_tensor_kib": 26.0,
+          "peak_allocated_bytes": 98397696,
+          "peak_reserved_bytes": 111149056
+        },
+        "32": {
+          "delay": 32,
+          "total_samples_ms": [
+            4523.262829519808,
+            4486.297140829265,
+            4518.661838024855
+          ],
+          "total_median_ms": 4518.661838024855,
+          "generated_chunks": 33,
+          "amortized_ms_per_generated_chunk": 136.9291466068138,
+          "amortized_scope": "includes cue encoding and all updates; not isolated single sampler latency",
+          "actual_persistent_tensor_kib": 26.0,
+          "peak_allocated_bytes": 98397696,
+          "peak_reserved_bytes": 111149056
+        }
+      }
+    }
+  }
+}

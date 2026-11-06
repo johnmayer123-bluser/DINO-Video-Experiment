@@ -1,0 +1,581 @@
+{
+  "seed": 42,
+  "pairs": 60,
+  "delays": [
+    1,
+    4,
+    8,
+    16,
+    32
+  ],
+  "joint_accuracy_definition": "mean per-variant last8-frame color AND shape correctness",
+  "paired_success_definition": "both variants strictly >0.5 last8-frame correctness",
+  "timing_definition": "median complete batch1 rollout divided by delay+1 generated chunks; includes cue and state updates",
+  "arms": {
+    "F": {
+      "label": "F Fixed cue",
+      "training": {
+        "hours": 0.09976287903445255,
+        "peak_allocated_mib": 729.11181640625
+      },
+      "delays": {
+        "1": {
+          "truth": {
+            "n": 120,
+            "joint_accuracy": 1.0,
+            "color_accuracy": 1.0,
+            "shape_accuracy": 1.0,
+            "spatial_iou": 0.9345143503386489,
+            "paired_both_correct": 1.0,
+            "paired_control_following": 1.0
+          },
+          "closed": {
+            "n": 120,
+            "joint_accuracy": 1.0,
+            "color_accuracy": 1.0,
+            "shape_accuracy": 1.0,
+            "spatial_iou": 0.9338787347579427,
+            "paired_both_correct": 1.0,
+            "paired_control_following": 1.0
+          },
+          "batch1": {
+            "total_median_ms": 289.3902575597167,
+            "amortized_ms_per_generated_chunk": 144.69512877985835,
+            "peak_allocated_mib": 93.58935546875,
+            "actual_persistent_tensor_kib": 26.0
+          }
+        },
+        "4": {
+          "truth": {
+            "n": 120,
+            "joint_accuracy": 1.0,
+            "color_accuracy": 1.0,
+            "shape_accuracy": 1.0,
+            "spatial_iou": 0.9345143503386489,
+            "paired_both_correct": 1.0,
+            "paired_control_following": 1.0
+          },
+          "closed": {
+            "n": 120,
+            "joint_accuracy": 1.0,
+            "color_accuracy": 1.0,
+            "shape_accuracy": 1.0,
+            "spatial_iou": 0.9334274462493407,
+            "paired_both_correct": 1.0,
+            "paired_control_following": 1.0
+          },
+          "batch1": {
+            "total_median_ms": 706.2559425830841,
+            "amortized_ms_per_generated_chunk": 141.25118851661682,
+            "peak_allocated_mib": 93.58935546875,
+            "actual_persistent_tensor_kib": 26.0
+          }
+        },
+        "8": {
+          "truth": {
+            "n": 120,
+            "joint_accuracy": 1.0,
+            "color_accuracy": 1.0,
+            "shape_accuracy": 1.0,
+            "spatial_iou": 0.9345143503386489,
+            "paired_both_correct": 1.0,
+            "paired_control_following": 1.0
+          },
+          "closed": {
+            "n": 120,
+            "joint_accuracy": 1.0,
+            "color_accuracy": 1.0,
+            "shape_accuracy": 1.0,
+            "spatial_iou": 0.9331713172957496,
+            "paired_both_correct": 1.0,
+            "paired_control_following": 1.0
+          },
+          "batch1": {
+            "total_median_ms": 1505.5484361946583,
+            "amortized_ms_per_generated_chunk": 167.28315957718425,
+            "peak_allocated_mib": 93.58935546875,
+            "actual_persistent_tensor_kib": 26.0
+          }
+        },
+        "16": {
+          "truth": {
+            "n": 120,
+            "joint_accuracy": 1.0,
+            "color_accuracy": 1.0,
+            "shape_accuracy": 1.0,
+            "spatial_iou": 0.9345143503386489,
+            "paired_both_correct": 1.0,
+            "paired_control_following": 1.0
+          },
+          "closed": {
+            "n": 120,
+            "joint_accuracy": 1.0,
+            "color_accuracy": 1.0,
+            "shape_accuracy": 1.0,
+            "spatial_iou": 0.9325164701093273,
+            "paired_both_correct": 1.0,
+            "paired_control_following": 1.0
+          },
+          "batch1": {
+            "total_median_ms": 2365.021053701639,
+            "amortized_ms_per_generated_chunk": 139.11888551186112,
+            "peak_allocated_mib": 93.58935546875,
+            "actual_persistent_tensor_kib": 26.0
+          }
+        },
+        "32": {
+          "truth": {
+            "n": 120,
+            "joint_accuracy": 1.0,
+            "color_accuracy": 1.0,
+            "shape_accuracy": 1.0,
+            "spatial_iou": 0.9345143503386489,
+            "paired_both_correct": 1.0,
+            "paired_control_following": 1.0
+          },
+          "closed": {
+            "n": 120,
+            "joint_accuracy": 1.0,
+            "color_accuracy": 1.0,
+            "shape_accuracy": 1.0,
+            "spatial_iou": 0.9319939348781382,
+            "paired_both_correct": 1.0,
+            "paired_control_following": 1.0
+          },
+          "batch1": {
+            "total_median_ms": 4594.510075636208,
+            "amortized_ms_per_generated_chunk": 139.22757804958206,
+            "peak_allocated_mib": 93.58935546875,
+            "actual_persistent_tensor_kib": 26.0
+          }
+        }
+      }
+    },
+    "L": {
+      "label": "L Latest chunk",
+      "training": {
+        "hours": 0.09425812342747425,
+        "peak_allocated_mib": 748.80517578125
+      },
+      "delays": {
+        "1": {
+          "truth": {
+            "n": 120,
+            "joint_accuracy": 0.1,
+            "color_accuracy": 0.275,
+            "shape_accuracy": 0.325,
+            "spatial_iou": 0.33693441164731935,
+            "paired_both_correct": 0.0,
+            "paired_control_following": 0.0
+          },
+          "closed": {
+            "n": 120,
+            "joint_accuracy": 0.09895833333333333,
+            "color_accuracy": 0.275,
+            "shape_accuracy": 0.32395833333333335,
+            "spatial_iou": 0.33714312318177003,
+            "paired_both_correct": 0.0,
+            "paired_control_following": 0.0
+          },
+          "batch1": {
+            "total_median_ms": 280.65523505210876,
+            "amortized_ms_per_generated_chunk": 140.32761752605438,
+            "peak_allocated_mib": 93.83935546875,
+            "actual_persistent_tensor_kib": 26.0
+          }
+        },
+        "4": {
+          "truth": {
+            "n": 120,
+            "joint_accuracy": 0.1,
+            "color_accuracy": 0.275,
+            "shape_accuracy": 0.325,
+            "spatial_iou": 0.33693441164731935,
+            "paired_both_correct": 0.0,
+            "paired_control_following": 0.0
+          },
+          "closed": {
+            "n": 120,
+            "joint_accuracy": 0.09895833333333333,
+            "color_accuracy": 0.25833333333333336,
+            "shape_accuracy": 0.32395833333333335,
+            "spatial_iou": 0.3496511268952565,
+            "paired_both_correct": 0.0,
+            "paired_control_following": 0.0
+          },
+          "batch1": {
+            "total_median_ms": 704.1294593364,
+            "amortized_ms_per_generated_chunk": 140.82589186728,
+            "peak_allocated_mib": 93.83935546875,
+            "actual_persistent_tensor_kib": 26.0
+          }
+        },
+        "8": {
+          "truth": {
+            "n": 120,
+            "joint_accuracy": 0.1,
+            "color_accuracy": 0.275,
+            "shape_accuracy": 0.325,
+            "spatial_iou": 0.33693441164731935,
+            "paired_both_correct": 0.0,
+            "paired_control_following": 0.0
+          },
+          "closed": {
+            "n": 120,
+            "joint_accuracy": 0.1,
+            "color_accuracy": 0.275,
+            "shape_accuracy": 0.3416666666666667,
+            "spatial_iou": 0.3520027970168526,
+            "paired_both_correct": 0.0,
+            "paired_control_following": 0.0
+          },
+          "batch1": {
+            "total_median_ms": 1763.3097125217319,
+            "amortized_ms_per_generated_chunk": 195.92330139130354,
+            "peak_allocated_mib": 93.83935546875,
+            "actual_persistent_tensor_kib": 26.0
+          }
+        },
+        "16": {
+          "truth": {
+            "n": 120,
+            "joint_accuracy": 0.1,
+            "color_accuracy": 0.275,
+            "shape_accuracy": 0.325,
+            "spatial_iou": 0.33693441164731935,
+            "paired_both_correct": 0.0,
+            "paired_control_following": 0.0
+          },
+          "closed": {
+            "n": 120,
+            "joint_accuracy": 0.096875,
+            "color_accuracy": 0.25833333333333336,
+            "shape_accuracy": 0.35520833333333335,
+            "spatial_iou": 0.35910870926062916,
+            "paired_both_correct": 0.0,
+            "paired_control_following": 0.0
+          },
+          "batch1": {
+            "total_median_ms": 2494.000257924199,
+            "amortized_ms_per_generated_chunk": 146.7058975249529,
+            "peak_allocated_mib": 93.83935546875,
+            "actual_persistent_tensor_kib": 26.0
+          }
+        },
+        "32": {
+          "truth": {
+            "n": 120,
+            "joint_accuracy": 0.1,
+            "color_accuracy": 0.275,
+            "shape_accuracy": 0.325,
+            "spatial_iou": 0.33693441164731935,
+            "paired_both_correct": 0.0,
+            "paired_control_following": 0.0
+          },
+          "closed": {
+            "n": 120,
+            "joint_accuracy": 0.09791666666666667,
+            "color_accuracy": 0.25833333333333336,
+            "shape_accuracy": 0.33958333333333335,
+            "spatial_iou": 0.3612443274259951,
+            "paired_both_correct": 0.0,
+            "paired_control_following": 0.0
+          },
+          "batch1": {
+            "total_median_ms": 4832.270009443164,
+            "amortized_ms_per_generated_chunk": 146.43242452858073,
+            "peak_allocated_mib": 93.83935546875,
+            "actual_persistent_tensor_kib": 26.0
+          }
+        }
+      }
+    },
+    "R": {
+      "label": "R Recursive",
+      "training": {
+        "hours": 0.09899268589681015,
+        "peak_allocated_mib": 792.44775390625
+      },
+      "delays": {
+        "1": {
+          "truth": {
+            "n": 120,
+            "joint_accuracy": 0.109375,
+            "color_accuracy": 0.24166666666666667,
+            "shape_accuracy": 0.3177083333333333,
+            "spatial_iou": 0.30103161022190306,
+            "paired_both_correct": 0.0,
+            "paired_control_following": 0.0
+          },
+          "closed": {
+            "n": 120,
+            "joint_accuracy": 0.109375,
+            "color_accuracy": 0.24166666666666667,
+            "shape_accuracy": 0.3145833333333333,
+            "spatial_iou": 0.3014492403446558,
+            "paired_both_correct": 0.0,
+            "paired_control_following": 0.0
+          },
+          "batch1": {
+            "total_median_ms": 280.227686278522,
+            "amortized_ms_per_generated_chunk": 140.113843139261,
+            "peak_allocated_mib": 93.83935546875,
+            "actual_persistent_tensor_kib": 26.0
+          }
+        },
+        "4": {
+          "truth": {
+            "n": 120,
+            "joint_accuracy": 0.109375,
+            "color_accuracy": 0.24166666666666667,
+            "shape_accuracy": 0.3177083333333333,
+            "spatial_iou": 0.3010273843184584,
+            "paired_both_correct": 0.0,
+            "paired_control_following": 0.0
+          },
+          "closed": {
+            "n": 120,
+            "joint_accuracy": 0.10729166666666666,
+            "color_accuracy": 0.24166666666666667,
+            "shape_accuracy": 0.315625,
+            "spatial_iou": 0.30323871804642805,
+            "paired_both_correct": 0.0,
+            "paired_control_following": 0.0
+          },
+          "batch1": {
+            "total_median_ms": 705.3122408688068,
+            "amortized_ms_per_generated_chunk": 141.06244817376137,
+            "peak_allocated_mib": 93.83935546875,
+            "actual_persistent_tensor_kib": 26.0
+          }
+        },
+        "8": {
+          "truth": {
+            "n": 120,
+            "joint_accuracy": 0.109375,
+            "color_accuracy": 0.24166666666666667,
+            "shape_accuracy": 0.3177083333333333,
+            "spatial_iou": 0.30097371724497013,
+            "paired_both_correct": 0.0,
+            "paired_control_following": 0.0
+          },
+          "closed": {
+            "n": 120,
+            "joint_accuracy": 0.09166666666666666,
+            "color_accuracy": 0.225,
+            "shape_accuracy": 0.32083333333333336,
+            "spatial_iou": 0.32064148381922725,
+            "paired_both_correct": 0.0,
+            "paired_control_following": 0.0
+          },
+          "batch1": {
+            "total_median_ms": 1280.2238566800952,
+            "amortized_ms_per_generated_chunk": 142.24709518667726,
+            "peak_allocated_mib": 93.83935546875,
+            "actual_persistent_tensor_kib": 26.0
+          }
+        },
+        "16": {
+          "truth": {
+            "n": 120,
+            "joint_accuracy": 0.10833333333333334,
+            "color_accuracy": 0.24166666666666667,
+            "shape_accuracy": 0.31666666666666665,
+            "spatial_iou": 0.3010386452225258,
+            "paired_both_correct": 0.0,
+            "paired_control_following": 0.0
+          },
+          "closed": {
+            "n": 120,
+            "joint_accuracy": 0.08645833333333333,
+            "color_accuracy": 0.23333333333333334,
+            "shape_accuracy": 0.30416666666666664,
+            "spatial_iou": 0.32448308635199036,
+            "paired_both_correct": 0.0,
+            "paired_control_following": 0.0
+          },
+          "batch1": {
+            "total_median_ms": 2406.132365576923,
+            "amortized_ms_per_generated_chunk": 141.53719797511312,
+            "peak_allocated_mib": 93.83935546875,
+            "actual_persistent_tensor_kib": 26.0
+          }
+        },
+        "32": {
+          "truth": {
+            "n": 120,
+            "joint_accuracy": 0.109375,
+            "color_accuracy": 0.24166666666666667,
+            "shape_accuracy": 0.3177083333333333,
+            "spatial_iou": 0.3010377220486134,
+            "paired_both_correct": 0.0,
+            "paired_control_following": 0.0
+          },
+          "closed": {
+            "n": 120,
+            "joint_accuracy": 0.1,
+            "color_accuracy": 0.25833333333333336,
+            "shape_accuracy": 0.29791666666666666,
+            "spatial_iou": 0.33989934392728666,
+            "paired_both_correct": 0.0,
+            "paired_control_following": 0.0
+          },
+          "batch1": {
+            "total_median_ms": 4554.915247485042,
+            "amortized_ms_per_generated_chunk": 138.027734772274,
+            "peak_allocated_mib": 93.83935546875,
+            "actual_persistent_tensor_kib": 26.0
+          }
+        }
+      }
+    }
+  },
+  "boundary_interventions": {
+    "1": {
+      "normal": {
+        "joint_accuracy": 0.109375,
+        "color_accuracy": 0.24166666666666667,
+        "shape_accuracy": 0.3145833333333333,
+        "paired_both_correct": 0.0
+      },
+      "clamp_boundary": {
+        "joint_accuracy": 0.10833333333333334,
+        "color_accuracy": 0.24166666666666667,
+        "shape_accuracy": 0.31666666666666665,
+        "paired_both_correct": 0.0
+      },
+      "clamp_boundary_zero": {
+        "joint_accuracy": 0.09791666666666667,
+        "color_accuracy": 0.23333333333333334,
+        "shape_accuracy": 0.309375,
+        "paired_both_correct": 0.0
+      },
+      "joint_differences": {
+        "normal_minus_clamp_boundary": 0.001041666666666663,
+        "clamp_boundary_minus_clamp_boundary_zero": 0.010416666666666671
+      }
+    },
+    "32": {
+      "normal": {
+        "joint_accuracy": 0.1,
+        "color_accuracy": 0.25833333333333336,
+        "shape_accuracy": 0.29791666666666666,
+        "paired_both_correct": 0.0
+      },
+      "clamp_boundary": {
+        "joint_accuracy": 0.109375,
+        "color_accuracy": 0.24166666666666667,
+        "shape_accuracy": 0.32083333333333336,
+        "paired_both_correct": 0.0
+      },
+      "clamp_boundary_zero": {
+        "joint_accuracy": 0.09791666666666667,
+        "color_accuracy": 0.23333333333333334,
+        "shape_accuracy": 0.309375,
+        "paired_both_correct": 0.0
+      },
+      "joint_differences": {
+        "normal_minus_clamp_boundary": -0.009374999999999994,
+        "clamp_boundary_minus_clamp_boundary_zero": 0.011458333333333334
+      }
+    }
+  },
+  "blank_leakage": {
+    "F": {
+      "1": {
+        "n_variants": 4,
+        "saturated_area_fraction": 0.0,
+        "last8_saturated_area_fraction": 0.0,
+        "visible_presence_fraction": 0.0
+      },
+      "4": {
+        "n_variants": 4,
+        "saturated_area_fraction": 0.0,
+        "last8_saturated_area_fraction": 0.0,
+        "visible_presence_fraction": 0.0
+      },
+      "8": {
+        "n_variants": 4,
+        "saturated_area_fraction": 0.0,
+        "last8_saturated_area_fraction": 0.0,
+        "visible_presence_fraction": 0.0
+      },
+      "16": {
+        "n_variants": 4,
+        "saturated_area_fraction": 0.0,
+        "last8_saturated_area_fraction": 0.0,
+        "visible_presence_fraction": 0.0
+      },
+      "32": {
+        "n_variants": 4,
+        "saturated_area_fraction": 0.0,
+        "last8_saturated_area_fraction": 0.0,
+        "visible_presence_fraction": 0.0
+      }
+    },
+    "L": {
+      "1": {
+        "n_variants": 4,
+        "saturated_area_fraction": 0.0,
+        "last8_saturated_area_fraction": 0.0,
+        "visible_presence_fraction": 0.0
+      },
+      "4": {
+        "n_variants": 4,
+        "saturated_area_fraction": 0.0,
+        "last8_saturated_area_fraction": 0.0,
+        "visible_presence_fraction": 0.0
+      },
+      "8": {
+        "n_variants": 4,
+        "saturated_area_fraction": 0.0,
+        "last8_saturated_area_fraction": 0.0,
+        "visible_presence_fraction": 0.0
+      },
+      "16": {
+        "n_variants": 4,
+        "saturated_area_fraction": 0.0,
+        "last8_saturated_area_fraction": 0.0,
+        "visible_presence_fraction": 0.0
+      },
+      "32": {
+        "n_variants": 4,
+        "saturated_area_fraction": 0.0,
+        "last8_saturated_area_fraction": 0.0,
+        "visible_presence_fraction": 0.0
+      }
+    },
+    "R": {
+      "1": {
+        "n_variants": 4,
+        "saturated_area_fraction": 0.0,
+        "last8_saturated_area_fraction": 0.0,
+        "visible_presence_fraction": 0.0
+      },
+      "4": {
+        "n_variants": 4,
+        "saturated_area_fraction": 0.0,
+        "last8_saturated_area_fraction": 0.0,
+        "visible_presence_fraction": 0.0
+      },
+      "8": {
+        "n_variants": 4,
+        "saturated_area_fraction": 0.0,
+        "last8_saturated_area_fraction": 0.0,
+        "visible_presence_fraction": 0.0
+      },
+      "16": {
+        "n_variants": 4,
+        "saturated_area_fraction": 0.0,
+        "last8_saturated_area_fraction": 0.0,
+        "visible_presence_fraction": 0.0
+      },
+      "32": {
+        "n_variants": 4,
+        "saturated_area_fraction": 0.0,
+        "last8_saturated_area_fraction": 0.0,
+        "visible_presence_fraction": 0.0
+      }
+    }
+  }
+}

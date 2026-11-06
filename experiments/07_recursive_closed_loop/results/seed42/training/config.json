@@ -1,0 +1,26 @@
+{
+  "seed": 42,
+  "steps": 6000,
+  "arms": [
+    "F",
+    "L",
+    "R"
+  ],
+  "scene_pairs": 1000,
+  "batch_pairs": 8,
+  "return_targets": 16,
+  "blank_targets": 8,
+  "parameters": 14633616,
+  "lr": 0.0002,
+  "weight_decay": 0.01,
+  "gradient_clip": 1.0,
+  "dropout": 0.1,
+  "state": "FP16 16x256",
+  "precision": "BF16 CUDA autocast, FP32 loss; CPU FP32 debug",
+  "condition": "F fixed first cue; L U(0,E(latest)); R U(old,E(latest))",
+  "delay": "per-batch uniform integer 1..4, independent RNG seed642; j uniform 0..d-1",
+  "unroll": "full BPTT; teacher-forced true blank; predict blank j before observing it",
+  "loss": "return mean(.5 fg+.5 bg) + .1 blank MSE; separate normalization",
+  "t": "equal mixture U[0,.2] and U[0,1]; t=0 pure noise",
+  "pairing": "same init/batch/d/j/noise/t/drop across arms; variants share noise/t/drop; blank RNG independent"
+}

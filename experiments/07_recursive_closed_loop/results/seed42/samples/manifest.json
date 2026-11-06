@@ -1,0 +1,90 @@
+[
+  {
+    "id": "test_00002_v0",
+    "pair_id": "test_00002",
+    "variant": 0,
+    "delay": 4,
+    "video": "test_00002_v0_d4.mp4",
+    "frame_sheet": "test_00002_v0_d4.png",
+    "frames": 96,
+    "fps": 12,
+    "layout": "rows truth/closed; columns F/L/R; cue true; closed blank generated; return generated"
+  },
+  {
+    "id": "test_00002_v0",
+    "pair_id": "test_00002",
+    "variant": 0,
+    "delay": 32,
+    "video": "test_00002_v0_d32.mp4",
+    "frame_sheet": "test_00002_v0_d32.png",
+    "frames": 544,
+    "fps": 12,
+    "layout": "rows truth/closed; columns F/L/R; cue true; closed blank generated; return generated"
+  },
+  {
+    "id": "test_00002_v1",
+    "pair_id": "test_00002",
+    "variant": 1,
+    "delay": 4,
+    "video": "test_00002_v1_d4.mp4",
+    "frame_sheet": "test_00002_v1_d4.png",
+    "frames": 96,
+    "fps": 12,
+    "layout": "rows truth/closed; columns F/L/R; cue true; closed blank generated; return generated"
+  },
+  {
+    "id": "test_00002_v1",
+    "pair_id": "test_00002",
+    "variant": 1,
+    "delay": 32,
+    "video": "test_00002_v1_d32.mp4",
+    "frame_sheet": "test_00002_v1_d32.png",
+    "frames": 544,
+    "fps": 12,
+    "layout": "rows truth/closed; columns F/L/R; cue true; closed blank generated; return generated"
+  },
+  {
+    "id": "test_00000_v0",
+    "pair_id": "test_00000",
+    "variant": 0,
+    "delay": 4,
+    "video": "test_00000_v0_d4.mp4",
+    "frame_sheet": "test_00000_v0_d4.png",
+    "frames": 96,
+    "fps": 12,
+    "layout": "rows truth/closed; columns F/L/R; cue true; closed blank generated; return generated"
+  },
+  {
+    "id": "test_00000_v0",
+    "pair_id": "test_00000",
+    "variant": 0,
+    "delay": 32,
+    "video": "test_00000_v0_d32.mp4",
+    "frame_sheet": "test_00000_v0_d32.png",
+    "frames": 544,
+    "fps": 12,
+    "layout": "rows truth/closed; columns F/L/R; cue true; closed blank generated; return generated"
+  },
+  {
+    "id": "test_00000_v1",
+    "pair_id": "test_00000",
+    "variant": 1,
+    "delay": 4,
+    "video": "test_00000_v1_d4.mp4",
+    "frame_sheet": "test_00000_v1_d4.png",
+    "frames": 96,
+    "fps": 12,
+    "layout": "rows truth/closed; columns F/L/R; cue true; closed blank generated; return generated"
+  },
+  {
+    "id": "test_00000_v1",
+    "pair_id": "test_00000",
+    "variant": 1,
+    "delay": 32,
+    "video": "test_00000_v1_d32.mp4",
+    "frame_sheet": "test_00000_v1_d32.png",
+    "frames": 544,
+    "fps": 12,
+    "layout": "rows truth/closed; columns F/L/R; cue true; closed blank generated; return generated"
+  }
+]

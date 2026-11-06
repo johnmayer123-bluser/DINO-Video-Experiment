@@ -3,10 +3,10 @@
 
 研究问题：用 K 个 D 维向量压缩视频历史后，能保留多少去噪收益，能否进一步控制下一块生成？
 
-前五问使用 UCF101 六类的相邻视频块 A、B，以冻结 Wan2.1 VAE 得到 latent，训练轻量历史编码器与 3D U-Net 预测 B 的 flow-matching 速度。第六问转向程序生成的物体保持任务，检验固定首块压缩历史能否控制下一块的颜色与形状。
+前五问使用 UCF101 六类的相邻视频块 A、B，以冻结 Wan2.1 VAE 得到 latent，训练轻量历史编码器与 3D U-Net 预测 B 的 flow-matching 速度。第六问转向程序生成的物体保持任务，检验固定首块压缩历史能否控制下一块的颜色与形状。第七问加入生成历史闭环，比较固定首块、最近块和递归状态在更长遮挡后的保持能力与资源消耗。
 当前较好的成本—误差折中是 **16×256、FP16 8 KiB**：三个种子上，平均保留原 64×1024 任务驱动基准约 **90.7%** 的去噪收益，保留上轮 16×1024 基准约 **96.0%** 的收益。这里的保留比率针对的是MSE，并不是携带了多少信息。（token_num*dim)
 
-视频和 latent 按时间切成相邻块（chunks）；这里的语义表示不是分割标签。前五问不使用分割网络或 mask；第六问使用程序真值 mask 计算前景／背景加权损失，mask 不作为模型条件。视频块 A／B 表示先后时段，与实验 00 的旧组键 A／B 不同。
+视频和 latent 按时间切成相邻块（chunks）；这里的语义表示不是分割标签。前五问不使用分割网络或 mask；第六、七问使用程序真值 mask 计算前景／背景加权损失，mask 不作为模型条件。视频块 A／B 表示先后时段，与实验 00 的旧组键 A／B 不同。
 
 ## 组名对照
 
@@ -22,6 +22,7 @@
 | 仅去噪监督 | FM only | 03：`C`；04 的 64-token 基准 |
 | 去噪＋语义对齐 | FM + alignment | 03：`J` |
 | 压缩历史条件生成 | Compressed history | 06：`C`，与 03 的 `C` 属于不同实验 |
+| 固定首块／最近块／递归更新 | Fixed cue / Latest chunk / Recursive | 07：`F` / `L` / `R`；此处 `L` 不代表完整历史 |
 
 ## 实验进展
 
@@ -35,6 +36,7 @@
 | 04B · 维度压缩 | 固定 16 个 token，继续缩小维度 | 3 | 32→8 KiB，保留局部基准 96.0%、原基准 90.7% 的收益；[实验](experiments/04_history_compression/width_sweep/README.md) |
 | 05 · 边界与表示 | 仅压缩表示、仅边界 latent、两者结合，哪种更有效？ | 3 | 26 KiB 组合比等预算纯表示改善 12.87%，比仅边界改善 1.48%；[实验](experiments/05_boundary_state/README.md) |
 | 06 · 条件生成 | 压缩历史能否控制下一块生成？ | 1 | 固定 8 KiB 表示＋18 KiB 空白边界，颜色／形状联合正确率 99.79%，无历史为 5.00%；[实验与视频](experiments/06_condition_generation/README.md) |
+| 07 · 递归与闭环 | 固定容量状态更新后能否保留更早的历史？ | 1 | 32 个生成遮挡块后，固定首块联合正确率 100%，当前递归为 10%，配对成功 0/60；[实验、资源与视频](experiments/07_recursive_closed_loop/README.md) |
 
 ## 当前压缩结果
 
@@ -73,7 +75,7 @@ python -m pip install -r requirements.txt
 
 ## Download Models & Dataset
 
-以下完整下载用于前五问。仅复现第六问时，按其 [README](experiments/06_condition_generation/README.md#复现) 下载 Wan VAE 即可，数据由程序生成。
+以下完整下载用于前五问。仅复现第六、七问时，按[第六问下载说明](experiments/06_condition_generation/README.md#复现)下载 Wan VAE 即可，数据由程序生成。
 
 ```bash
 # 在仓库根目录执行；支持续传，已有的完整资源会跳过。
@@ -99,7 +101,7 @@ Wan2.1 仅用于 VAE 编解码，实验中的轻量去噪器从头训练。
 
 ## Data & Preprocessing
 
-以下为前五问的 UCF101 数据流程；第六问的数据与评价见[条件生成实验](experiments/06_condition_generation/README.md)。
+以下为前五问的 UCF101 数据流程；合成数据与评价见[第六问条件生成](experiments/06_condition_generation/README.md)和[第七问递归闭环](experiments/07_recursive_closed_loop/README.md)。
 
 使用 UCF101 官方 split 1；从官方训练集按“类别＋来源组”留出约 20% 作为验证集，固定划分种子 42。同组视频及其窗口不会跨集合。
 
@@ -125,7 +127,7 @@ python -u scripts/prepare_cache.py --root . --stage all
 
 ## 复现与结果
 
-训练、评估命令及依赖顺序见各实验 README。前五问训练输出放在 `runs/`，第六问输出放在其独立实验目录。仓库附带原始误差、统计、图表和第六问的代表生成视频，不分发训练检查点。无需 GPU，可重算附带结果并绘图：
+训练、评估命令及依赖顺序见各实验 README。前五问训练输出放在 `runs/`，第六、七问输出放在各自实验目录。仓库附带原始误差、统计、图表和代表生成视频，不分发训练检查点。无需 GPU，可重算附带结果并绘图：
 
 ```bash
 python experiments/01_history_semantics/plot_results.py
@@ -133,6 +135,7 @@ python experiments/02_predicted_semantics/analyze.py
 python experiments/03_semantic_supervision/analyze.py
 python experiments/04_history_compression/analyze.py
 python experiments/04_history_compression/width_sweep/analyze.py
+python experiments/07_recursive_closed_loop/analyze.py
 ```
 
 ## Repository Structure
@@ -146,7 +149,8 @@ DINO-Video-Experiment/
 │   ├── 03_semantic_supervision/   # 十种子仅去噪／加语义对齐同容量对照
 │   ├── 04_history_compression/    # token 压缩与 width_sweep/
 │   ├── 05_boundary_state/         # 表示与最近边界的互补性
-│   └── 06_condition_generation/   # 固定压缩历史控制单块生成与视频结果
+│   ├── 06_condition_generation/   # 固定压缩历史控制单块生成与视频结果
+│   └── 07_recursive_closed_loop/  # 固定／最近／递归状态，长遮挡闭环与资源结果
 ├── scripts/                      # 公共下载、缓存、模型与初始 A/B 代码
 ├── assets/                       # 初始实验图
 ├── results/                      # 初始实验结果；后续结果随各实验目录保存

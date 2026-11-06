@@ -1,0 +1,13 @@
+{
+  "quality_model_phase_seconds": 145.3948205737397,
+  "quality_batch_pairs": 8,
+  "batch1_latency_measured": false,
+  "batch1_resources_command": "python resources.py --device cuda",
+  "persistent_condition_kib": 26,
+  "vae": {
+    "generator_resident": false,
+    "seconds": 1099.3523505404592,
+    "peak_allocated_bytes": 1329188352,
+    "peak_reserved_bytes": 1526726656
+  }
+}
